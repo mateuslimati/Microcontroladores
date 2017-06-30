@@ -82,23 +82,22 @@
 #include "ADC.h"
 #include "Itoa.h"
 #include "ReadSignal.h"
+#include "LED.h"
 
 #define high 1
 #define low 0
 
+int button = 0;
+
 void main(){
     
-    init_timer();
+    initINT2();
     init_LCD();
     init_UART();
+    ADCInit();
     
     TRISCbits.RC2 = 0;
-    TRISBbits.RB5 = 0;
     
-    set_line(0, 0);   
-    write_LCD("Microcontroladores");
-    
-    ADCInit();
     int i = 0;
     clearLCD();
     
@@ -169,10 +168,8 @@ void main(){
             set_line(1,3);
             write_LCD("coincidem");
             PORTCbits.RC2 = 1;
-            PORTBbits.RB5 = 0;
             __delay_ms(1000);    
             PORTCbits.RC2 = 0;
-            PORTBbits.RB5 = 1;
             __delay_ms(1000);
         }
         else{
@@ -181,14 +178,26 @@ void main(){
             write_LCD("As senhas");
             set_line(1,2);
             write_LCD("não coincidem");
-            __delay_ms(2000);
+            PORTCbits.RC2 = 1;
+            __delay_ms(500);    
+            PORTCbits.RC2 = 0;
+            __delay_ms(500);
+            PORTCbits.RC2 = 1;
+            __delay_ms(500);    
+            PORTCbits.RC2 = 0;
+            __delay_ms(500);
         } 
         
-            //__delay_ms(2000);
         PORTCbits.RC2 = 0;
-        PORTBbits.RB5 = 0;
        
-        i = 0;       
+        i = 0;    
+        if(button == 1){
+            clearLCD();
+            write_LCD("Botão apertado");
+            __delay_ms(2000);
+            button = 0;
+        }
+            
     }while(1);
     
 }

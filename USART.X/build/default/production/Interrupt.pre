@@ -4778,26 +4778,27 @@ void init_LCD();
 void write_LCD(char *);
 void set_line(int , int );
 
-# 10 "Interrupt.c"
-int i = 0;
+# 11 "Interrupt.c"
+extern int button;
 
-void interrupt low_priority INT(){
+# 32
+void interrupt ISR(){
 
-if(INTCONbits.TMR0IF == 1){
-INTCONbits.TMR0IF = 0;
-
-TMR0H = 0xB;
-TMR0L = 0xDC;
-
-if(i == 0){
-i = 1;
-
-}
-else{
-i = 0;
-
+if(INTCON3bits.INT2IF){
+INTCON3bits.INT2IF = 0;
+button = 1;
 }
 }
+
+void initINT2(){
+
+INTCONbits.GIE = 0;
+INTCONbits.PEIE = 0;
+TRISBbits.RB2 = 1;
+INTCON2bits.INTEDG0 = 1;
+INTCON3bits.INT2IF = 0;
+INTCON3bits.INT2IE = 1;
+INTCONbits.GIE = 1;
 }
 
 void init_timer(){

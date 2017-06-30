@@ -1,31 +1,51 @@
-/*
+ /*
  * File:   Interrupt.c
  * Author: mateus
  *
  * Created on 2 de Maio de 2017, 16:32
  */
 #include <xc.h>
+#include <pic18f4550.h>
 #include "LCD.h"
 
-int i = 0;
+extern int button;
 
-void interrupt low_priority INT(){
+//void interrupt low_priority INT(){ Interrupt for secound
+//    
+//    if(INTCONbits.TMR0IF == 1){
+//        INTCONbits.TMR0IF = 0;
+//        
+//        TMR0H = 0xB;
+//        TMR0L = 0xDC;
+//        
+//        if(i == 0){
+//            i = 1;
+//            //write_LCD("sec");
+//        }
+//        else{
+//            i = 0;
+//            //write_LCD("next");
+//        }
+//    }
+//}
+
+void interrupt ISR(){
     
-    if(INTCONbits.TMR0IF == 1){
-        INTCONbits.TMR0IF = 0;
-        
-        TMR0H = 0xB;
-        TMR0L = 0xDC;
-        
-        if(i == 0){
-            i = 1;
-            //write_LCD("sec");
-        }
-        else{
-            i = 0;
-            //write_LCD("next");
-        }
+    if(INTCON3bits.INT2IF){
+        INTCON3bits.INT2IF = 0;
+        button = 1;
     }
+}
+
+void initINT2(){
+    
+    INTCONbits.GIE = 0;
+    INTCONbits.PEIE = 0;
+    TRISBbits.RB2 = 1;
+    INTCON2bits.INTEDG0 = 1;
+    INTCON3bits.INT2IF = 0;
+    INTCON3bits.INT2IE = 1;
+    INTCONbits.GIE = 1;
 }
 
 void init_timer(){

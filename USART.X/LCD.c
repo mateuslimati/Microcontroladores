@@ -44,7 +44,8 @@ void send_msg(char msg){
 
 void init_LCD(){
     
-    TRISB = 0x00;
+    TRISB = 0x04;
+    TRISD = 0x00;
     TRISE = 0x00;
     PORTD = 0x00;
     

@@ -41,6 +41,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PORTBbits `VS101 ~T0 @X0 0 e@3969 ]
 "3580
 [v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"3954
+[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "4175
 [v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
@@ -3650,90 +3652,93 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD.c: 45: void init_LCD(){
 [e :U _init_LCD ]
 [f ]
-[; ;LCD.c: 47: TRISB = 0x00;
+[; ;LCD.c: 47: TRISB = 0x04;
 "47
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;LCD.c: 48: TRISE = 0x00;
+[e = _TRISB -> -> 4 `i `uc ]
+[; ;LCD.c: 48: TRISD = 0x00;
 "48
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;LCD.c: 49: PORTD = 0x00;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;LCD.c: 49: TRISE = 0x00;
 "49
+[e = _TRISE -> -> 0 `i `uc ]
+[; ;LCD.c: 50: PORTD = 0x00;
+"50
 [e = _PORTD -> -> 0 `i `uc ]
-[; ;LCD.c: 51: send_cfg(0x01);
-"51
-[e ( _send_cfg (1 -> -> 1 `i `uc ]
-[; ;LCD.c: 52: send_cfg(0x38);
+[; ;LCD.c: 52: send_cfg(0x01);
 "52
-[e ( _send_cfg (1 -> -> 56 `i `uc ]
-[; ;LCD.c: 53: send_cfg(0x80);
+[e ( _send_cfg (1 -> -> 1 `i `uc ]
+[; ;LCD.c: 53: send_cfg(0x38);
 "53
-[e ( _send_cfg (1 -> -> 128 `i `uc ]
-[; ;LCD.c: 54: send_cfg(0x0F);
+[e ( _send_cfg (1 -> -> 56 `i `uc ]
+[; ;LCD.c: 54: send_cfg(0x80);
 "54
+[e ( _send_cfg (1 -> -> 128 `i `uc ]
+[; ;LCD.c: 55: send_cfg(0x0F);
+"55
 [e ( _send_cfg (1 -> -> 15 `i `uc ]
-[; ;LCD.c: 56: }
-"56
+[; ;LCD.c: 57: }
+"57
 [e :UE 366 ]
 }
-"58
+"59
 [v _write_LCD `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;LCD.c: 58: void write_LCD(char *c){
+[; ;LCD.c: 59: void write_LCD(char *c){
 [e :U _write_LCD ]
 [v _c `*uc ~T0 @X0 1 r1 ]
 [f ]
-"60
-[v _i `i ~T0 @X0 1 a ]
-[; ;LCD.c: 60: int i = 0;
-[e = _i -> 0 `i ]
-[; ;LCD.c: 61: for(; c[i] != '\0'; i++)
 "61
+[v _i `i ~T0 @X0 1 a ]
+[; ;LCD.c: 61: int i = 0;
+[e = _i -> 0 `i ]
+[; ;LCD.c: 62: for(; c[i] != '\0'; i++)
+"62
 {
 [e $U 371  ]
-"62
+"63
 [e :U 368 ]
-[; ;LCD.c: 62: send_msg(c[i]);
+[; ;LCD.c: 63: send_msg(c[i]);
 [e ( _send_msg (1 *U + _c * -> _i `x -> -> # *U _c `i `x ]
-"61
+"62
 [e ++ _i -> 1 `i ]
 [e :U 371 ]
 [e $ != -> *U + _c * -> _i `x -> -> # *U _c `i `x `ui -> 0 `ui 368  ]
 [e :U 369 ]
-"62
-}
-[; ;LCD.c: 63: }
 "63
+}
+[; ;LCD.c: 64: }
+"64
 [e :UE 367 ]
 }
-"65
+"66
 [v _set_line `(v ~T0 @X0 1 ef2`i`i ]
 {
-[; ;LCD.c: 65: void set_line(int line, int pos){
+[; ;LCD.c: 66: void set_line(int line, int pos){
 [e :U _set_line ]
 [v _line `i ~T0 @X0 1 r1 ]
 [v _pos `i ~T0 @X0 1 r2 ]
 [f ]
-"67
-[v _cursor `uc ~T0 @X0 1 a ]
-[; ;LCD.c: 67: char cursor;
-[; ;LCD.c: 68: if(line == 0)
 "68
-[e $ ! == _line -> 0 `i 373  ]
-[; ;LCD.c: 69: cursor = 0x80 + pos;
+[v _cursor `uc ~T0 @X0 1 a ]
+[; ;LCD.c: 68: char cursor;
+[; ;LCD.c: 69: if(line == 0)
 "69
+[e $ ! == _line -> 0 `i 373  ]
+[; ;LCD.c: 70: cursor = 0x80 + pos;
+"70
 [e = _cursor -> + -> 128 `i _pos `uc ]
 [e $U 374  ]
-"70
-[e :U 373 ]
-[; ;LCD.c: 70: else
-[; ;LCD.c: 71: cursor = 0xC0 + pos;
 "71
+[e :U 373 ]
+[; ;LCD.c: 71: else
+[; ;LCD.c: 72: cursor = 0xC0 + pos;
+"72
 [e = _cursor -> + -> 192 `i _pos `uc ]
 [e :U 374 ]
-[; ;LCD.c: 72: send_cfg(cursor);
-"72
+[; ;LCD.c: 73: send_cfg(cursor);
+"73
 [e ( _send_cfg (1 _cursor ]
-[; ;LCD.c: 74: }
-"74
+[; ;LCD.c: 75: }
+"75
 [e :UE 372 ]
 }

@@ -24,7 +24,7 @@
 
 
 #pragma config CCP2MX = ON
-#pragma config PBADEN = ON
+#pragma config PBADEN = OFF
 #pragma config LPT1OSC = OFF
 #pragma config MCLRE = ON
 
@@ -4843,7 +4843,9 @@ void set_line(int , int );
 
 # 38 "Interrupt.h"
 void interrupt low_priority INT();
+void interrupt ISR();
 void init_timer();
+void initINT2();
 
 # 37 "USART.h"
 void init_UART();
@@ -4898,20 +4900,21 @@ void ito_a(int n, char s[]);
 void readSignal(char *signal, int pos);
 int cmpSignal(char *pass, char *toc);
 
-# 89 "main.c"
+# 36 "LED.h"
+void blink(int rounds, int time);
+
+# 90 "main.c"
+int button = 0;
+
 void main(){
 
-init_timer();
+initINT2();
 init_LCD();
 init_UART();
+ADCInit();
 
 TRISCbits.RC2 = 0;
-TRISBbits.RB5 = 0;
 
-set_line(0, 0);
-write_LCD("Microcontroladores");
-
-ADCInit();
 int i = 0;
 clearLCD();
 
@@ -4982,10 +4985,8 @@ write_LCD("As senhas");
 set_line(1,3);
 write_LCD("coincidem");
 PORTCbits.RC2 = 1;
-PORTBbits.RB5 = 0;
 _delay((unsigned long)((1000)*(16000000/4000.0)));
 PORTCbits.RC2 = 0;
-PORTBbits.RB5 = 1;
 _delay((unsigned long)((1000)*(16000000/4000.0)));
 }
 else{
@@ -4994,14 +4995,26 @@ set_line(0,3);
 write_LCD("As senhas");
 set_line(1,2);
 write_LCD("não coincidem");
-_delay((unsigned long)((2000)*(16000000/4000.0)));
+PORTCbits.RC2 = 1;
+_delay((unsigned long)((500)*(16000000/4000.0)));
+PORTCbits.RC2 = 0;
+_delay((unsigned long)((500)*(16000000/4000.0)));
+PORTCbits.RC2 = 1;
+_delay((unsigned long)((500)*(16000000/4000.0)));
+PORTCbits.RC2 = 0;
+_delay((unsigned long)((500)*(16000000/4000.0)));
 }
 
-
 PORTCbits.RC2 = 0;
-PORTBbits.RB5 = 0;
 
 i = 0;
+if(button == 1){
+clearLCD();
+write_LCD("Botão apertado");
+_delay((unsigned long)((2000)*(16000000/4000.0)));
+button = 0;
+}
+
 }while(1);
 
 }

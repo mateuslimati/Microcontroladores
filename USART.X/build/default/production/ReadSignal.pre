@@ -4753,7 +4753,6 @@ i = 0;
 while(i < 500){
 if(ADCRead() > 9){
 *signal |= (0x03<<j);
-
 }
 _delay((unsigned long)((1)*(16000000/4000.0)));
 i++;

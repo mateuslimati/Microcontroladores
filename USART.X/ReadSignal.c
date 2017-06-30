@@ -25,7 +25,6 @@ void readSignal(char *signal, int pos){
         while(i < 500){
             if(ADCRead() > 9){
                 *signal |= (0x03<<j);
-                //break;
             }
             __delay_ms(1);    
             i++;
