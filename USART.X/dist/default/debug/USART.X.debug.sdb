@@ -1,0 +1,236 @@
+[p LITE_MODE AUTOSTATIC LFSROK EMI_WORD ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 18F4550 ]
+[d frameptr 4065 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"54 /opt/microchip/xc8/v1.41/sources/common/ftdiv.c
+[v ___ftdiv __ftdiv `(f  1 e 3 0 ]
+"62 /opt/microchip/xc8/v1.41/sources/common/ftmul.c
+[v ___ftmul __ftmul `(f  1 e 3 0 ]
+"20 /opt/microchip/xc8/v1.41/sources/common/ftsub.c
+[v ___ftsub __ftsub `(f  1 e 3 0 ]
+"10 /opt/microchip/xc8/v1.41/sources/common/sprcadd.c
+[v ___fladd __fladd `(d  1 e 3 0 ]
+"245
+[v ___flsub __flsub `(d  1 e 3 0 ]
+"11 /opt/microchip/xc8/v1.41/sources/common/sprcdiv.c
+[v ___fldiv __fldiv `(d  1 e 3 0 ]
+"8 /opt/microchip/xc8/v1.41/sources/common/sprcmul.c
+[v ___flmul __flmul `(d  1 e 3 0 ]
+"15 /opt/microchip/xc8/v1.41/sources/common/Umul32.c
+[v ___lmul __lmul `(ul  1 e 4 0 ]
+"11 /home/mateus/MPLABXProjects/USART.X/Interrupt.c
+[v _INT INT `IIL(v  1 e 1 0 ]
+"30
+[v _init_timer init_timer `(v  1 e 1 0 ]
+"11 /home/mateus/MPLABXProjects/USART.X/LCD.c
+[v _ena_pulse ena_pulse `(v  1 e 1 0 ]
+"22
+[v _send_cfg send_cfg `(v  1 e 1 0 ]
+"30
+[v _send_msg send_msg `(v  1 e 1 0 ]
+"38
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+"49
+[v _write_LCD write_LCD `(v  1 e 1 0 ]
+"56
+[v _set_line set_line `(v  1 e 1 0 ]
+"83 /home/mateus/MPLABXProjects/USART.X/main.c
+[v _main main `(v  1 e 1 0 ]
+"10 /home/mateus/MPLABXProjects/USART.X/USART.c
+[v _init_UART init_UART `(v  1 e 1 0 ]
+"22
+[v _UART_Write UART_Write `(v  1 e 1 0 ]
+"37
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+"41
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+"2668 /opt/microchip/xc8/v1.41/include/pic18f4550.h
+[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
+[s S129 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 RDPU 1 0 :1:7 
+]
+"2830
+[s S136 . 1 `uc 1 CK1SPP 1 0 :1:0 
+`uc 1 CK2SPP 1 0 :1:1 
+`uc 1 OESPP 1 0 :1:2 
+]
+[s S140 . 1 `uc 1 PD2 1 0 :1:0 
+`uc 1 PC2 1 0 :1:1 
+`uc 1 CCP10 1 0 :1:2 
+`uc 1 CCP9E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 CCP2E 1 0 :1:7 
+]
+[s S147 . 1 `uc 1 RDE 1 0 :1:0 
+`uc 1 WRE 1 0 :1:1 
+`uc 1 CS 1 0 :1:2 
+`uc 1 PC3E 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 PA2E 1 0 :1:7 
+]
+[s S154 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PB2 1 0 :1:2 
+`uc 1 . 1 0 :4:3 
+`uc 1 RE7 1 0 :1:7 
+]
+[u S159 . 1 `S129 1 . 1 0 `S136 1 . 1 0 `S140 1 . 1 0 `S147 1 . 1 0 `S154 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES159  1 e 1 @3972 ]
+"3954
+[v _TRISD TRISD `VEuc  1 e 1 @3989 ]
+"4175
+[v _TRISE TRISE `VEuc  1 e 1 @3990 ]
+"5340
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
+"5351
+[v _RCREG RCREG `VEuc  1 e 1 @4014 ]
+"5362
+[v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
+[s S74 . 1 `uc 1 T0PS 1 0 :3:0 
+`uc 1 PSA 1 0 :1:3 
+`uc 1 T0SE 1 0 :1:4 
+`uc 1 T0CS 1 0 :1:5 
+`uc 1 T08BIT 1 0 :1:6 
+`uc 1 TMR0ON 1 0 :1:7 
+]
+"7984
+[s S81 . 1 `uc 1 T0PS0 1 0 :1:0 
+`uc 1 T0PS1 1 0 :1:1 
+`uc 1 T0PS2 1 0 :1:2 
+]
+[u S85 . 1 `S74 1 . 1 0 `S81 1 . 1 0 ]
+[v _T0CONbits T0CONbits `VES85  1 e 1 @4053 ]
+"8039
+[v _TMR0L TMR0L `VEuc  1 e 1 @4054 ]
+"8045
+[v _TMR0H TMR0H `VEuc  1 e 1 @4055 ]
+[s S21 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INT0IF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INT0IE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE_GIEL 1 0 :1:6 
+`uc 1 GIE_GIEH 1 0 :1:7 
+]
+"8476
+[s S30 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 INT0F 1 0 :1:1 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :1:3 
+`uc 1 INT0E 1 0 :1:4 
+`uc 1 T0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+[s S39 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 GIEL 1 0 :1:6 
+`uc 1 GIEH 1 0 :1:7 
+]
+[u S43 . 1 `S21 1 . 1 0 `S30 1 . 1 0 `S39 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES43  1 e 1 @4082 ]
+"8826
+[v _BRGH BRGH `VEb  1 e 0 @32098 ]
+"8946
+[v _CREN CREN `VEb  1 e 0 @32092 ]
+"9774
+[v _RCIF RCIF `VEb  1 e 0 @31989 ]
+"9868
+[v _SPEN SPEN `VEb  1 e 0 @32095 ]
+"9952
+[v _SYNC SYNC `VEb  1 e 0 @32100 ]
+"10102
+[v _TRISC6 TRISC6 `VEb  1 e 0 @31910 ]
+"10104
+[v _TRISC7 TRISC7 `VEb  1 e 0 @31911 ]
+"10128
+[v _TRMT TRMT `VEb  1 e 0 @32097 ]
+"10168
+[v _TXEN TXEN `VEb  1 e 0 @32101 ]
+"9 /home/mateus/MPLABXProjects/USART.X/Interrupt.c
+[v _i i `i  1 e 2 0 ]
+"83 /home/mateus/MPLABXProjects/USART.X/main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"100
+} 0
+"49 /home/mateus/MPLABXProjects/USART.X/LCD.c
+[v _write_LCD write_LCD `(v  1 e 1 0 ]
+{
+"51
+[v write_LCD@j j `i  1 a 2 23 ]
+"49
+[v write_LCD@c c `*.32uc  1 p 2 19 ]
+"54
+} 0
+"30
+[v _send_msg send_msg `(v  1 e 1 0 ]
+{
+[v send_msg@msg msg `uc  1 a 1 wreg ]
+[v send_msg@msg msg `uc  1 a 1 wreg ]
+"32
+[v send_msg@msg msg `uc  1 a 1 18 ]
+"36
+} 0
+"56
+[v _set_line set_line `(v  1 e 1 0 ]
+{
+"58
+[v set_line@cursor cursor `uc  1 a 1 23 ]
+"56
+[v set_line@line line `i  1 p 2 19 ]
+[v set_line@pos pos `i  1 p 2 21 ]
+"66
+} 0
+"30 /home/mateus/MPLABXProjects/USART.X/Interrupt.c
+[v _init_timer init_timer `(v  1 e 1 0 ]
+{
+"51
+} 0
+"10 /home/mateus/MPLABXProjects/USART.X/USART.c
+[v _init_UART init_UART `(v  1 e 1 0 ]
+{
+"20
+} 0
+"38 /home/mateus/MPLABXProjects/USART.X/LCD.c
+[v _init_LCD init_LCD `(v  1 e 1 0 ]
+{
+"47
+} 0
+"22
+[v _send_cfg send_cfg `(v  1 e 1 0 ]
+{
+[v send_cfg@cmd cmd `uc  1 a 1 wreg ]
+[v send_cfg@cmd cmd `uc  1 a 1 wreg ]
+"24
+[v send_cfg@cmd cmd `uc  1 a 1 18 ]
+"28
+} 0
+"11
+[v _ena_pulse ena_pulse `(v  1 e 1 0 ]
+{
+"20
+} 0
+"41 /home/mateus/MPLABXProjects/USART.X/USART.c
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+{
+"44
+} 0
+"37
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+{
+"39
+} 0
+"11 /home/mateus/MPLABXProjects/USART.X/Interrupt.c
+[v _INT INT `IIL(v  1 e 1 0 ]
+{
+"28
+} 0
