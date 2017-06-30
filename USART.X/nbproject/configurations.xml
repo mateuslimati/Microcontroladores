@@ -9,7 +9,6 @@
       <itemPath>USART.h</itemPath>
       <itemPath>ADC.h</itemPath>
       <itemPath>ReadSignal.h</itemPath>
-      <itemPath>Itoa.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -24,7 +23,6 @@
       <itemPath>USART.c</itemPath>
       <itemPath>ADC.c</itemPath>
       <itemPath>ReadSignal.c</itemPath>
-      <itemPath>Itoa.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -3,10 +3,6 @@
 [d edition pro ]
 [d chip 18F4550 ]
 [d frameptr 4065 ]
-"8 /opt/microchip/xc8/v1.41/sources/common/awdiv.c
-[v ___awdiv __awdiv `(i  1 e 2 0 ]
-"8 /opt/microchip/xc8/v1.41/sources/common/awmod.c
-[v ___awmod __awmod `(i  1 e 2 0 ]
 "62 /opt/microchip/xc8/v1.41/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
 "86 /opt/microchip/xc8/v1.41/sources/common/ftadd.c
@@ -35,8 +31,6 @@
 [v _ISR ISR `II(v  1 e 1 0 ]
 "40
 [v _initINT2 initINT2 `(v  1 e 1 0 ]
-"11 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Itoa.c
-[v _reverse reverse `(v  1 e 1 0 ]
 "11 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
 [v _ena_pulse ena_pulse `(v  1 e 1 0 ]
 "22
@@ -51,7 +45,7 @@
 [v _write_LCD write_LCD `(v  1 e 1 0 ]
 "66
 [v _set_line set_line `(v  1 e 1 0 ]
-"92 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+"90 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
 [v _main main `(v  1 e 1 0 ]
 "13 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
 [v _readSignal readSignal `(v  1 e 1 0 ]
@@ -356,18 +350,18 @@
 [v _TRMT TRMT `VEb  1 e 0 @32097 ]
 "10168
 [v _TXEN TXEN `VEb  1 e 0 @32101 ]
-"90 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+"88 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
 [v _button button `i  1 e 2 0 ]
-"92
+"90
 [v _main main `(v  1 e 1 0 ]
 {
-"101
+"99
 [v main@i i `i  1 a 2 36 ]
-"107
+"105
 [v main@toc toc `[2]uc  1 a 2 34 ]
-"104
+"102
 [v main@pass pass `[2]uc  1 a 2 32 ]
-"203
+"201
 } 0
 "59 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
 [v _write_LCD write_LCD `(v  1 e 1 0 ]

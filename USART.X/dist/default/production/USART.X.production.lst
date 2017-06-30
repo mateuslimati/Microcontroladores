@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Fri Jun 30 23:35:29 2017
+                                                                                               Fri Jun 30 23:47:21 2017
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F4550
@@ -151,7 +151,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    137  000822  42                 	db	66	;'B'
    138  000823  6F                 	db	111	;'o'
    139  000824  74                 	db	116	;'t'
-   140  000825  E3                 	db	-29
+   140  000825  61                 	db	97	;'a'
    141  000826  6F                 	db	111	;'o'
    142  000827  20                 	db	32
    143  000828  61                 	db	97	;'a'
@@ -180,7 +180,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    166  00083E  00                 	db	0
    167  00083F                     STR_9:
    168  00083F  6E                 	db	110	;'n'
-   169  000840  E3                 	db	-29
+   169  000840  61                 	db	97	;'a'
    170  000841  6F                 	db	111	;'o'
    171  000842  20                 	db	32
    172  000843  63                 	db	99	;'c'
@@ -373,7 +373,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    359 ;;
    360 ;; *************** function _main *****************
    361 ;; Defined at:
-   362 ;;		line 92 in file "main.c"
+   362 ;;		line 90 in file "main.c"
    363 ;; Parameters:    Size  Location     Type
    364 ;;		None
    365 ;; Auto vars:     Size  Location     Type
@@ -417,58 +417,58 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    403  00086C                     _main:
    404                           	opt stack 27
    405                           
-   406                           ;main.c: 94: initINT2();
+   406                           ;main.c: 92: initINT2();
    407                           
    408                           ;incstack = 0
    409  00086C  EC87  F007         	call	_initINT2	;wreg free
    410                           
-   411                           ;main.c: 95: init_LCD();
+   411                           ;main.c: 93: init_LCD();
    412  000870  EC2B  F007         	call	_init_LCD	;wreg free
    413                           
-   414                           ;main.c: 96: init_UART();
+   414                           ;main.c: 94: init_UART();
    415  000874  EC74  F007         	call	_init_UART	;wreg free
    416                           
-   417                           ;main.c: 97: ADCInit();
+   417                           ;main.c: 95: ADCInit();
    418  000878  EC7E  F007         	call	_ADCInit	;wreg free
    419                           
-   420                           ;main.c: 99: TRISCbits.RC2 = 0;
+   420                           ;main.c: 97: TRISCbits.RC2 = 0;
    421  00087C  9494               	bcf	3988,2,c	;volatile
    422                           
-   423                           ;main.c: 101: int i = 0;
+   423                           ;main.c: 99: int i = 0;
    424  00087E  0E00               	movlw	0
    425  000880  6E26               	movwf	main@i+1,c
    426  000882  0E00               	movlw	0
    427  000884  6E25               	movwf	main@i,c
    428                           
-   429                           ;main.c: 102: clearLCD();
+   429                           ;main.c: 100: clearLCD();
    430  000886  EC8F  F007         	call	_clearLCD	;wreg free
    431                           
-   432                           ;main.c: 104: char pass[2];
-   433                           ;main.c: 105: pass[0] = 0x00;
+   432                           ;main.c: 102: char pass[2];
+   433                           ;main.c: 103: pass[0] = 0x00;
    434  00088A  0E00               	movlw	0
    435  00088C  6E21               	movwf	main@pass,c
    436                           
-   437                           ;main.c: 106: pass[1] = 0x00;
+   437                           ;main.c: 104: pass[1] = 0x00;
    438  00088E  0E00               	movlw	0
    439  000890  6E22               	movwf	main@pass+1,c
    440                           
-   441                           ;main.c: 107: char toc[2];
-   442                           ;main.c: 108: toc[0] = 0x00;
+   441                           ;main.c: 105: char toc[2];
+   442                           ;main.c: 106: toc[0] = 0x00;
    443  000892  0E00               	movlw	0
    444  000894  6E23               	movwf	main@toc,c
    445                           
-   446                           ;main.c: 109: toc[1] = 0x00;
+   446                           ;main.c: 107: toc[1] = 0x00;
    447  000896  0E00               	movlw	0
    448  000898  6E24               	movwf	main@toc+1,c
    449                           
-   450                           ;main.c: 112: write_LCD("Voce tem 5 seg-");
+   450                           ;main.c: 110: write_LCD("Voce tem 5 seg-");
    451  00089A  0E12               	movlw	low STR_1
    452  00089C  6E12               	movwf	write_LCD@c,c
    453  00089E  0E08               	movlw	high STR_1
    454  0008A0  6E13               	movwf	write_LCD@c+1,c
    455  0008A2  ECD2  F006         	call	_write_LCD	;wreg free
    456                           
-   457                           ;main.c: 113: set_line(1,0);
+   457                           ;main.c: 111: set_line(1,0);
    458  0008A6  0E00               	movlw	0
    459  0008A8  6E13               	movwf	set_line@line+1,c
    460  0008AA  0E01               	movlw	1
@@ -479,46 +479,46 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    465  0008B4  6E14               	movwf	set_line@pos,c
    466  0008B6  EC4F  F007         	call	_set_line	;wreg free
    467                           
-   468                           ;main.c: 114: write_LCD("undos para bater");
+   468                           ;main.c: 112: write_LCD("undos para bater");
    469  0008BA  0E01               	movlw	low STR_2
    470  0008BC  6E12               	movwf	write_LCD@c,c
    471  0008BE  0E08               	movlw	high STR_2
    472  0008C0  6E13               	movwf	write_LCD@c+1,c
    473  0008C2  ECD2  F006         	call	_write_LCD	;wreg free
    474                           
-   475                           ;main.c: 115: _delay((unsigned long)((3000)*(16000000/4000.0)));
+   475                           ;main.c: 113: _delay((unsigned long)((3000)*(16000000/4000.0)));
    476  0008C6  0E3D               	movlw	61
    477  0008C8  6E20               	movwf	(??_main+1)& (0+255),c
    478  0008CA  0EE1               	movlw	225
    479  0008CC  6E1F               	movwf	??_main& (0+255),c
    480  0008CE  0E40               	movlw	64
-   481  0008D0                     u517:
+   481  0008D0                     u467:
    482  0008D0  2EE8               	decfsz	wreg,f,c
-   483  0008D2  D7FE               	bra	u517
+   483  0008D2  D7FE               	bra	u467
    484  0008D4  2E1F               	decfsz	??_main& (0+255),f,c
-   485  0008D6  D7FC               	bra	u517
+   485  0008D6  D7FC               	bra	u467
    486  0008D8  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   487  0008DA  D7FA               	bra	u517
+   487  0008DA  D7FA               	bra	u467
    488                           
-   489                           ;main.c: 117: while(i < 4){
-   490  0008DC  D040               	goto	l1325
-   491  0008DE                     l1305:
+   489                           ;main.c: 115: while(i < 4){
+   490  0008DC  D040               	goto	l1273
+   491  0008DE                     l1253:
    492                           
-   493                           ;main.c: 118: clearLCD();
+   493                           ;main.c: 116: clearLCD();
    494  0008DE  EC8F  F007         	call	_clearLCD	;wreg free
    495                           
-   496                           ;main.c: 119: send_msg('1'+ i);
+   496                           ;main.c: 117: send_msg('1'+ i);
    497  0008E2  5025               	movf	main@i,w,c
    498  0008E4  0F31               	addlw	49
    499  0008E6  EC13  F007         	call	_send_msg
    500                           
-   501                           ;main.c: 120: if(i == 0)
+   501                           ;main.c: 118: if(i == 0)
    502  0008EA  5025               	movf	main@i,w,c
    503  0008EC  1026               	iorwf	main@i+1,w,c
    504  0008EE  A4D8               	btfss	status,2,c
-   505  0008F0  D00B               	goto	l1313
+   505  0008F0  D00B               	goto	l1261
    506                           
-   507                           ;main.c: 121: readSignal(&pass[0], 0);
+   507                           ;main.c: 119: readSignal(&pass[0], 0);
    508  0008F2  0E21               	movlw	low main@pass
    509  0008F4  6E13               	movwf	readSignal@signal,c
    510  0008F6  0E00               	movlw	high main@pass
@@ -528,16 +528,16 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    514  0008FE  0E00               	movlw	0
    515  000900  6E15               	movwf	readSignal@pos,c
    516  000902  EC19  F006         	call	_readSignal	;wreg free
-   517  000906  D029               	goto	l1323
-   518  000908                     l1313:
+   517  000906  D029               	goto	l1271
+   518  000908                     l1261:
    519                           
-   520                           ;main.c: 122: else if(i == 1)
+   520                           ;main.c: 120: else if(i == 1)
    521  000908  0425               	decf	main@i,w,c
    522  00090A  1026               	iorwf	main@i+1,w,c
    523  00090C  A4D8               	btfss	status,2,c
-   524  00090E  D00B               	goto	l1317
+   524  00090E  D00B               	goto	l1265
    525                           
-   526                           ;main.c: 123: readSignal(&pass[0], 1);
+   526                           ;main.c: 121: readSignal(&pass[0], 1);
    527  000910  0E21               	movlw	low main@pass
    528  000912  6E13               	movwf	readSignal@signal,c
    529  000914  0E00               	movlw	high main@pass
@@ -547,17 +547,17 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    533  00091C  0E01               	movlw	1
    534  00091E  6E15               	movwf	readSignal@pos,c
    535  000920  EC19  F006         	call	_readSignal	;wreg free
-   536  000924  D01A               	goto	l1323
-   537  000926                     l1317:
+   536  000924  D01A               	goto	l1271
+   537  000926                     l1265:
    538                           
-   539                           ;main.c: 124: else if(i == 2)
+   539                           ;main.c: 122: else if(i == 2)
    540  000926  0E02               	movlw	2
    541  000928  1825               	xorwf	main@i,w,c
    542  00092A  1026               	iorwf	main@i+1,w,c
    543  00092C  A4D8               	btfss	status,2,c
-   544  00092E  D00B               	goto	l1321
+   544  00092E  D00B               	goto	l1269
    545                           
-   546                           ;main.c: 125: readSignal(&pass[1], 0);
+   546                           ;main.c: 123: readSignal(&pass[1], 0);
    547  000930  0E22               	movlw	low (main@pass+1)
    548  000932  6E13               	movwf	readSignal@signal,c
    549  000934  0E00               	movlw	high (main@pass+1)
@@ -567,11 +567,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    553  00093C  0E00               	movlw	0
    554  00093E  6E15               	movwf	readSignal@pos,c
    555  000940  EC19  F006         	call	_readSignal	;wreg free
-   556  000944  D00A               	goto	l1323
-   557  000946                     l1321:
+   556  000944  D00A               	goto	l1271
+   557  000946                     l1269:
    558                           
-   559                           ;main.c: 126: else
-   560                           ;main.c: 127: readSignal(&pass[1], 1);
+   559                           ;main.c: 124: else
+   560                           ;main.c: 125: readSignal(&pass[1], 1);
    561  000946  0E22               	movlw	low (main@pass+1)
    562  000948  6E13               	movwf	readSignal@signal,c
    563  00094A  0E00               	movlw	high (main@pass+1)
@@ -581,33 +581,33 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    567  000952  0E01               	movlw	1
    568  000954  6E15               	movwf	readSignal@pos,c
    569  000956  EC19  F006         	call	_readSignal	;wreg free
-   570  00095A                     l1323:
+   570  00095A                     l1271:
    571                           
-   572                           ;main.c: 128: i++;
+   572                           ;main.c: 126: i++;
    573  00095A  4A25               	infsnz	main@i,f,c
    574  00095C  2A26               	incf	main@i+1,f,c
-   575  00095E                     l1325:
+   575  00095E                     l1273:
    576  00095E  BE26               	btfsc	main@i+1,7,c
-   577  000960  D7BE               	goto	l1305
+   577  000960  D7BE               	goto	l1253
    578  000962  5026               	movf	main@i+1,w,c
-   579  000964  E104               	bnz	l1327
+   579  000964  E104               	bnz	l1275
    580  000966  0E04               	movlw	4
    581  000968  5C25               	subwf	main@i,w,c
    582  00096A  A0D8               	btfss	status,0,c
-   583  00096C  D7B8               	goto	l1305
-   584  00096E                     l1327:
+   583  00096C  D7B8               	goto	l1253
+   584  00096E                     l1275:
    585                           
-   586                           ;main.c: 129: }
-   587                           ;main.c: 130: i = 0;
+   586                           ;main.c: 127: }
+   587                           ;main.c: 128: i = 0;
    588  00096E  0E00               	movlw	0
    589  000970  6E26               	movwf	main@i+1,c
    590  000972  0E00               	movlw	0
    591  000974  6E25               	movwf	main@i,c
    592                           
-   593                           ;main.c: 132: clearLCD();
+   593                           ;main.c: 130: clearLCD();
    594  000976  EC8F  F007         	call	_clearLCD	;wreg free
    595                           
-   596                           ;main.c: 133: set_line(0,5);
+   596                           ;main.c: 131: set_line(0,5);
    597  00097A  0E00               	movlw	0
    598  00097C  6E13               	movwf	set_line@line+1,c
    599  00097E  0E00               	movlw	0
@@ -618,14 +618,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    604  000988  6E14               	movwf	set_line@pos,c
    605  00098A  EC4F  F007         	call	_set_line	;wreg free
    606                           
-   607                           ;main.c: 134: write_LCD("Leitura");
+   607                           ;main.c: 132: write_LCD("Leitura");
    608  00098E  0E62               	movlw	low STR_3
    609  000990  6E12               	movwf	write_LCD@c,c
    610  000992  0E08               	movlw	high STR_3
    611  000994  6E13               	movwf	write_LCD@c+1,c
    612  000996  ECD2  F006         	call	_write_LCD	;wreg free
    613                           
-   614                           ;main.c: 135: set_line(1,3);
+   614                           ;main.c: 133: set_line(1,3);
    615  00099A  0E00               	movlw	0
    616  00099C  6E13               	movwf	set_line@line+1,c
    617  00099E  0E01               	movlw	1
@@ -636,32 +636,32 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    622  0009A8  6E14               	movwf	set_line@pos,c
    623  0009AA  EC4F  F007         	call	_set_line	;wreg free
    624                           
-   625                           ;main.c: 136: write_LCD("Finalizada");
+   625                           ;main.c: 134: write_LCD("Finalizada");
    626  0009AE  0E4D               	movlw	low STR_4
    627  0009B0  6E12               	movwf	write_LCD@c,c
    628  0009B2  0E08               	movlw	high STR_4
    629  0009B4  6E13               	movwf	write_LCD@c+1,c
    630  0009B6  ECD2  F006         	call	_write_LCD	;wreg free
    631                           
-   632                           ;main.c: 137: _delay((unsigned long)((3000)*(16000000/4000.0)));
+   632                           ;main.c: 135: _delay((unsigned long)((3000)*(16000000/4000.0)));
    633  0009BA  0E3D               	movlw	61
    634  0009BC  6E20               	movwf	(??_main+1)& (0+255),c
    635  0009BE  0EE1               	movlw	225
    636  0009C0  6E1F               	movwf	??_main& (0+255),c
    637  0009C2  0E40               	movlw	64
-   638  0009C4                     u527:
+   638  0009C4                     u477:
    639  0009C4  2EE8               	decfsz	wreg,f,c
-   640  0009C6  D7FE               	bra	u527
+   640  0009C6  D7FE               	bra	u477
    641  0009C8  2E1F               	decfsz	??_main& (0+255),f,c
-   642  0009CA  D7FC               	bra	u527
+   642  0009CA  D7FC               	bra	u477
    643  0009CC  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   644  0009CE  D7FA               	bra	u527
-   645  0009D0                     l1341:
+   644  0009CE  D7FA               	bra	u477
+   645  0009D0                     l1289:
    646                           
-   647                           ;main.c: 140: clearLCD();
+   647                           ;main.c: 138: clearLCD();
    648  0009D0  EC8F  F007         	call	_clearLCD	;wreg free
    649                           
-   650                           ;main.c: 141: set_line(0,0);
+   650                           ;main.c: 139: set_line(0,0);
    651  0009D4  0E00               	movlw	0
    652  0009D6  6E13               	movwf	set_line@line+1,c
    653  0009D8  0E00               	movlw	0
@@ -672,54 +672,54 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    658  0009E2  6E14               	movwf	set_line@pos,c
    659  0009E4  EC4F  F007         	call	_set_line	;wreg free
    660                           
-   661                           ;main.c: 142: write_LCD("Bata na porta");
+   661                           ;main.c: 140: write_LCD("Bata na porta");
    662  0009E8  0E31               	movlw	low STR_5
    663  0009EA  6E12               	movwf	write_LCD@c,c
    664  0009EC  0E08               	movlw	high STR_5
    665  0009EE  6E13               	movwf	write_LCD@c+1,c
    666  0009F0  ECD2  F006         	call	_write_LCD	;wreg free
    667                           
-   668                           ;main.c: 143: _delay((unsigned long)((3000)*(16000000/4000.0)));
+   668                           ;main.c: 141: _delay((unsigned long)((3000)*(16000000/4000.0)));
    669  0009F4  0E3D               	movlw	61
    670  0009F6  6E20               	movwf	(??_main+1)& (0+255),c
    671  0009F8  0EE1               	movlw	225
    672  0009FA  6E1F               	movwf	??_main& (0+255),c
    673  0009FC  0E40               	movlw	64
-   674  0009FE                     u537:
+   674  0009FE                     u487:
    675  0009FE  2EE8               	decfsz	wreg,f,c
-   676  000A00  D7FE               	bra	u537
+   676  000A00  D7FE               	bra	u487
    677  000A02  2E1F               	decfsz	??_main& (0+255),f,c
-   678  000A04  D7FC               	bra	u537
+   678  000A04  D7FC               	bra	u487
    679  000A06  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   680  000A08  D7FA               	bra	u537
+   680  000A08  D7FA               	bra	u487
    681                           
-   682                           ;main.c: 144: toc[0] = 0x00;
+   682                           ;main.c: 142: toc[0] = 0x00;
    683  000A0A  0E00               	movlw	0
    684  000A0C  6E23               	movwf	main@toc,c
    685                           
-   686                           ;main.c: 145: toc[1] = 0x00;
+   686                           ;main.c: 143: toc[1] = 0x00;
    687  000A0E  0E00               	movlw	0
    688  000A10  6E24               	movwf	main@toc+1,c
    689                           
-   690                           ;main.c: 147: while(i < 4){
-   691  000A12  D040               	goto	l1373
-   692  000A14                     l1353:
+   690                           ;main.c: 145: while(i < 4){
+   691  000A12  D040               	goto	l1321
+   692  000A14                     l1301:
    693                           
-   694                           ;main.c: 148: clearLCD();
+   694                           ;main.c: 146: clearLCD();
    695  000A14  EC8F  F007         	call	_clearLCD	;wreg free
    696                           
-   697                           ;main.c: 149: send_msg('1'+ i);
+   697                           ;main.c: 147: send_msg('1'+ i);
    698  000A18  5025               	movf	main@i,w,c
    699  000A1A  0F31               	addlw	49
    700  000A1C  EC13  F007         	call	_send_msg
    701                           
-   702                           ;main.c: 150: if(i == 0)
+   702                           ;main.c: 148: if(i == 0)
    703  000A20  5025               	movf	main@i,w,c
    704  000A22  1026               	iorwf	main@i+1,w,c
    705  000A24  A4D8               	btfss	status,2,c
-   706  000A26  D00B               	goto	l1361
+   706  000A26  D00B               	goto	l1309
    707                           
-   708                           ;main.c: 151: readSignal(&toc[0], 0);
+   708                           ;main.c: 149: readSignal(&toc[0], 0);
    709  000A28  0E23               	movlw	low main@toc
    710  000A2A  6E13               	movwf	readSignal@signal,c
    711  000A2C  0E00               	movlw	high main@toc
@@ -729,16 +729,16 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    715  000A34  0E00               	movlw	0
    716  000A36  6E15               	movwf	readSignal@pos,c
    717  000A38  EC19  F006         	call	_readSignal	;wreg free
-   718  000A3C  D029               	goto	l1371
-   719  000A3E                     l1361:
+   718  000A3C  D029               	goto	l1319
+   719  000A3E                     l1309:
    720                           
-   721                           ;main.c: 152: else if(i == 1)
+   721                           ;main.c: 150: else if(i == 1)
    722  000A3E  0425               	decf	main@i,w,c
    723  000A40  1026               	iorwf	main@i+1,w,c
    724  000A42  A4D8               	btfss	status,2,c
-   725  000A44  D00B               	goto	l1365
+   725  000A44  D00B               	goto	l1313
    726                           
-   727                           ;main.c: 153: readSignal(&toc[0], 1);
+   727                           ;main.c: 151: readSignal(&toc[0], 1);
    728  000A46  0E23               	movlw	low main@toc
    729  000A48  6E13               	movwf	readSignal@signal,c
    730  000A4A  0E00               	movlw	high main@toc
@@ -748,17 +748,17 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    734  000A52  0E01               	movlw	1
    735  000A54  6E15               	movwf	readSignal@pos,c
    736  000A56  EC19  F006         	call	_readSignal	;wreg free
-   737  000A5A  D01A               	goto	l1371
-   738  000A5C                     l1365:
+   737  000A5A  D01A               	goto	l1319
+   738  000A5C                     l1313:
    739                           
-   740                           ;main.c: 154: else if(i == 2)
+   740                           ;main.c: 152: else if(i == 2)
    741  000A5C  0E02               	movlw	2
    742  000A5E  1825               	xorwf	main@i,w,c
    743  000A60  1026               	iorwf	main@i+1,w,c
    744  000A62  A4D8               	btfss	status,2,c
-   745  000A64  D00B               	goto	l1369
+   745  000A64  D00B               	goto	l1317
    746                           
-   747                           ;main.c: 155: readSignal(&toc[1], 0);
+   747                           ;main.c: 153: readSignal(&toc[1], 0);
    748  000A66  0E24               	movlw	low (main@toc+1)
    749  000A68  6E13               	movwf	readSignal@signal,c
    750  000A6A  0E00               	movlw	high (main@toc+1)
@@ -768,11 +768,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    754  000A72  0E00               	movlw	0
    755  000A74  6E15               	movwf	readSignal@pos,c
    756  000A76  EC19  F006         	call	_readSignal	;wreg free
-   757  000A7A  D00A               	goto	l1371
-   758  000A7C                     l1369:
+   757  000A7A  D00A               	goto	l1319
+   758  000A7C                     l1317:
    759                           
-   760                           ;main.c: 156: else
-   761                           ;main.c: 157: readSignal(&toc[1], 1);
+   760                           ;main.c: 154: else
+   761                           ;main.c: 155: readSignal(&toc[1], 1);
    762  000A7C  0E24               	movlw	low (main@toc+1)
    763  000A7E  6E13               	movwf	readSignal@signal,c
    764  000A80  0E00               	movlw	high (main@toc+1)
@@ -782,30 +782,30 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    768  000A88  0E01               	movlw	1
    769  000A8A  6E15               	movwf	readSignal@pos,c
    770  000A8C  EC19  F006         	call	_readSignal	;wreg free
-   771  000A90                     l1371:
+   771  000A90                     l1319:
    772                           
-   773                           ;main.c: 158: i++;
+   773                           ;main.c: 156: i++;
    774  000A90  4A25               	infsnz	main@i,f,c
    775  000A92  2A26               	incf	main@i+1,f,c
-   776  000A94                     l1373:
+   776  000A94                     l1321:
    777  000A94  BE26               	btfsc	main@i+1,7,c
-   778  000A96  D7BE               	goto	l1353
+   778  000A96  D7BE               	goto	l1301
    779  000A98  5026               	movf	main@i+1,w,c
-   780  000A9A  E104               	bnz	l1375
+   780  000A9A  E104               	bnz	l1323
    781  000A9C  0E04               	movlw	4
    782  000A9E  5C25               	subwf	main@i,w,c
    783  000AA0  A0D8               	btfss	status,0,c
-   784  000AA2  D7B8               	goto	l1353
-   785  000AA4                     l1375:
+   784  000AA2  D7B8               	goto	l1301
+   785  000AA4                     l1323:
    786                           
-   787                           ;main.c: 159: }
-   788                           ;main.c: 160: i = 0;
+   787                           ;main.c: 157: }
+   788                           ;main.c: 158: i = 0;
    789  000AA4  0E00               	movlw	0
    790  000AA6  6E26               	movwf	main@i+1,c
    791  000AA8  0E00               	movlw	0
    792  000AAA  6E25               	movwf	main@i,c
    793                           
-   794                           ;main.c: 162: i = cmpSignal(pass, toc);
+   794                           ;main.c: 160: i = cmpSignal(pass, toc);
    795  000AAC  0E21               	movlw	low main@pass
    796  000AAE  6E0F               	movwf	cmpSignal@pass,c
    797  000AB0  0E00               	movlw	high main@pass
@@ -818,16 +818,16 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    804  000AC0  C00F  F025         	movff	?_cmpSignal,main@i
    805  000AC4  C010  F026         	movff	?_cmpSignal+1,main@i+1
    806                           
-   807                           ;main.c: 164: if(i == 1){
+   807                           ;main.c: 162: if(i == 1){
    808  000AC8  0425               	decf	main@i,w,c
    809  000ACA  1026               	iorwf	main@i+1,w,c
    810  000ACC  A4D8               	btfss	status,2,c
-   811  000ACE  D03D               	goto	l1399
+   811  000ACE  D03D               	goto	l1347
    812                           
-   813                           ;main.c: 165: clearLCD();
+   813                           ;main.c: 163: clearLCD();
    814  000AD0  EC8F  F007         	call	_clearLCD	;wreg free
    815                           
-   816                           ;main.c: 166: set_line(0,3);
+   816                           ;main.c: 164: set_line(0,3);
    817  000AD4  0E00               	movlw	0
    818  000AD6  6E13               	movwf	set_line@line+1,c
    819  000AD8  0E00               	movlw	0
@@ -838,14 +838,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    824  000AE2  6E14               	movwf	set_line@pos,c
    825  000AE4  EC4F  F007         	call	_set_line	;wreg free
    826                           
-   827                           ;main.c: 167: write_LCD("As senhas");
+   827                           ;main.c: 165: write_LCD("As senhas");
    828  000AE8  0E58               	movlw	low STR_6
    829  000AEA  6E12               	movwf	write_LCD@c,c
    830  000AEC  0E08               	movlw	high STR_6
    831  000AEE  6E13               	movwf	write_LCD@c+1,c
    832  000AF0  ECD2  F006         	call	_write_LCD	;wreg free
    833                           
-   834                           ;main.c: 168: set_line(1,3);
+   834                           ;main.c: 166: set_line(1,3);
    835  000AF4  0E00               	movlw	0
    836  000AF6  6E13               	movwf	set_line@line+1,c
    837  000AF8  0E01               	movlw	1
@@ -856,58 +856,58 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    842  000B02  6E14               	movwf	set_line@pos,c
    843  000B04  EC4F  F007         	call	_set_line	;wreg free
    844                           
-   845                           ;main.c: 169: write_LCD("coincidem");
+   845                           ;main.c: 167: write_LCD("coincidem");
    846  000B08  0E43               	movlw	low (STR_9+4)
    847  000B0A  6E12               	movwf	write_LCD@c,c
    848  000B0C  0E08               	movlw	high (STR_9+4)
    849  000B0E  6E13               	movwf	write_LCD@c+1,c
    850  000B10  ECD2  F006         	call	_write_LCD	;wreg free
    851                           
-   852                           ;main.c: 170: PORTCbits.RC2 = 1;
+   852                           ;main.c: 168: PORTCbits.RC2 = 1;
    853  000B14  8482               	bsf	3970,2,c	;volatile
    854                           
-   855                           ;main.c: 171: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   855                           ;main.c: 169: _delay((unsigned long)((1000)*(16000000/4000.0)));
    856  000B16  0E15               	movlw	21
    857  000B18  6E20               	movwf	(??_main+1)& (0+255),c
    858  000B1A  0E4B               	movlw	75
    859  000B1C  6E1F               	movwf	??_main& (0+255),c
    860  000B1E  0EBE               	movlw	190
-   861  000B20                     u547:
+   861  000B20                     u497:
    862  000B20  2EE8               	decfsz	wreg,f,c
-   863  000B22  D7FE               	bra	u547
+   863  000B22  D7FE               	bra	u497
    864  000B24  2E1F               	decfsz	??_main& (0+255),f,c
-   865  000B26  D7FC               	bra	u547
+   865  000B26  D7FC               	bra	u497
    866  000B28  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   867  000B2A  D7FA               	bra	u547
+   867  000B2A  D7FA               	bra	u497
    868  000B2C  D000               	nop2	
    869                           
-   870                           ;main.c: 172: PORTCbits.RC2 = 0;
+   870                           ;main.c: 170: PORTCbits.RC2 = 0;
    871  000B2E  9482               	bcf	3970,2,c	;volatile
    872                           
-   873                           ;main.c: 173: _delay((unsigned long)((1000)*(16000000/4000.0)));
+   873                           ;main.c: 171: _delay((unsigned long)((1000)*(16000000/4000.0)));
    874  000B30  0E15               	movlw	21
    875  000B32  6E20               	movwf	(??_main+1)& (0+255),c
    876  000B34  0E4B               	movlw	75
    877  000B36  6E1F               	movwf	??_main& (0+255),c
    878  000B38  0EBE               	movlw	190
-   879  000B3A                     u557:
+   879  000B3A                     u507:
    880  000B3A  2EE8               	decfsz	wreg,f,c
-   881  000B3C  D7FE               	bra	u557
+   881  000B3C  D7FE               	bra	u507
    882  000B3E  2E1F               	decfsz	??_main& (0+255),f,c
-   883  000B40  D7FC               	bra	u557
+   883  000B40  D7FC               	bra	u507
    884  000B42  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   885  000B44  D7FA               	bra	u557
+   885  000B44  D7FA               	bra	u507
    886  000B46  D000               	nop2	
    887                           
-   888                           ;main.c: 174: }
-   889  000B48  D052               	goto	l1425
-   890  000B4A                     l1399:
+   888                           ;main.c: 172: }
+   889  000B48  D052               	goto	l1373
+   890  000B4A                     l1347:
    891                           
-   892                           ;main.c: 175: else{
-   893                           ;main.c: 176: clearLCD();
+   892                           ;main.c: 173: else{
+   893                           ;main.c: 174: clearLCD();
    894  000B4A  EC8F  F007         	call	_clearLCD	;wreg free
    895                           
-   896                           ;main.c: 177: set_line(0,3);
+   896                           ;main.c: 175: set_line(0,3);
    897  000B4E  0E00               	movlw	0
    898  000B50  6E13               	movwf	set_line@line+1,c
    899  000B52  0E00               	movlw	0
@@ -918,14 +918,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    904  000B5C  6E14               	movwf	set_line@pos,c
    905  000B5E  EC4F  F007         	call	_set_line	;wreg free
    906                           
-   907                           ;main.c: 178: write_LCD("As senhas");
+   907                           ;main.c: 176: write_LCD("As senhas");
    908  000B62  0E58               	movlw	low STR_6
    909  000B64  6E12               	movwf	write_LCD@c,c
    910  000B66  0E08               	movlw	high STR_6
    911  000B68  6E13               	movwf	write_LCD@c+1,c
    912  000B6A  ECD2  F006         	call	_write_LCD	;wreg free
    913                           
-   914                           ;main.c: 179: set_line(1,2);
+   914                           ;main.c: 177: set_line(1,2);
    915  000B6E  0E00               	movlw	0
    916  000B70  6E13               	movwf	set_line@line+1,c
    917  000B72  0E01               	movlw	1
@@ -936,132 +936,132 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
    922  000B7C  6E14               	movwf	set_line@pos,c
    923  000B7E  EC4F  F007         	call	_set_line	;wreg free
    924                           
-   925                           ;main.c: 180: write_LCD("não coincidem");
+   925                           ;main.c: 178: write_LCD("nao coincidem");
    926  000B82  0E3F               	movlw	low STR_9
    927  000B84  6E12               	movwf	write_LCD@c,c
    928  000B86  0E08               	movlw	high STR_9
    929  000B88  6E13               	movwf	write_LCD@c+1,c
    930  000B8A  ECD2  F006         	call	_write_LCD	;wreg free
    931                           
-   932                           ;main.c: 181: PORTCbits.RC2 = 1;
+   932                           ;main.c: 179: PORTCbits.RC2 = 1;
    933  000B8E  8482               	bsf	3970,2,c	;volatile
    934                           
-   935                           ;main.c: 182: _delay((unsigned long)((500)*(16000000/4000.0)));
+   935                           ;main.c: 180: _delay((unsigned long)((500)*(16000000/4000.0)));
    936  000B90  0E0B               	movlw	11
    937  000B92  6E20               	movwf	(??_main+1)& (0+255),c
    938  000B94  0E26               	movlw	38
    939  000B96  6E1F               	movwf	??_main& (0+255),c
    940  000B98  0E5E               	movlw	94
-   941  000B9A                     u567:
+   941  000B9A                     u517:
    942  000B9A  2EE8               	decfsz	wreg,f,c
-   943  000B9C  D7FE               	bra	u567
+   943  000B9C  D7FE               	bra	u517
    944  000B9E  2E1F               	decfsz	??_main& (0+255),f,c
-   945  000BA0  D7FC               	bra	u567
+   945  000BA0  D7FC               	bra	u517
    946  000BA2  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   947  000BA4  D7FA               	bra	u567
+   947  000BA4  D7FA               	bra	u517
    948                           
-   949                           ;main.c: 183: PORTCbits.RC2 = 0;
+   949                           ;main.c: 181: PORTCbits.RC2 = 0;
    950  000BA6  9482               	bcf	3970,2,c	;volatile
    951                           
-   952                           ;main.c: 184: _delay((unsigned long)((500)*(16000000/4000.0)));
+   952                           ;main.c: 182: _delay((unsigned long)((500)*(16000000/4000.0)));
    953  000BA8  0E0B               	movlw	11
    954  000BAA  6E20               	movwf	(??_main+1)& (0+255),c
    955  000BAC  0E26               	movlw	38
    956  000BAE  6E1F               	movwf	??_main& (0+255),c
    957  000BB0  0E5E               	movlw	94
-   958  000BB2                     u577:
+   958  000BB2                     u527:
    959  000BB2  2EE8               	decfsz	wreg,f,c
-   960  000BB4  D7FE               	bra	u577
+   960  000BB4  D7FE               	bra	u527
    961  000BB6  2E1F               	decfsz	??_main& (0+255),f,c
-   962  000BB8  D7FC               	bra	u577
+   962  000BB8  D7FC               	bra	u527
    963  000BBA  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   964  000BBC  D7FA               	bra	u577
+   964  000BBC  D7FA               	bra	u527
    965                           
-   966                           ;main.c: 185: PORTCbits.RC2 = 1;
+   966                           ;main.c: 183: PORTCbits.RC2 = 1;
    967  000BBE  8482               	bsf	3970,2,c	;volatile
    968                           
-   969                           ;main.c: 186: _delay((unsigned long)((500)*(16000000/4000.0)));
+   969                           ;main.c: 184: _delay((unsigned long)((500)*(16000000/4000.0)));
    970  000BC0  0E0B               	movlw	11
    971  000BC2  6E20               	movwf	(??_main+1)& (0+255),c
    972  000BC4  0E26               	movlw	38
    973  000BC6  6E1F               	movwf	??_main& (0+255),c
    974  000BC8  0E5E               	movlw	94
-   975  000BCA                     u587:
+   975  000BCA                     u537:
    976  000BCA  2EE8               	decfsz	wreg,f,c
-   977  000BCC  D7FE               	bra	u587
+   977  000BCC  D7FE               	bra	u537
    978  000BCE  2E1F               	decfsz	??_main& (0+255),f,c
-   979  000BD0  D7FC               	bra	u587
+   979  000BD0  D7FC               	bra	u537
    980  000BD2  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   981  000BD4  D7FA               	bra	u587
+   981  000BD4  D7FA               	bra	u537
    982                           
-   983                           ;main.c: 187: PORTCbits.RC2 = 0;
+   983                           ;main.c: 185: PORTCbits.RC2 = 0;
    984  000BD6  9482               	bcf	3970,2,c	;volatile
    985                           
-   986                           ;main.c: 188: _delay((unsigned long)((500)*(16000000/4000.0)));
+   986                           ;main.c: 186: _delay((unsigned long)((500)*(16000000/4000.0)));
    987  000BD8  0E0B               	movlw	11
    988  000BDA  6E20               	movwf	(??_main+1)& (0+255),c
    989  000BDC  0E26               	movlw	38
    990  000BDE  6E1F               	movwf	??_main& (0+255),c
    991  000BE0  0E5E               	movlw	94
-   992  000BE2                     u597:
+   992  000BE2                     u547:
    993  000BE2  2EE8               	decfsz	wreg,f,c
-   994  000BE4  D7FE               	bra	u597
+   994  000BE4  D7FE               	bra	u547
    995  000BE6  2E1F               	decfsz	??_main& (0+255),f,c
-   996  000BE8  D7FC               	bra	u597
+   996  000BE8  D7FC               	bra	u547
    997  000BEA  2E20               	decfsz	(??_main+1)& (0+255),f,c
-   998  000BEC  D7FA               	bra	u597
-   999  000BEE                     l1425:
+   998  000BEC  D7FA               	bra	u547
+   999  000BEE                     l1373:
   1000                           
-  1001                           ;main.c: 189: }
-  1002                           ;main.c: 191: PORTCbits.RC2 = 0;
+  1001                           ;main.c: 187: }
+  1002                           ;main.c: 189: PORTCbits.RC2 = 0;
   1003  000BEE  9482               	bcf	3970,2,c	;volatile
   1004                           
-  1005                           ;main.c: 193: i = 0;
+  1005                           ;main.c: 191: i = 0;
   1006  000BF0  0E00               	movlw	0
   1007  000BF2  6E26               	movwf	main@i+1,c
   1008  000BF4  0E00               	movlw	0
   1009  000BF6  6E25               	movwf	main@i,c
   1010                           
-  1011                           ;main.c: 194: if(button == 1){
+  1011                           ;main.c: 192: if(button == 1){
   1012  000BF8  0427               	decf	_button,w,c
   1013  000BFA  1028               	iorwf	_button+1,w,c
   1014  000BFC  A4D8               	btfss	status,2,c
-  1015  000BFE  D6E8               	goto	l1341
+  1015  000BFE  D6E8               	goto	l1289
   1016                           
-  1017                           ;main.c: 195: clearLCD();
+  1017                           ;main.c: 193: clearLCD();
   1018  000C00  EC8F  F007         	call	_clearLCD	;wreg free
   1019                           
-  1020                           ;main.c: 196: write_LCD("Botão apertado");
+  1020                           ;main.c: 194: write_LCD("Botao apertado");
   1021  000C04  0E22               	movlw	low STR_10
   1022  000C06  6E12               	movwf	write_LCD@c,c
   1023  000C08  0E08               	movlw	high STR_10
   1024  000C0A  6E13               	movwf	write_LCD@c+1,c
   1025  000C0C  ECD2  F006         	call	_write_LCD	;wreg free
   1026                           
-  1027                           ;main.c: 197: _delay((unsigned long)((2000)*(16000000/4000.0)));
+  1027                           ;main.c: 195: _delay((unsigned long)((2000)*(16000000/4000.0)));
   1028  000C10  0E29               	movlw	41
   1029  000C12  6E20               	movwf	(??_main+1)& (0+255),c
   1030  000C14  0E96               	movlw	150
   1031  000C16  6E1F               	movwf	??_main& (0+255),c
   1032  000C18  0E7F               	movlw	127
-  1033  000C1A                     u607:
+  1033  000C1A                     u557:
   1034  000C1A  2EE8               	decfsz	wreg,f,c
-  1035  000C1C  D7FE               	bra	u607
+  1035  000C1C  D7FE               	bra	u557
   1036  000C1E  2E1F               	decfsz	??_main& (0+255),f,c
-  1037  000C20  D7FC               	bra	u607
+  1037  000C20  D7FC               	bra	u557
   1038  000C22  2E20               	decfsz	(??_main+1)& (0+255),f,c
-  1039  000C24  D7FA               	bra	u607
+  1039  000C24  D7FA               	bra	u557
   1040  000C26  F000               	nop	
   1041                           
-  1042                           ;main.c: 198: button = 0;
+  1042                           ;main.c: 196: button = 0;
   1043  000C28  0E00               	movlw	0
   1044  000C2A  6E28               	movwf	_button+1,c
   1045  000C2C  0E00               	movlw	0
   1046  000C2E  6E27               	movwf	_button,c
   1047                           
-  1048                           ;main.c: 199: }
-  1049                           ;main.c: 201: }while(1);
-  1050  000C30  D6CF               	goto	l1341
+  1048                           ;main.c: 197: }
+  1049                           ;main.c: 199: }while(1);
+  1050  000C30  D6CF               	goto	l1289
   1051  000C32                     __end_of_main:
   1052                           	opt stack 0
   1053                           tblptru	equ	0xFF8
@@ -1117,8 +1117,8 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1103  000DAA  6E16               	movwf	write_LCD@i,c
   1104                           
   1105                           ;LCD.c: 62: for(; c[i] != '\0'; i++)
-  1106  000DAC  D010               	goto	l1233
-  1107  000DAE                     l1229:
+  1106  000DAC  D010               	goto	l1181
+  1107  000DAE                     l1177:
   1108                           
   1109                           ;LCD.c: 63: send_msg(c[i]);
   1110  000DAE  5016               	movf	write_LCD@i,w,c
@@ -1138,7 +1138,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1124  000DC6  EC13  F007         	call	_send_msg
   1125  000DCA  4A16               	infsnz	write_LCD@i,f,c
   1126  000DCC  2A17               	incf	write_LCD@i+1,f,c
-  1127  000DCE                     l1233:
+  1127  000DCE                     l1181:
   1128  000DCE  5016               	movf	write_LCD@i,w,c
   1129  000DD0  2412               	addwf	write_LCD@c,w,c
   1130  000DD2  6E14               	movwf	??_write_LCD& (0+255),c
@@ -1156,7 +1156,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1142  000DE6  0900               	iorlw	0
   1143  000DE8  B4D8               	btfsc	status,2,c
   1144  000DEA  0012               	return	
-  1145  000DEC  D7E0               	goto	l1229
+  1145  000DEC  D7E0               	goto	l1177
   1146  000DEE                     __end_of_write_LCD:
   1147                           	opt stack 0
   1148                           tblptru	equ	0xFF8
@@ -1217,11 +1217,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1203  000E2E  0E06               	movlw	6
   1204  000E30  6E10               	movwf	??_send_msg& (0+255),c
   1205  000E32  0E30               	movlw	48
-  1206  000E34                     u617:
+  1206  000E34                     u567:
   1207  000E34  2EE8               	decfsz	wreg,f,c
-  1208  000E36  D7FE               	bra	u617
+  1208  000E36  D7FE               	bra	u567
   1209  000E38  2E10               	decfsz	??_send_msg& (0+255),f,c
-  1210  000E3A  D7FC               	bra	u617
+  1210  000E3A  D7FC               	bra	u567
   1211  000E3C  D000               	nop2	
   1212                           
   1213                           ;LCD.c: 40: ena_pulse();
@@ -1231,11 +1231,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1217  000E42  0E06               	movlw	6
   1218  000E44  6E10               	movwf	??_send_msg& (0+255),c
   1219  000E46  0E30               	movlw	48
-  1220  000E48                     u627:
+  1220  000E48                     u577:
   1221  000E48  2EE8               	decfsz	wreg,f,c
-  1222  000E4A  D7FE               	bra	u627
+  1222  000E4A  D7FE               	bra	u577
   1223  000E4C  2E10               	decfsz	??_send_msg& (0+255),f,c
-  1224  000E4E  D7FC               	bra	u627
+  1224  000E4E  D7FC               	bra	u577
   1225  000E50  D000               	nop2	
   1226                           
   1227                           ;LCD.c: 42: PORTBbits.RB3 = 0;
@@ -1294,13 +1294,13 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1280  000E9E  5012               	movf	set_line@line,w,c
   1281  000EA0  1013               	iorwf	set_line@line+1,w,c
   1282  000EA2  A4D8               	btfss	status,2,c
-  1283  000EA4  D003               	goto	l1239
+  1283  000EA4  D003               	goto	l1187
   1284                           
   1285                           ;LCD.c: 70: cursor = 0x80 + pos;
   1286  000EA6  5014               	movf	set_line@pos,w,c
   1287  000EA8  0F80               	addlw	128
   1288  000EAA  D002               	goto	L1
-  1289  000EAC                     l1239:
+  1289  000EAC                     l1187:
   1290                           
   1291                           ;LCD.c: 71: else
   1292                           ;LCD.c: 72: cursor = 0xC0 + pos;
@@ -1374,14 +1374,14 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1360  000C3A  0415               	decf	readSignal@pos,w,c
   1361  000C3C  1016               	iorwf	readSignal@pos+1,w,c
   1362  000C3E  A4D8               	btfss	status,2,c
-  1363  000C40  D004               	goto	l1249
+  1363  000C40  D004               	goto	l1197
   1364                           
   1365                           ;ReadSignal.c: 17: j = 4;
   1366  000C42  0E00               	movlw	0
   1367  000C44  6E1E               	movwf	readSignal@j+1,c
   1368  000C46  0E04               	movlw	4
   1369  000C48  6E1D               	movwf	readSignal@j,c
-  1370  000C4A                     l1249:
+  1370  000C4A                     l1197:
   1371                           
   1372                           ;ReadSignal.c: 18: int limite;
   1373                           ;ReadSignal.c: 19: limite = j + 4;
@@ -1395,7 +1395,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1381                           ;ReadSignal.c: 20: int i;
   1382                           ;ReadSignal.c: 22: while(j < limite){
   1383  000C56  D033               	goto	l208
-  1384  000C58                     l1251:
+  1384  000C58                     l1199:
   1385                           
   1386                           ;ReadSignal.c: 24: i = 0;
   1387  000C58  0E00               	movlw	0
@@ -1404,61 +1404,61 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1390  000C5E  6E1B               	movwf	readSignal@i,c
   1391                           
   1392                           ;ReadSignal.c: 25: while(i < 500){
-  1393  000C60  D022               	goto	l1261
-  1394  000C62                     l1253:
+  1393  000C60  D022               	goto	l1209
+  1394  000C62                     l1201:
   1395                           
-  1396                           ;ReadSignal.c: 26: if(ADCRead() > 9){
+  1396                           ;ReadSignal.c: 26: if((int)ADCRead() > 9){
   1397  000C62  EC5D  F007         	call	_ADCRead	;wreg free
   1398  000C66  5010               	movf	?_ADCRead+1,w,c
-  1399  000C68  E104               	bnz	u350
+  1399  000C68  E104               	bnz	u300
   1400  000C6A  0E0A               	movlw	10
   1401  000C6C  5C0F               	subwf	?_ADCRead,w,c
   1402  000C6E  A0D8               	btfss	status,0,c
-  1403  000C70  D010               	goto	l1257
-  1404  000C72                     u350:
+  1403  000C70  D010               	goto	l1205
+  1404  000C72                     u300:
   1405                           
   1406                           ;ReadSignal.c: 27: *signal |= (0x03<<j);
   1407  000C72  C01D  F017         	movff	readSignal@j,??_readSignal
   1408  000C76  0E03               	movlw	3
   1409  000C78  6E18               	movwf	(??_readSignal+1)& (0+255),c
   1410  000C7A  2A17               	incf	??_readSignal,f,c
-  1411  000C7C  D002               	goto	u364
-  1412  000C7E                     u365:
+  1411  000C7C  D002               	goto	u314
+  1412  000C7E                     u315:
   1413  000C7E  90D8               	bcf	status,0,c
   1414  000C80  3618               	rlcf	??_readSignal+1,f,c
-  1415  000C82                     u364:
+  1415  000C82                     u314:
   1416  000C82  2E17               	decfsz	??_readSignal,f,c
-  1417  000C84  D7FC               	goto	u365
+  1417  000C84  D7FC               	goto	u315
   1418  000C86  C013  FFD9         	movff	readSignal@signal,fsr2l
   1419  000C8A  C014  FFDA         	movff	readSignal@signal+1,fsr2h
   1420  000C8E  5018               	movf	??_readSignal+1,w,c
   1421  000C90  12DF               	iorwf	indf2,f,c
-  1422  000C92                     l1257:
+  1422  000C92                     l1205:
   1423                           
   1424                           ;ReadSignal.c: 28: }
   1425                           ;ReadSignal.c: 29: _delay((unsigned long)((1)*(16000000/4000.0)));
   1426  000C92  0E06               	movlw	6
   1427  000C94  6E17               	movwf	??_readSignal& (0+255),c
   1428  000C96  0E30               	movlw	48
-  1429  000C98                     u637:
+  1429  000C98                     u587:
   1430  000C98  2EE8               	decfsz	wreg,f,c
-  1431  000C9A  D7FE               	bra	u637
+  1431  000C9A  D7FE               	bra	u587
   1432  000C9C  2E17               	decfsz	??_readSignal& (0+255),f,c
-  1433  000C9E  D7FC               	bra	u637
+  1433  000C9E  D7FC               	bra	u587
   1434  000CA0  D000               	nop2	
   1435                           
   1436                           ;ReadSignal.c: 30: i++;
   1437  000CA2  4A1B               	infsnz	readSignal@i,f,c
   1438  000CA4  2A1C               	incf	readSignal@i+1,f,c
-  1439  000CA6                     l1261:
+  1439  000CA6                     l1209:
   1440  000CA6  BE1C               	btfsc	readSignal@i+1,7,c
-  1441  000CA8  D7DC               	goto	l1253
+  1441  000CA8  D7DC               	goto	l1201
   1442  000CAA  0EF4               	movlw	244
   1443  000CAC  5C1B               	subwf	readSignal@i,w,c
   1444  000CAE  0E01               	movlw	1
   1445  000CB0  581C               	subwfb	readSignal@i+1,w,c
   1446  000CB2  A0D8               	btfss	status,0,c
-  1447  000CB4  D7D6               	goto	l1253
+  1447  000CB4  D7D6               	goto	l1201
   1448                           
   1449                           ;ReadSignal.c: 31: }
   1450                           ;ReadSignal.c: 32: j+=2;
@@ -1477,7 +1477,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1463  000CCC  5817               	subwfb	??_readSignal& (0+255),w,c
   1464  000CCE  B0D8               	btfsc	status,0,c
   1465  000CD0  0012               	return	
-  1466  000CD2  D7C2               	goto	l1251
+  1466  000CD2  D7C2               	goto	l1199
   1467  000CD4                     __end_of_readSignal:
   1468                           	opt stack 0
   1469                           tblptru	equ	0xFF8
@@ -1835,7 +1835,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1821  000D68  50DE               	movf	postinc2,w,c
   1822  000D6A  18E6               	xorwf	postinc1,w,c
   1823  000D6C  A4D8               	btfss	status,2,c
-  1824  000D6E  D015               	goto	l1273
+  1824  000D6E  D015               	goto	l1221
   1825  000D70  EE20 F001          	lfsr	2,1
   1826  000D74  5011               	movf	cmpSignal@toc,w,c
   1827  000D76  26D9               	addwf	fsr2l,f,c
@@ -1849,7 +1849,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1835  000D88  50DE               	movf	postinc2,w,c
   1836  000D8A  18E6               	xorwf	postinc1,w,c
   1837  000D8C  A4D8               	btfss	status,2,c
-  1838  000D8E  D005               	goto	l1273
+  1838  000D8E  D005               	goto	l1221
   1839                           
   1840                           ;ReadSignal.c: 39: return 1;
   1841  000D90  0E00               	movlw	0
@@ -1857,7 +1857,7 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1843  000D94  0E01               	movlw	1
   1844  000D96  6E0F               	movwf	?_cmpSignal,c
   1845  000D98  0012               	return	
-  1846  000D9A                     l1273:
+  1846  000D9A                     l1221:
   1847                           
   1848                           ;ReadSignal.c: 40: return 0;
   1849  000D9A  0E00               	movlw	0
@@ -2000,11 +2000,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1986  000E8C  0E06               	movlw	6
   1987  000E8E  6E10               	movwf	??_send_cfg& (0+255),c
   1988  000E90  0E30               	movlw	48
-  1989  000E92                     u647:
+  1989  000E92                     u597:
   1990  000E92  2EE8               	decfsz	wreg,f,c
-  1991  000E94  D7FE               	bra	u647
+  1991  000E94  D7FE               	bra	u597
   1992  000E96  2E10               	decfsz	??_send_cfg& (0+255),f,c
-  1993  000E98  D7FC               	bra	u647
+  1993  000E98  D7FC               	bra	u597
   1994  000E9A  D000               	nop2	
   1995  000E9C  0012               	return		;funcret
   1996  000E9E                     __end_of_send_cfg:
@@ -2072,11 +2072,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2058  000DF0  0E06               	movlw	6
   2059  000DF2  6E0F               	movwf	??_ena_pulse& (0+255),c
   2060  000DF4  0E30               	movlw	48
-  2061  000DF6                     u657:
+  2061  000DF6                     u607:
   2062  000DF6  2EE8               	decfsz	wreg,f,c
-  2063  000DF8  D7FE               	bra	u657
+  2063  000DF8  D7FE               	bra	u607
   2064  000DFA  2E0F               	decfsz	??_ena_pulse& (0+255),f,c
-  2065  000DFC  D7FC               	bra	u657
+  2065  000DFC  D7FC               	bra	u607
   2066  000DFE  D000               	nop2	
   2067                           
   2068                           ;LCD.c: 15: PORTEbits.RE1 = 1;
@@ -2086,11 +2086,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2072  000E02  0E06               	movlw	6
   2073  000E04  6E0F               	movwf	??_ena_pulse& (0+255),c
   2074  000E06  0E30               	movlw	48
-  2075  000E08                     u667:
+  2075  000E08                     u617:
   2076  000E08  2EE8               	decfsz	wreg,f,c
-  2077  000E0A  D7FE               	bra	u667
+  2077  000E0A  D7FE               	bra	u617
   2078  000E0C  2E0F               	decfsz	??_ena_pulse& (0+255),f,c
-  2079  000E0E  D7FC               	bra	u667
+  2079  000E0E  D7FC               	bra	u617
   2080  000E10  D000               	nop2	
   2081                           
   2082                           ;LCD.c: 17: PORTEbits.RE1 = 0;
@@ -2100,11 +2100,11 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   2086  000E14  0E06               	movlw	6
   2087  000E16  6E0F               	movwf	??_ena_pulse& (0+255),c
   2088  000E18  0E30               	movlw	48
-  2089  000E1A                     u677:
+  2089  000E1A                     u627:
   2090  000E1A  2EE8               	decfsz	wreg,f,c
-  2091  000E1C  D7FE               	bra	u677
+  2091  000E1C  D7FE               	bra	u627
   2092  000E1E  2E0F               	decfsz	??_ena_pulse& (0+255),f,c
-  2093  000E20  D7FC               	bra	u677
+  2093  000E20  D7FC               	bra	u627
   2094  000E22  D000               	nop2	
   2095  000E24  0012               	return		;funcret
   2096  000E26                     __end_of_ena_pulse:
@@ -2649,30 +2649,30 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Fri Jun 30 23:35:29 2017
+Symbol Table                                                                                   Fri Jun 30 23:47:21 2017
 
             __CFG_BOR$ON 000000              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
            __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
                     l208 0CBE                      l197 0EBC             __CFG_CPB$OFF 000000  
-                    u350 0C72             __CFG_CPD$OFF 000000                      u364 0C82  
-                    _ISR 0008                      u365 0C7E                      u517 08D0  
-                    u607 0C1A                      u527 09C4                      u617 0E34  
-                    u537 09FE                      u627 0E48                      u547 0B20  
-                    u637 0C98                      u557 0B3A                      u647 0E92  
-                    u567 0B9A                      u657 0DF6                      u577 0BB2  
-                    u667 0E08                      u587 0BCA                      u677 0E1A  
-                    u597 0BE2          __end_of_ADCInit 0F0E          __end_of_ADCRead 0ED2  
+                    u300 0C72                      u314 0C82                      u315 0C7E  
+           __CFG_CPD$OFF 000000                      u507 0B3A                      _ISR 0008  
+                    u517 0B9A                      u607 0DF6                      u527 0BB2  
+                    u617 0E08                      u537 0BCA                      u627 0E1A  
+                    u547 0BE2                      u467 08D0                      u557 0C1A  
+                    u477 09C4                      u567 0E34                      u487 09FE  
+                    u577 0E48                      u497 0B20                      u587 0C98  
+                    u597 0E92          __end_of_ADCInit 0F0E          __end_of_ADCRead 0ED2  
                     wreg 000FE8             __CFG_FOSC$HS 000000             __CFG_LVP$OFF 000000  
-                   ?_ISR 0001             __CFG_WDT$OFF 000000                     l1233 0DCE  
-                   l1321 0946                     l1313 0908                     l1305 08DE  
-                   l1251 0C58                     l1323 095A                     l1253 0C62  
-                   l1261 0CA6                     l1229 0DAE                     l1341 09D0  
-                   l1317 0926                     l1325 095E                     l1239 0EAC  
-                   l1327 096E                     l1273 0D9A                     l1257 0C92  
-                   l1249 0C4A                     l1425 0BEE                     l1361 0A3E  
-                   l1353 0A14                     l1371 0A90                     l1365 0A5C  
-                   l1373 0A94                     l1375 0AA4                     l1369 0A7C  
-                   l1399 0B4A                     STR_1 0812                     STR_2 0801  
+                   ?_ISR 0001             __CFG_WDT$OFF 000000                     l1201 0C62  
+                   l1221 0D9A                     l1205 0C92                     l1301 0A14  
+                   l1209 0CA6                     l1313 0A5C                     l1321 0A94  
+                   l1323 0AA4                     l1181 0DCE                     l1317 0A7C  
+                   l1309 0A3E                     l1261 0908                     l1253 08DE  
+                   l1319 0A90                     l1271 095A                     l1177 0DAE  
+                   l1265 0926                     l1273 095E                     l1187 0EAC  
+                   l1347 0B4A                     l1275 096E                     l1197 0C4A  
+                   l1373 0BEE                     l1269 0946                     l1199 0C58  
+                   l1289 09D0                     STR_1 0812                     STR_2 0801  
                    STR_3 0862                     STR_4 084D                     STR_5 0831  
                    STR_6 0858                     STR_7 0843                     STR_8 0858  
                    STR_9 083F                     _BRGH 007D62                     _CREN 007D5C  

@@ -3554,7 +3554,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 367  ]
 [e :U 368 ]
 {
-[; ;ReadSignal.c: 26: if(ADCRead() > 9){
+[; ;ReadSignal.c: 26: if((int)ADCRead() > 9){
 "26
 [e $ ! > ( _ADCRead ..  -> 9 `i 370  ]
 {

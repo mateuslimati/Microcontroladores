@@ -4860,50 +4860,11 @@ void UART_Read_Text(char *Output, unsigned int length);
 void ADCInit();
 unsigned int ADCRead();
 
-# 14 "/opt/microchip/xc8/v1.41/include/string.h"
-extern void * memcpy(void *, const void *, size_t);
-extern void * memmove(void *, const void *, size_t);
-extern void * memset(void *, int, size_t);
-
-# 34
-extern char * strcat(char *, const char *);
-extern char * strcpy(char *, const char *);
-extern char * strncat(char *, const char *, size_t);
-extern char * strncpy(char *, const char *, size_t);
-extern char * strdup(const char *);
-extern char * strtok(char *, const char *);
-
-
-extern int memcmp(const void *, const void *, size_t);
-extern int strcmp(const char *, const char *);
-extern int stricmp(const char *, const char *);
-extern int strncmp(const char *, const char *, size_t);
-extern int strnicmp(const char *, const char *, size_t);
-extern void * memchr(const void *, int, size_t);
-extern size_t strcspn(const char *, const char *);
-extern char * strpbrk(const char *, const char *);
-extern size_t strspn(const char *, const char *);
-extern char * strstr(const char *, const char *);
-extern char * stristr(const char *, const char *);
-extern char * strerror(int);
-extern size_t strlen(const char *);
-extern char * strchr(const char *, int);
-extern char * strichr(const char *, int);
-extern char * strrchr(const char *, int);
-extern char * strrichr(const char *, int);
-
-# 38 "Itoa.h"
-void reverse(char s[]);
-void ito_a(int n, char s[]);
-
 # 38 "ReadSignal.h"
 void readSignal(char *signal, int pos);
 int cmpSignal(char *pass, char *toc);
 
-# 36 "LED.h"
-void blink(int rounds, int time);
-
-# 90 "main.c"
+# 88 "main.c"
 int button = 0;
 
 void main(){
@@ -4994,7 +4955,7 @@ clearLCD();
 set_line(0,3);
 write_LCD("As senhas");
 set_line(1,2);
-write_LCD("não coincidem");
+write_LCD("nao coincidem");
 PORTCbits.RC2 = 1;
 _delay((unsigned long)((500)*(16000000/4000.0)));
 PORTCbits.RC2 = 0;
@@ -5010,7 +4971,7 @@ PORTCbits.RC2 = 0;
 i = 0;
 if(button == 1){
 clearLCD();
-write_LCD("Botão apertado");
+write_LCD("Botao apertado");
 _delay((unsigned long)((2000)*(16000000/4000.0)));
 button = 0;
 }

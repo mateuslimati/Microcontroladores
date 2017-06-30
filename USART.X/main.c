@@ -80,9 +80,7 @@
 #include "Interrupt.h"
 #include "USART.h"
 #include "ADC.h"
-#include "Itoa.h"
 #include "ReadSignal.h"
-#include "LED.h"
 
 #define high 1
 #define low 0
@@ -177,7 +175,7 @@ void main(){
             set_line(0,3);
             write_LCD("As senhas");
             set_line(1,2);
-            write_LCD("não coincidem");
+            write_LCD("nao coincidem");
             PORTCbits.RC2 = 1;
             __delay_ms(500);    
             PORTCbits.RC2 = 0;
@@ -193,7 +191,7 @@ void main(){
         i = 0;    
         if(button == 1){
             clearLCD();
-            write_LCD("Botão apertado");
+            write_LCD("Botao apertado");
             __delay_ms(2000);
             button = 0;
         }
