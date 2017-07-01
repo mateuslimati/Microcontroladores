@@ -365,7 +365,7 @@
 [v main@pass pass `[2]uc  1 a 2 38 ]
 "29
 [v main@toc toc `[2]uc  1 a 2 36 ]
-"46
+"47
 } 0
 "55 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _lerToque lerToque `(v  1 e 1 0 ]

@@ -1,6 +1,6 @@
-/*
+ /*
  * File:   main.c
- * Author: mateus
+ * Author: Mateus Lima
  *
  * Created on 25 de Abril de 2017, 11:03
  */
@@ -39,6 +39,7 @@ void main(){
         
         if(button == 1){
             cadastrarSenha(pass);
+            button = 0;
         }
             
     }while(1);

@@ -4881,6 +4881,7 @@ cmpPass(pass, toc);
 
 if(button == 1){
 cadastrarSenha(pass);
+button = 0;
 }
 
 }while(1);
