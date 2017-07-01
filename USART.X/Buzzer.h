@@ -28,17 +28,12 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef INTERRUPT_H
-#define	INTERRUPT_H
+#ifndef BUZZER
+#define	BUZZER
 
 #include <xc.h> // include processor files - each processor file is guarded.  
-#include <time.h>
-#include <pic18f4550.h>
 
-void interrupt low_priority INT();
-void interrupt ISR();
-void init_timer();
-void init_INTRB2();
+void bip(int rounds, int time);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

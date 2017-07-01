@@ -4738,7 +4738,7 @@ extern __nonreentrant void _delaywdt(unsigned long);
 extern __nonreentrant void _delay3(unsigned char);
 
 # 11 "ADC.c"
-void ADCInit(){
+void init_ADC(){
 TRISAbits.TRISA0 = 1;
 ADCON0 = 0;
 ADCON1 = 0x0e;
@@ -4746,7 +4746,7 @@ ADCON2 = 0xd9;
 ADCON0bits.ADON = 1;
 }
 
-unsigned int ADCRead(){
+unsigned int read_ADC(){
 unsigned int value;
 ADCON0bits.GO = 1;
 

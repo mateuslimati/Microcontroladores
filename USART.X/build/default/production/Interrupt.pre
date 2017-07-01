@@ -4790,7 +4790,7 @@ button = 1;
 }
 }
 
-void initINT2(){
+void init_INTRB2(){
 
 INTCONbits.GIE = 0;
 INTCONbits.PEIE = 0;

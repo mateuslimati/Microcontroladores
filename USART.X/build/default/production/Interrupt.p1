@@ -3632,10 +3632,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 363 ]
 }
 "40
-[v _initINT2 `(v ~T0 @X0 1 ef ]
+[v _init_INTRB2 `(v ~T0 @X0 1 ef ]
 {
-[; ;Interrupt.c: 40: void initINT2(){
-[e :U _initINT2 ]
+[; ;Interrupt.c: 40: void init_INTRB2(){
+[e :U _init_INTRB2 ]
 [f ]
 [; ;Interrupt.c: 42: INTCONbits.GIE = 0;
 "42

@@ -1,135 +1,92 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
 "41 Interrupt.h
-[v _initINT2 `(v ~T0 @X0 0 ef ]
+[v _init_INTRB2 `(v ~T0 @X0 0 ef ]
 "42 LCD.h
 [v _init_LCD `(v ~T0 @X0 0 ef ]
-"37 USART.h
-[v _init_UART `(v ~T0 @X0 0 ef ]
 "37 ADC.h
-[v _ADCInit `(v ~T0 @X0 0 ef ]
-"3812 /opt/microchip/xc8/v1.41/include/pic18f4550.h
-[s S149 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S149 . TRISC0 TRISC1 TRISC2 . TRISC6 TRISC7 ]
-"3820
-[s S150 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S150 . RC0 RC1 RC2 . RC6 RC7 ]
-"3811
-[u S148 `S149 1 `S150 1 ]
-[n S148 . . . ]
-"3829
-[v _TRISCbits `VS148 ~T0 @X0 0 e@3988 ]
-"40 LCD.h
-[v _clearLCD `(v ~T0 @X0 0 ef ]
-"43
-[v _write_LCD `(v ~T0 @X0 0 ef1`*uc ]
-"44
-[v _set_line `(v ~T0 @X0 0 ef2`i`i ]
-[v F3779 `(v ~T0 @X0 1 tf1`ul ]
-"161 /opt/microchip/xc8/v1.41/include/pic18.h
-[v __delay `JF3779 ~T0 @X0 0 e ]
-[p i __delay ]
-"41 LCD.h
-[v _send_msg `(v ~T0 @X0 0 ef1`uc ]
-"38 ReadSignal.h
-[v _readSignal `(v ~T0 @X0 0 ef2`*uc`i ]
-"39
-[v _cmpSignal `(i ~T0 @X0 0 ef2`*uc`*uc ]
-"2533 /opt/microchip/xc8/v1.41/include/pic18f4550.h
-[s S106 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S106 . RC0 RC1 RC2 . RC4 RC5 RC6 RC7 ]
-"2543
-[s S107 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S107 . T1OSO T1OSI CCP1 . TX RX ]
-"2551
-[s S108 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S108 . T13CKI . P1A . CK DT ]
-"2559
-[s S109 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S109 . . CCP2 PA1 ]
-"2564
-[s S110 :1 `uc 1 :1 `uc 1 ]
-[n S110 . . PA2 ]
-"2532
-[u S105 `S106 1 `S107 1 `S108 1 `S109 1 `S110 1 ]
-[n S105 . . . . . . ]
-"2569
-[v _PORTCbits `VS105 ~T0 @X0 0 e@3970 ]
-"13 main.c
+[v _init_ADC `(v ~T0 @X0 0 ef ]
+"36 TOCTOC.h
+[v _cadastrarSenha `(v ~T0 @X0 0 ef1`*uc ]
+"37
+[v _lerToque `(v ~T0 @X0 0 ef1`*uc ]
+"38
+[v _cmpPass `(v ~T0 @X0 0 ef2`*uc`*uc ]
+"35 main.h
 [p x PLLDIV=1 ]
-"14
-[p x CPUDIV=OSC1_PLL2 ]
-"15
-[p x USBDIV=1 ]
-"18
-[p x FOSC=HS ]
-"19
-[p x FCMEN=OFF ]
-"20
-[p x IESO=OFF ]
-"23
-[p x PWRT=OFF ]
-"24
-[p x BOR=ON ]
-"25
-[p x BORV=3 ]
-"26
-[p x VREGEN=OFF ]
-"29
-[p x WDT=OFF ]
-"30
-[p x WDTPS=32768 ]
-"33
-[p x CCP2MX=ON ]
-"34
-[p x PBADEN=OFF ]
-"35
-[p x LPT1OSC=OFF ]
 "36
-[p x MCLRE=ON ]
-"39
-[p x STVREN=ON ]
+[p x CPUDIV=OSC1_PLL2 ]
+"37
+[p x USBDIV=1 ]
 "40
-[p x LVP=OFF ]
+[p x FOSC=HS ]
 "41
-[p x ICPRT=OFF ]
+[p x FCMEN=OFF ]
 "42
-[p x XINST=OFF ]
+[p x IESO=OFF ]
 "45
-[p x CP0=OFF ]
+[p x PWRT=OFF ]
 "46
-[p x CP1=OFF ]
+[p x BOR=ON ]
 "47
-[p x CP2=OFF ]
+[p x BORV=3 ]
 "48
-[p x CP3=OFF ]
+[p x VREGEN=OFF ]
 "51
-[p x CPB=OFF ]
+[p x WDT=OFF ]
 "52
-[p x CPD=OFF ]
+[p x WDTPS=32768 ]
 "55
-[p x WRT0=OFF ]
+[p x CCP2MX=ON ]
 "56
-[p x WRT1=OFF ]
+[p x PBADEN=OFF ]
 "57
-[p x WRT2=OFF ]
+[p x LPT1OSC=OFF ]
 "58
-[p x WRT3=OFF ]
+[p x MCLRE=ON ]
 "61
-[p x WRTC=OFF ]
+[p x STVREN=ON ]
 "62
-[p x WRTB=OFF ]
+[p x LVP=OFF ]
 "63
-[p x WRTD=OFF ]
-"66
-[p x EBTR0=OFF ]
+[p x ICPRT=OFF ]
+"64
+[p x XINST=OFF ]
 "67
-[p x EBTR1=OFF ]
+[p x CP0=OFF ]
 "68
-[p x EBTR2=OFF ]
+[p x CP1=OFF ]
 "69
+[p x CP2=OFF ]
+"70
+[p x CP3=OFF ]
+"73
+[p x CPB=OFF ]
+"74
+[p x CPD=OFF ]
+"77
+[p x WRT0=OFF ]
+"78
+[p x WRT1=OFF ]
+"79
+[p x WRT2=OFF ]
+"80
+[p x WRT3=OFF ]
+"83
+[p x WRTC=OFF ]
+"84
+[p x WRTB=OFF ]
+"85
+[p x WRTD=OFF ]
+"88
+[p x EBTR0=OFF ]
+"89
+[p x EBTR1=OFF ]
+"90
+[p x EBTR2=OFF ]
+"91
 [p x EBTR3=OFF ]
-"72
+"94
 [p x EBTRB=OFF ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
@@ -3671,361 +3628,81 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Interrupt.h: 38: void interrupt low_priority INT();
 [; ;Interrupt.h: 39: void interrupt ISR();
 [; ;Interrupt.h: 40: void init_timer();
-[; ;Interrupt.h: 41: void initINT2();
-[; ;USART.h: 37: void init_UART();
-[; ;USART.h: 38: void UART_Write(char data);
-[; ;USART.h: 39: char UART_TX_Empty();
-[; ;USART.h: 40: void UART_Write_Text(char *text);
-[; ;USART.h: 41: char UART_Data_Ready();
-[; ;USART.h: 42: char UART_Read();
-[; ;USART.h: 43: void UART_Read_Text(char *Output, unsigned int length);
-[; ;ADC.h: 37: void ADCInit();
-[; ;ADC.h: 38: unsigned int ADCRead();
-[; ;ReadSignal.h: 38: void readSignal(char *signal, int pos);
-[; ;ReadSignal.h: 39: int cmpSignal(char *pass, char *toc);
-"88 main.c
+[; ;Interrupt.h: 41: void init_INTRB2();
+[; ;ADC.h: 37: void init_ADC();
+[; ;ADC.h: 38: unsigned int read_ADC();
+[; ;TOCTOC.h: 36: void cadastrarSenha(char* pass);
+[; ;TOCTOC.h: 37: void lerToque(char* toque);
+[; ;TOCTOC.h: 38: void cmpPass(char* pass, char* toque);
+"18 main.c
 [v _button `i ~T0 @X0 1 e ]
 [i _button
 -> 0 `i
 ]
-[; ;main.c: 88: int button = 0;
-"90
+[; ;main.c: 18: int button = 0;
+"20
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 90: void main(){
+[; ;main.c: 20: void main(){
 [e :U _main ]
 [f ]
-[; ;main.c: 92: initINT2();
-"92
-[e ( _initINT2 ..  ]
-[; ;main.c: 93: init_LCD();
-"93
+[; ;main.c: 22: init_INTRB2();
+"22
+[e ( _init_INTRB2 ..  ]
+[; ;main.c: 23: init_LCD();
+"23
 [e ( _init_LCD ..  ]
-[; ;main.c: 94: init_UART();
-"94
-[e ( _init_UART ..  ]
-[; ;main.c: 95: ADCInit();
-"95
-[e ( _ADCInit ..  ]
-[; ;main.c: 97: TRISCbits.RC2 = 0;
-"97
-[e = . . _TRISCbits 1 2 -> -> 0 `i `uc ]
-"99
-[v _i `i ~T0 @X0 1 a ]
-[; ;main.c: 99: int i = 0;
-[e = _i -> 0 `i ]
-[; ;main.c: 100: clearLCD();
-"100
-[e ( _clearLCD ..  ]
-"102
+[; ;main.c: 24: init_ADC();
+"24
+[e ( _init_ADC ..  ]
+"26
 [v _pass `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 102: char pass[2];
-[; ;main.c: 103: pass[0] = 0x00;
-"103
+[; ;main.c: 26: char pass[2];
+[; ;main.c: 27: pass[0] = 0x00;
+"27
 [e = *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 104: pass[1] = 0x00;
-"104
+[; ;main.c: 28: pass[1] = 0x00;
+"28
 [e = *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
-"105
+"29
 [v _toc `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 105: char toc[2];
-[; ;main.c: 106: toc[0] = 0x00;
-"106
+[; ;main.c: 29: char toc[2];
+[; ;main.c: 30: toc[0] = 0x00;
+"30
 [e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 107: toc[1] = 0x00;
-"107
+[; ;main.c: 31: toc[1] = 0x00;
+"31
 [e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 110: write_LCD("Voce tem 5 seg-");
-"110
-[e ( _write_LCD (1 -> :s 1C `*uc ]
-[; ;main.c: 111: set_line(1,0);
-"111
-[e ( _set_line (2 , -> 1 `i -> 0 `i ]
-[; ;main.c: 112: write_LCD("undos para bater");
-"112
-[e ( _write_LCD (1 -> :s 2C `*uc ]
-[; ;main.c: 113: _delay((unsigned long)((3000)*(16000000/4000.0)));
-"113
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 115: while(i < 4){
-"115
-[e $U 364  ]
-[e :U 365 ]
-{
-[; ;main.c: 116: clearLCD();
-"116
-[e ( _clearLCD ..  ]
-[; ;main.c: 117: send_msg('1'+ i);
-"117
-[e ( _send_msg (1 -> + -> 49 `ui -> _i `ui `uc ]
-[; ;main.c: 118: if(i == 0)
-"118
-[e $ ! == _i -> 0 `i 367  ]
-[; ;main.c: 119: readSignal(&pass[0], 0);
-"119
-[e ( _readSignal (2 , &U *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> 0 `i ]
-[e $U 368  ]
-"120
-[e :U 367 ]
-[; ;main.c: 120: else if(i == 1)
-[e $ ! == _i -> 1 `i 369  ]
-[; ;main.c: 121: readSignal(&pass[0], 1);
-"121
-[e ( _readSignal (2 , &U *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> 1 `i ]
-[e $U 370  ]
-"122
-[e :U 369 ]
-[; ;main.c: 122: else if(i == 2)
-[e $ ! == _i -> 2 `i 371  ]
-[; ;main.c: 123: readSignal(&pass[1], 0);
-"123
-[e ( _readSignal (2 , &U *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> 0 `i ]
-[e $U 372  ]
-"124
-[e :U 371 ]
-[; ;main.c: 124: else
-[; ;main.c: 125: readSignal(&pass[1], 1);
-"125
-[e ( _readSignal (2 , &U *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> 1 `i ]
-[e :U 372 ]
-[e :U 370 ]
-[e :U 368 ]
-[; ;main.c: 126: i++;
-"126
-[e ++ _i -> 1 `i ]
-"127
-}
-[e :U 364 ]
-"115
-[e $ < _i -> 4 `i 365  ]
+[; ;main.c: 33: cadastrarSenha(pass);
+"33
+[e ( _cadastrarSenha (1 &U _pass ]
+[; ;main.c: 35: do{
+"35
 [e :U 366 ]
-[; ;main.c: 127: }
-[; ;main.c: 128: i = 0;
-"128
-[e = _i -> 0 `i ]
-[; ;main.c: 130: clearLCD();
-"130
-[e ( _clearLCD ..  ]
-[; ;main.c: 131: set_line(0,5);
-"131
-[e ( _set_line (2 , -> 0 `i -> 5 `i ]
-[; ;main.c: 132: write_LCD("Leitura");
-"132
-[e ( _write_LCD (1 -> :s 3C `*uc ]
-[; ;main.c: 133: set_line(1,3);
-"133
-[e ( _set_line (2 , -> 1 `i -> 3 `i ]
-[; ;main.c: 134: write_LCD("Finalizada");
-"134
-[e ( _write_LCD (1 -> :s 4C `*uc ]
-[; ;main.c: 135: _delay((unsigned long)((3000)*(16000000/4000.0)));
-"135
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 137: do{
-"137
-[e :U 375 ]
 {
-[; ;main.c: 138: clearLCD();
-"138
-[e ( _clearLCD ..  ]
-[; ;main.c: 139: set_line(0,0);
-"139
-[e ( _set_line (2 , -> 0 `i -> 0 `i ]
-[; ;main.c: 140: write_LCD("Bata na porta");
-"140
-[e ( _write_LCD (1 -> :s 5C `*uc ]
-[; ;main.c: 141: _delay((unsigned long)((3000)*(16000000/4000.0)));
-"141
-[e ( __delay (1 -> * -> -> 3000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 142: toc[0] = 0x00;
-"142
-[e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 143: toc[1] = 0x00;
-"143
-[e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 145: while(i < 4){
-"145
-[e $U 376  ]
-[e :U 377 ]
+[; ;main.c: 37: lerToque(toc);
+"37
+[e ( _lerToque (1 &U _toc ]
+[; ;main.c: 38: cmpPass(pass, toc);
+"38
+[e ( _cmpPass (2 , &U _pass &U _toc ]
+[; ;main.c: 40: if(button == 1){
+"40
+[e $ ! == _button -> 1 `i 367  ]
 {
-[; ;main.c: 146: clearLCD();
-"146
-[e ( _clearLCD ..  ]
-[; ;main.c: 147: send_msg('1'+ i);
-"147
-[e ( _send_msg (1 -> + -> 49 `ui -> _i `ui `uc ]
-[; ;main.c: 148: if(i == 0)
-"148
-[e $ ! == _i -> 0 `i 379  ]
-[; ;main.c: 149: readSignal(&toc[0], 0);
-"149
-[e ( _readSignal (2 , &U *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> 0 `i ]
-[e $U 380  ]
-"150
-[e :U 379 ]
-[; ;main.c: 150: else if(i == 1)
-[e $ ! == _i -> 1 `i 381  ]
-[; ;main.c: 151: readSignal(&toc[0], 1);
-"151
-[e ( _readSignal (2 , &U *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> 1 `i ]
-[e $U 382  ]
-"152
-[e :U 381 ]
-[; ;main.c: 152: else if(i == 2)
-[e $ ! == _i -> 2 `i 383  ]
-[; ;main.c: 153: readSignal(&toc[1], 0);
-"153
-[e ( _readSignal (2 , &U *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> 0 `i ]
-[e $U 384  ]
-"154
-[e :U 383 ]
-[; ;main.c: 154: else
-[; ;main.c: 155: readSignal(&toc[1], 1);
-"155
-[e ( _readSignal (2 , &U *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> 1 `i ]
-[e :U 384 ]
-[e :U 382 ]
-[e :U 380 ]
-[; ;main.c: 156: i++;
-"156
-[e ++ _i -> 1 `i ]
-"157
+[; ;main.c: 41: cadastrarSenha(pass);
+"41
+[e ( _cadastrarSenha (1 &U _pass ]
+"42
 }
-[e :U 376 ]
-"145
-[e $ < _i -> 4 `i 377  ]
-[e :U 378 ]
-[; ;main.c: 157: }
-[; ;main.c: 158: i = 0;
-"158
-[e = _i -> 0 `i ]
-[; ;main.c: 160: i = cmpSignal(pass, toc);
-"160
-[e = _i ( _cmpSignal (2 , &U _pass &U _toc ]
-[; ;main.c: 162: if(i == 1){
-"162
-[e $ ! == _i -> 1 `i 385  ]
-{
-[; ;main.c: 163: clearLCD();
-"163
-[e ( _clearLCD ..  ]
-[; ;main.c: 164: set_line(0,3);
-"164
-[e ( _set_line (2 , -> 0 `i -> 3 `i ]
-[; ;main.c: 165: write_LCD("As senhas");
-"165
-[e ( _write_LCD (1 -> :s 6C `*uc ]
-[; ;main.c: 166: set_line(1,3);
-"166
-[e ( _set_line (2 , -> 1 `i -> 3 `i ]
-[; ;main.c: 167: write_LCD("coincidem");
-"167
-[e ( _write_LCD (1 -> :s 7C `*uc ]
-[; ;main.c: 168: PORTCbits.RC2 = 1;
-"168
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 169: _delay((unsigned long)((1000)*(16000000/4000.0)));
-"169
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 170: PORTCbits.RC2 = 0;
-"170
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 171: _delay((unsigned long)((1000)*(16000000/4000.0)));
-"171
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"172
+[e :U 367 ]
+"44
 }
-[; ;main.c: 172: }
-[e $U 386  ]
-"173
-[e :U 385 ]
-[; ;main.c: 173: else{
-{
-[; ;main.c: 174: clearLCD();
-"174
-[e ( _clearLCD ..  ]
-[; ;main.c: 175: set_line(0,3);
-"175
-[e ( _set_line (2 , -> 0 `i -> 3 `i ]
-[; ;main.c: 176: write_LCD("As senhas");
-"176
-[e ( _write_LCD (1 -> :s 8C `*uc ]
-[; ;main.c: 177: set_line(1,2);
-"177
-[e ( _set_line (2 , -> 1 `i -> 2 `i ]
-[; ;main.c: 178: write_LCD("nao coincidem");
-"178
-[e ( _write_LCD (1 -> :s 9C `*uc ]
-[; ;main.c: 179: PORTCbits.RC2 = 1;
-"179
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 180: _delay((unsigned long)((500)*(16000000/4000.0)));
-"180
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 181: PORTCbits.RC2 = 0;
-"181
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 182: _delay((unsigned long)((500)*(16000000/4000.0)));
-"182
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 183: PORTCbits.RC2 = 1;
-"183
-[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-[; ;main.c: 184: _delay((unsigned long)((500)*(16000000/4000.0)));
-"184
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 185: PORTCbits.RC2 = 0;
-"185
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 186: _delay((unsigned long)((500)*(16000000/4000.0)));
-"186
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-"187
-}
-[e :U 386 ]
-[; ;main.c: 187: }
-[; ;main.c: 189: PORTCbits.RC2 = 0;
-"189
-[e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 191: i = 0;
-"191
-[e = _i -> 0 `i ]
-[; ;main.c: 192: if(button == 1){
-"192
-[e $ ! == _button -> 1 `i 387  ]
-{
-[; ;main.c: 193: clearLCD();
-"193
-[e ( _clearLCD ..  ]
-[; ;main.c: 194: write_LCD("Botao apertado");
-"194
-[e ( _write_LCD (1 -> :s 10C `*uc ]
-[; ;main.c: 195: _delay((unsigned long)((2000)*(16000000/4000.0)));
-"195
-[e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
-[; ;main.c: 196: button = 0;
-"196
-[e = _button -> 0 `i ]
-"197
-}
-[e :U 387 ]
-"199
-}
-[; ;main.c: 197: }
-[; ;main.c: 199: }while(1);
-[e $ != -> 1 `i -> 0 `i 375  ]
-[e :U 374 ]
-[; ;main.c: 201: }
-"201
+[; ;main.c: 42: }
+[; ;main.c: 44: }while(1);
+[e $ != -> 1 `i -> 0 `i 366  ]
+[e :U 365 ]
+[; ;main.c: 46: }
+"46
 [e :UE 363 ]
 }
-[a 6C 65 115 32 115 101 110 104 97 115 0 ]
-[a 8C 65 115 32 115 101 110 104 97 115 0 ]
-[a 2C 117 110 100 111 115 32 112 97 114 97 32 98 97 116 101 114 0 ]
-[a 10C 66 111 116 97 111 32 97 112 101 114 116 97 100 111 0 ]
-[a 9C 110 97 111 32 99 111 105 110 99 105 100 101 109 0 ]
-[a 7C 99 111 105 110 99 105 100 101 109 0 ]
-[a 5C 66 97 116 97 32 110 97 32 112 111 114 116 97 0 ]
-[a 3C 76 101 105 116 117 114 97 0 ]
-[a 4C 70 105 110 97 108 105 122 97 100 97 0 ]
-[a 1C 86 111 99 101 32 116 101 109 32 53 32 115 101 103 45 0 ]

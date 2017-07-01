@@ -3556,10 +3556,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
 "11 ADC.c
-[v _ADCInit `(v ~T0 @X0 1 ef ]
+[v _init_ADC `(v ~T0 @X0 1 ef ]
 {
-[; ;ADC.c: 11: void ADCInit(){
-[e :U _ADCInit ]
+[; ;ADC.c: 11: void init_ADC(){
+[e :U _init_ADC ]
 [f ]
 [; ;ADC.c: 12: TRISAbits.TRISA0 = 1;
 "12
@@ -3581,10 +3581,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 362 ]
 }
 "19
-[v _ADCRead `(ui ~T0 @X0 1 ef ]
+[v _read_ADC `(ui ~T0 @X0 1 ef ]
 {
-[; ;ADC.c: 19: unsigned int ADCRead(){
-[e :U _ADCRead ]
+[; ;ADC.c: 19: unsigned int read_ADC(){
+[e :U _read_ADC ]
 [f ]
 "20
 [v _value `ui ~T0 @X0 1 a ]

@@ -1,8 +1,8 @@
  build/default/production/main.d  \
  build/default/production/main.p1:  \
  main.c  \
-USART.h  \
+main.h  \
 LCD.h  \
-ReadSignal.h  \
+TOCTOC.h  \
 ADC.h  \
 Interrupt.h 

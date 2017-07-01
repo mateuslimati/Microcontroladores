@@ -34,8 +34,8 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <pic18f4550.h>
 
-void ADCInit();
-unsigned int ADCRead();
+void init_ADC();
+unsigned int read_ADC();
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

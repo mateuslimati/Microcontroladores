@@ -37,7 +37,7 @@ void interrupt ISR(){
     }
 }
 
-void initINT2(){
+void init_INTRB2(){
     
     INTCONbits.GIE = 0;
     INTCONbits.PEIE = 0;
