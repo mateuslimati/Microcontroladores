@@ -34,12 +34,10 @@ void main(){
  
     do{
         
-        lerToque(toc);
-        cmpPass(pass, toc);
-        
+        destravarPorta(pass, toc);
         if(button == 1){
-            cadastrarSenha(pass);
             button = 0;
+            cadastrarSenha(pass);
         }
             
     }while(1);

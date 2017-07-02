@@ -35,7 +35,8 @@
 
 void cadastrarSenha(char* pass);
 void lerToque(char* toque);
-void cmpPass(char* pass, char* toque);
+int cmpPass(char* pass, char* toque);
+void destravarPorta(char* pass, char* toque);
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

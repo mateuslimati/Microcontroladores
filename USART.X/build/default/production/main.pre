@@ -4854,7 +4854,8 @@ unsigned int read_ADC();
 # 36 "TOCTOC.h"
 void cadastrarSenha(char* pass);
 void lerToque(char* toque);
-void cmpPass(char* pass, char* toque);
+int cmpPass(char* pass, char* toque);
+void destravarPorta(char* pass, char* toque);
 
 # 18 "main.c"
 int button = 0;
@@ -4876,12 +4877,10 @@ cadastrarSenha(pass);
 
 do{
 
-lerToque(toc);
-cmpPass(pass, toc);
-
+destravarPorta(pass, toc);
 if(button == 1){
-cadastrarSenha(pass);
 button = 0;
+cadastrarSenha(pass);
 }
 
 }while(1);

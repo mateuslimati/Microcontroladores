@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.41/dat/en_msgs.txt -cs \
   -h+dist/default/production/USART.X.production.sym \
   --cmf=dist/default/production/USART.X.production.cmf -z -Q18F4550 \
-  -o/tmp/xcXemVFzW -Mdist/default/production/USART.X.production.map -E1 \
+  -o/tmp/xcX4HfPVt -Mdist/default/production/USART.X.production.map -E1 \
   -ver=XC8 -ASTACK=060h-07ffh -pstack=STACK -ACODE=00h-07FFFh \
   -ACONST=00h-07FFFh -ASMALLCONST=0800h-08FFhx120 \
   -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh -AABS1=00h-07FFh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcXmsZmQf.obj dist/default/production/USART.X.production.obj 
+  /tmp/xcXQW2fBi.obj dist/default/production/USART.X.production.obj 
 
 Object code version is 3.11
 
@@ -34,36 +34,38 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcXmsZmQf.obj
+/tmp/xcXQW2fBi.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production/USART.X.production.obj
                 intcode                               8        8        6        4       0
-                temp                                 2B       2B        1        1       1
-                smallconst                          800      800       4E      400       0
-                intcode_body                        CEE      CEE       84      427       0
-                text16                              E6E      E6E       38      427       0
-                text15                              F00      F00       1E      427       0
-                text14                              F8A      F8A        8      427       0
-                text13                              F3A      F3A       18      427       0
-                text12                              C4C      C4C       A2      427       0
-                text11                              F1E      F1E       1C      427       0
-                text10                              EA6      EA6       30      427       0
-                text9                               E24      E24       4A      427       0
-                text8                               84E      84E      16E      427       0
-                text7                               B8A      B8A       C2      427       0
-                text6                               DD8      DD8       4C      427       0
-                text5                               AB2      AB2       D8      427       0
-                text4                               F68      F68       12      427       0
-                text3                               F7A      F7A       10      427       0
-                text2                               ED6      ED6       2A      427       0
-                text1                               9BC      9BC       F6      427       0
-                text0                               D72      D72       66      427       0
-                cstackCOMRAM                          1        1       28        1       1
-                bssCOMRAM                            29       29        2        1       1
-                cinit                               F52      F52       16      427       0
+                temp                                 35       35        1        1       1
+                smallconst                          800      800       76      400       0
+                intcode_body                        F52      F52       84      43B       0
+                text18                              DEE      DEE       C2      43B       0
+                text17                             1130     1130       38      43B       0
+                text16                             11C2     11C2       1E      43B       0
+                text15                             124C     124C        8      43B       0
+                text14                             109A     109A       4C      43B       0
+                text13                             11E0     11E0       1C      43B       0
+                text12                             1168     1168       30      43B       0
+                text11                             10E6     10E6       4A      43B       0
+                text10                              D0E      D0E       E0      43B       0
+                text9                               FD6      FD6       6A      43B       0
+                text8                              11FC     11FC       18      43B       0
+                text7                               EB0      EB0       A2      43B       0
+                text6                               C04      C04      10A      43B       0
+                text5                               A56      A56      1AE      43B       0
+                text4                               876      876      1E0      43B       0
+                text3                              122A     122A       12      43B       0
+                text2                              123C     123C       10      43B       0
+                text1                              1198     1198       2A      43B       0
+                text0                              1040     1040       5A      43B       0
+                cstackCOMRAM                          1        1       32        1       1
+                bssCOMRAM                            33       33        2        1       1
+                cinit                              1214     1214       16      43B       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -72,37 +74,39 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                intcode_body                        CEE      CEE       84         0
-                text16                              E6E      E6E       38         0
-                text15                              F00      F00       1E         0
-                text14                              F8A      F8A        8         0
-                text13                              F3A      F3A       18         0
-                text12                              C4C      C4C       A2         0
-                text11                              F1E      F1E       1C         0
-                text10                              EA6      EA6       30         0
-                text9                               E24      E24       4A         0
-                text8                               84E      84E      16E         0
-                text7                               B8A      B8A       C2         0
-                text6                               DD8      DD8       4C         0
-                text5                               AB2      AB2       D8         0
-                text4                               F68      F68       12         0
-                text3                               F7A      F7A       10         0
-                text2                               ED6      ED6       2A         0
-                text1                               9BC      9BC       F6         0
-                text0                               D72      D72       66         0
-                cinit                               F52      F52       16         0
+                intcode_body                        F52      F52       84         0
+                text18                              DEE      DEE       C2         0
+                text17                             1130     1130       38         0
+                text16                             11C2     11C2       1E         0
+                text15                             124C     124C        8         0
+                text14                             109A     109A       4C         0
+                text13                             11E0     11E0       1C         0
+                text12                             1168     1168       30         0
+                text11                             10E6     10E6       4A         0
+                text10                              D0E      D0E       E0         0
+                text9                               FD6      FD6       6A         0
+                text8                              11FC     11FC       18         0
+                text7                               EB0      EB0       A2         0
+                text6                               C04      C04      10A         0
+                text5                               A56      A56      1AE         0
+                text4                               876      876      1E0         0
+                text3                              122A     122A       12         0
+                text2                              123C     123C       10         0
+                text1                              1198     1198       2A         0
+                text0                              1040     1040       5A         0
+                cinit                              1214     1214       16         0
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
-                smallconst                          800      800       4E         0
+                smallconst                          800      800       76         0
 
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                temp                                 2B       2B        1         1
-                cstackCOMRAM                          1        1       28         1
-                bssCOMRAM                            29       29        2         1
+                temp                                 35       35        1         1
+                cstackCOMRAM                          1        1       32         1
+                bssCOMRAM                            33       33        2         1
 
         CLASS   ABS1           
 
@@ -143,10 +147,10 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  00002B  00002C         1       1  COMRAM  
+                cstackCOMRAM                   000001  000035  000036         1       1  COMRAM  
                 intcode                        000008  00000A  000012         4       0  CODE    
-                smallconst                     000800  00004E  00084E       400       0  SMALLCON
-                text8                          00084E  000744  000F92       427       0  CODE    
+                smallconst                     000800  000076  000876       400       0  SMALLCON
+                text4                          000876  0009DE  001254       43B       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -162,24 +166,26 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
-        BIGRAM           00002C-0007FF              7D4
+        BIGRAM           000036-0007FF              7CA
         CODE             000004-000007                4
                          000012-0007FF              7EE
-                         000F92-007FFF             706E
-        COMRAM           00002C-00005F               34
+                         001254-007FFF             6DAC
+        COMRAM           000036-00005F               2A
         CONST            000004-000007                4
                          000012-0007FF              7EE
-                         000F92-007FFF             706E
+                         001254-007FFF             6DAC
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000F92-007FFF             706E
+        MEDIUMCONST      001254-007FFF             6DAC
         RAM              000060-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000F92-007FFF              100
+        SMALLCONST       001254-007FFF              100
         STACK            000060-0007FF              7A0
 
                                   Symbol Table
 
+?_cmpPass                cstackCOMRAM 000018
 ?_cmpSignal              cstackCOMRAM 00000F
+?_confirmarSenha         cstackCOMRAM 000018
 ?_read_ADC               cstackCOMRAM 00000F
 _ADCON0                  (abs)        000FC2
 _ADCON0bits              (abs)        000FC2
@@ -304,13 +310,13 @@ __Hrdata                 rdata        000000
 __Hreset_vec             reset_vec    000004
 __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
-__Hsmallconst            smallconst   00084E
+__Hsmallconst            smallconst   000876
 __Hspace_0               (abs)        30000E
-__Hspace_1               (abs)        00002C
+__Hspace_1               (abs)        000036
 __Hspace_2               (abs)        000000
 __Hstack                 stack        000000
 __Hstruct                struct       000000
-__Htemp                  temp         00002C
+__Htemp                  temp         000036
 __Htext                  text         000000
 __Htext0                 text0        000000
 __Htext1                 text1        000000
@@ -321,6 +327,8 @@ __Htext13                text13       000000
 __Htext14                text14       000000
 __Htext15                text15       000000
 __Htext16                text16       000000
+__Htext17                text17       000000
+__Htext18                text18       000000
 __Htext2                 text2        000000
 __Htext3                 text3        000000
 __Htext4                 text4        000000
@@ -386,7 +394,7 @@ __Lspace_1               (abs)        000000
 __Lspace_2               (abs)        000000
 __Lstack                 stack        000000
 __Lstruct                struct       000000
-__Ltemp                  temp         00002B
+__Ltemp                  temp         000035
 __Ltext                  text         000000
 __Ltext0                 text0        000000
 __Ltext1                 text1        000000
@@ -397,6 +405,8 @@ __Ltext13                text13       000000
 __Ltext14                text14       000000
 __Ltext15                text15       000000
 __Ltext16                text16       000000
+__Ltext17                text17       000000
+__Ltext18                text18       000000
 __Ltext2                 text2        000000
 __Ltext3                 text3        000000
 __Ltext4                 text4        000000
@@ -406,7 +416,7 @@ __Ltext7                 text7        000000
 __Ltext8                 text8        000000
 __Ltext9                 text9        000000
 __S0                     (abs)        30000E
-__S1                     (abs)        00002C
+__S1                     (abs)        000036
 __S2                     (abs)        000000
 ___inthi_sp              stack        000000
 ___intlo_sp              stack        000000
@@ -415,50 +425,54 @@ ___rparam_used           (abs)        000001
 ___sp                    stack        000000
 __accesstop              (abs)        000060
 __activetblptr           (abs)        000001
-__end_of_ISR             intcode_body 000D72
-__end_of__initialization cinit        000F56
-__end_of_bip             text7        000C4C
-__end_of_cadastrarSenha  text8        0009BC
-__end_of_clearLCD        text14       000F92
-__end_of_cmpPass         text5        000B8A
-__end_of_cmpSignal       text6        000E24
-__end_of_ena_pulse       text16       000EA6
-__end_of_init_ADC        text4        000F7A
-__end_of_init_INTRB2     text3        000F8A
-__end_of_init_LCD        text2        000F00
-__end_of_lerToque        text1        000AB2
-__end_of_main            text0        000DD8
-__end_of_readSignal      text12       000CEE
-__end_of_read_ADC        text13       000F52
-__end_of_send_cfg        text15       000F1E
-__end_of_send_msg        text10       000ED6
-__end_of_set_line        text11       000F3A
-__end_of_write_LCD       text9        000E6E
-__initialization         cinit        000F52
+__end_of_ISR             intcode_body 000FD6
+__end_of__initialization cinit        001218
+__end_of_bip             text18       000EB0
+__end_of_cadastrarSenha  text5        000C04
+__end_of_clearLCD        text15       001254
+__end_of_cmpPass         text10       000DEE
+__end_of_cmpSignal       text14       0010E6
+__end_of_confirmarSenha  text9        001040
+__end_of_destravarPorta  text4        000A56
+__end_of_ena_pulse       text17       001168
+__end_of_init_ADC        text3        00123C
+__end_of_init_INTRB2     text2        00124C
+__end_of_init_LCD        text1        0011C2
+__end_of_lerToque        text6        000D0E
+__end_of_main            text0        00109A
+__end_of_readSignal      text7        000F52
+__end_of_read_ADC        text8        001214
+__end_of_send_cfg        text16       0011E0
+__end_of_send_msg        text12       001198
+__end_of_set_line        text13       0011FC
+__end_of_write_LCD       text11       001130
+__initialization         cinit        001214
 __mediumconst            mediumconst  000000
-__pbssCOMRAM             bssCOMRAM    000029
-__pcinit                 cinit        000F52
+__pbssCOMRAM             bssCOMRAM    000033
+__pcinit                 cinit        001214
 __pcstackCOMRAM          cstackCOMRAM 000001
 __pintcode               intcode      000008
-__pintcode_body          intcode_body 000CEE
+__pintcode_body          intcode_body 000F52
 __psmallconst            smallconst   000800
-__ptext0                 text0        000D72
-__ptext1                 text1        0009BC
-__ptext10                text10       000EA6
-__ptext11                text11       000F1E
-__ptext12                text12       000C4C
-__ptext13                text13       000F3A
-__ptext14                text14       000F8A
-__ptext15                text15       000F00
-__ptext16                text16       000E6E
-__ptext2                 text2        000ED6
-__ptext3                 text3        000F7A
-__ptext4                 text4        000F68
-__ptext5                 text5        000AB2
-__ptext6                 text6        000DD8
-__ptext7                 text7        000B8A
-__ptext8                 text8        00084E
-__ptext9                 text9        000E24
+__ptext0                 text0        001040
+__ptext1                 text1        001198
+__ptext10                text10       000D0E
+__ptext11                text11       0010E6
+__ptext12                text12       001168
+__ptext13                text13       0011E0
+__ptext14                text14       00109A
+__ptext15                text15       00124C
+__ptext16                text16       0011C2
+__ptext17                text17       001130
+__ptext18                text18       000DEE
+__ptext2                 text2        00123C
+__ptext3                 text3        00122A
+__ptext4                 text4        000876
+__ptext5                 text5        000A56
+__ptext6                 text6        000C04
+__ptext7                 text7        000EB0
+__ptext8                 text8        0011FC
+__ptext9                 text9        000FD6
 __ramtop                 ramtop       000800
 __size_of_ISR            (abs)        000000
 __size_of_bip            (abs)        000000
@@ -466,6 +480,8 @@ __size_of_cadastrarSenha (abs)        000000
 __size_of_clearLCD       (abs)        000000
 __size_of_cmpPass        (abs)        000000
 __size_of_cmpSignal      (abs)        000000
+__size_of_confirmarSenha (abs)        000000
+__size_of_destravarPorta (abs)        000000
 __size_of_ena_pulse      (abs)        000000
 __size_of_init_ADC       (abs)        000000
 __size_of_init_INTRB2    (abs)        000000
@@ -479,46 +495,54 @@ __size_of_send_msg       (abs)        000000
 __size_of_set_line       (abs)        000000
 __size_of_write_LCD      (abs)        000000
 __smallconst             smallconst   000800
-_bip                     text7        000B8A
-_button                  bssCOMRAM    000029
-_cadastrarSenha          text8        00084E
-_clearLCD                text14       000F8A
-_cmpPass                 text5        000AB2
-_cmpSignal               text6        000DD8
-_ena_pulse               text16       000E6E
-_init_ADC                text4        000F68
-_init_INTRB2             text3        000F7A
-_init_LCD                text2        000ED6
-_lerToque                text1        0009BC
-_main                    text0        000D72
-_readSignal              text12       000C4C
-_read_ADC                text13       000F3A
-_send_cfg                text15       000F00
-_send_msg                text10       000EA6
-_set_line                text11       000F1E
-_write_LCD               text9        000E24
+_bip                     text18       000DEE
+_button                  bssCOMRAM    000033
+_cadastrarSenha          text5        000A56
+_clearLCD                text15       00124C
+_cmpPass                 text10       000D0E
+_cmpSignal               text14       00109A
+_confirmarSenha          text9        000FD6
+_destravarPorta          text4        000876
+_ena_pulse               text17       001130
+_init_ADC                text3        00122A
+_init_INTRB2             text2        00123C
+_init_LCD                text1        001198
+_lerToque                text6        000C04
+_main                    text0        001040
+_readSignal              text7        000EB0
+_read_ADC                text8        0011FC
+_send_cfg                text16       0011C2
+_send_msg                text12       001168
+_set_line                text13       0011E0
+_write_LCD               text11       0010E6
 bip@j                    cstackCOMRAM 000015
 bip@rounds               cstackCOMRAM 00000F
 bip@time                 cstackCOMRAM 000011
-btemp                    temp         00002B
-cadastrarSenha@i         cstackCOMRAM 000023
-cadastrarSenha@pass      cstackCOMRAM 00001F
+btemp                    temp         000035
+cadastrarSenha@i         cstackCOMRAM 000027
+cadastrarSenha@j         cstackCOMRAM 000029
+cadastrarSenha@pass      cstackCOMRAM 000023
+cadastrarSenha@temp1     cstackCOMRAM 00002D
+cadastrarSenha@temp2     cstackCOMRAM 00002B
 cmpPass@i                cstackCOMRAM 00001C
 cmpPass@pass             cstackCOMRAM 000018
 cmpPass@toque            cstackCOMRAM 00001A
 cmpSignal@pass           cstackCOMRAM 00000F
 cmpSignal@toc            cstackCOMRAM 000011
-end_of_initialization    cinit        000F56
-int$flags                temp         00002B
-int_func                 intcode_body 000CEE
+destravarPorta@i         cstackCOMRAM 000023
+destravarPorta@pass      cstackCOMRAM 00001F
+destravarPorta@toque     cstackCOMRAM 000021
+end_of_initialization    cinit        001218
+int$flags                temp         000035
+int_func                 intcode_body 000F52
 intlevel0                text         000000
 intlevel1                text         000000
 intlevel2                text         000000
 intlevel3                text         000000
 lerToque@i               cstackCOMRAM 000021
 lerToque@toque           cstackCOMRAM 00001F
-main@pass                cstackCOMRAM 000027
-main@toc                 cstackCOMRAM 000025
+main@pass                cstackCOMRAM 000031
+main@toc                 cstackCOMRAM 00002F
 readSignal@i             cstackCOMRAM 00001B
 readSignal@j             cstackCOMRAM 00001D
 readSignal@limite        cstackCOMRAM 000019
@@ -533,7 +557,7 @@ set_line@pos             cstackCOMRAM 000014
 stackhi                  (abs)        0007FF
 stacklo                  (abs)        000060
 start                    init         00000E
-start_initialization     cinit        000F52
+start_initialization     cinit        001214
 write_LCD@c              cstackCOMRAM 000012
 write_LCD@i              cstackCOMRAM 000016
 
@@ -546,8 +570,8 @@ FUNCTION INFORMATION:
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
-  pass            2   38[COMRAM] unsigned char [2]
-  toc             2   36[COMRAM] unsigned char [2]
+  pass            2   48[COMRAM] unsigned char [2]
+  toc             2   46[COMRAM] unsigned char [2]
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -562,51 +586,15 @@ FUNCTION INFORMATION:
       Temps:          0       0       0       0       0       0       0       0       0
       Totals:         4       0       0       0       0       0       0       0       0
 Total ram usage:        4 bytes
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    6
  This function calls:
 		_cadastrarSenha
-		_cmpPass
+		_destravarPorta
 		_init_ADC
 		_init_INTRB2
 		_init_LCD
-		_lerToque
  This function is called by:
 		Startup code after reset
- This function uses a non-reentrant model
-
-
- *************** function _lerToque *****************
- Defined at:
-		line 55 in file "TOCTOC.c"
- Parameters:    Size  Location     Type
-  toque           2   30[COMRAM] PTR unsigned char 
-		 -> main@toc(2), 
- Auto vars:     Size  Location     Type
-  i               2   32[COMRAM] int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         2       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         4       0       0       0       0       0       0       0       0
-Total ram usage:        4 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    4
- This function calls:
-		_clearLCD
-		_readSignal
-		_send_msg
-		_set_line
-		_write_LCD
- This function is called by:
-		_main
  This function uses a non-reentrant model
 
 
@@ -700,16 +688,16 @@ Total ram usage:        0 bytes
  This function uses a non-reentrant model
 
 
- *************** function _cmpPass *****************
+ *************** function _destravarPorta *****************
  Defined at:
-		line 81 in file "TOCTOC.c"
+		line 49 in file "TOCTOC.c"
  Parameters:    Size  Location     Type
-  pass            2   23[COMRAM] PTR unsigned char 
+  pass            2   30[COMRAM] PTR unsigned char 
 		 -> main@pass(2), 
-  toque           2   25[COMRAM] PTR unsigned char 
+  toque           2   32[COMRAM] PTR unsigned char 
 		 -> main@toc(2), 
  Auto vars:     Size  Location     Type
-  i               2   27[COMRAM] int 
+  i               2   34[COMRAM] int 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -725,11 +713,14 @@ Total ram usage:        0 bytes
       Totals:         6       0       0       0       0       0       0       0       0
 Total ram usage:        6 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    5
  This function calls:
 		_bip
 		_clearLCD
-		_cmpSignal
+		_cmpPass
+		_readSignal
+		_read_ADC
+		_send_msg
 		_set_line
 		_write_LCD
  This function is called by:
@@ -737,78 +728,53 @@ Total ram usage:        6 bytes
  This function uses a non-reentrant model
 
 
- *************** function _cmpSignal *****************
+ *************** function _cadastrarSenha *****************
  Defined at:
-		line 36 in file "ReadSignal.c"
+		line 137 in file "TOCTOC.c"
  Parameters:    Size  Location     Type
-  pass            2   14[COMRAM] PTR unsigned char 
+  pass            2   34[COMRAM] PTR unsigned char 
 		 -> main@pass(2), 
-  toc             2   16[COMRAM] PTR unsigned char 
-		 -> main@toc(2), 
  Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  2   14[COMRAM] int 
- Registers used:
-		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         4       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0
-      Totals:         6       0       0       0       0       0       0       0       0
-Total ram usage:        6 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		Nothing
- This function is called by:
-		_cmpPass
- This function uses a non-reentrant model
-
-
- *************** function _bip *****************
- Defined at:
-		line 14 in file "Buzzer.c"
- Parameters:    Size  Location     Type
-  rounds          2   14[COMRAM] int 
-  time            2   16[COMRAM] int 
- Auto vars:     Size  Location     Type
-  j               2   20[COMRAM] int 
+  temp1           2   44[COMRAM] unsigned char [2]
+  temp2           2   42[COMRAM] unsigned char [2]
+  j               2   40[COMRAM] int 
+  i               2   38[COMRAM] int 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         4       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         8       0       0       0       0       0       0       0       0
       Temps:          2       0       0       0       0       0       0       0       0
-      Totals:         8       0       0       0       0       0       0       0       0
-Total ram usage:        8 bytes
+      Totals:        12       0       0       0       0       0       0       0       0
+Total ram usage:       12 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    1
+ Hardware stack levels required when called:    5
  This function calls:
-		Nothing
- This function is called by:
+		_clearLCD
 		_cmpPass
+		_confirmarSenha
+		_lerToque
+		_set_line
+		_write_LCD
+ This function is called by:
+		_main
  This function uses a non-reentrant model
 
 
- *************** function _cadastrarSenha *****************
+ *************** function _lerToque *****************
  Defined at:
-		line 19 in file "TOCTOC.c"
+		line 22 in file "TOCTOC.c"
  Parameters:    Size  Location     Type
-  pass            2   30[COMRAM] PTR unsigned char 
-		 -> main@pass(2), 
+  toque           2   30[COMRAM] PTR unsigned char 
+		 -> cadastrarSenha@temp2(2), cadastrarSenha@temp1(2), 
  Auto vars:     Size  Location     Type
-  i               2   34[COMRAM] int 
+  i               2   32[COMRAM] int 
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
@@ -820,119 +786,20 @@ Total ram usage:        8 bytes
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
       Params:         2       0       0       0       0       0       0       0       0
       Locals:         2       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0
-      Totals:         6       0       0       0       0       0       0       0       0
-Total ram usage:        6 bytes
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         4       0       0       0       0       0       0       0       0
+Total ram usage:        4 bytes
  Hardware stack levels used:    1
  Hardware stack levels required when called:    4
  This function calls:
 		_clearLCD
 		_readSignal
+		_read_ADC
 		_send_msg
 		_set_line
 		_write_LCD
  This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _write_LCD *****************
- Defined at:
-		line 59 in file "LCD.c"
- Parameters:    Size  Location     Type
-  c               2   17[COMRAM] PTR unsigned char 
-		 -> STR_9(14), STR_8(10), STR_7(10), STR_6(10), 
-		 -> STR_5(14), STR_4(11), STR_3(8), STR_2(6), 
-		 -> STR_1(13), 
- Auto vars:     Size  Location     Type
-  i               2   21[COMRAM] int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         2       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0
-      Temps:          2       0       0       0       0       0       0       0       0
-      Totals:         6       0       0       0       0       0       0       0       0
-Total ram usage:        6 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_send_msg
- This function is called by:
 		_cadastrarSenha
-		_lerToque
-		_cmpPass
- This function uses a non-reentrant model
-
-
- *************** function _send_msg *****************
- Defined at:
-		line 35 in file "LCD.c"
- Parameters:    Size  Location     Type
-  msg             1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  msg             1   16[COMRAM] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         0       0       0       0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0       0       0       0
-      Temps:          1       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_ena_pulse
- This function is called by:
-		_write_LCD
-		_cadastrarSenha
-		_lerToque
- This function uses a non-reentrant model
-
-
- *************** function _set_line *****************
- Defined at:
-		line 66 in file "LCD.c"
- Parameters:    Size  Location     Type
-  line            2   17[COMRAM] int 
-  pos             2   19[COMRAM] int 
- Auto vars:     Size  Location     Type
-  cursor          1   21[COMRAM] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         4       0       0       0       0       0       0       0       0
-      Locals:         1       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0
-      Totals:         5       0       0       0       0       0       0       0       0
-Total ram usage:        5 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_send_cfg
- This function is called by:
-		_cadastrarSenha
-		_lerToque
-		_cmpPass
  This function uses a non-reentrant model
 
 
@@ -941,7 +808,7 @@ Total ram usage:        5 bytes
 		line 13 in file "ReadSignal.c"
  Parameters:    Size  Location     Type
   signal          2   18[COMRAM] PTR unsigned char 
-		 -> main@toc(2), main@pass(2), 
+		 -> cadastrarSenha@temp2(2), cadastrarSenha@temp1(2), main@toc(2), 
   pos             2   20[COMRAM] int 
  Auto vars:     Size  Location     Type
   j               2   28[COMRAM] int 
@@ -966,8 +833,8 @@ Total ram usage:       12 bytes
  This function calls:
 		_read_ADC
  This function is called by:
-		_cadastrarSenha
 		_lerToque
+		_destravarPorta
  This function uses a non-reentrant model
 
 
@@ -998,6 +865,217 @@ Total ram usage:        4 bytes
 		Nothing
  This function is called by:
 		_readSignal
+		_lerToque
+		_destravarPorta
+ This function uses a non-reentrant model
+
+
+ *************** function _confirmarSenha *****************
+ Defined at:
+		line 121 in file "TOCTOC.c"
+ Parameters:    Size  Location     Type
+		None
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   23[COMRAM] int 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_clearLCD
+		_set_line
+		_write_LCD
+ This function is called by:
+		_cadastrarSenha
+ This function uses a non-reentrant model
+
+
+ *************** function _cmpPass *****************
+ Defined at:
+		line 97 in file "TOCTOC.c"
+ Parameters:    Size  Location     Type
+  pass            2   23[COMRAM] PTR unsigned char 
+		 -> cadastrarSenha@temp1(2), main@pass(2), 
+  toque           2   25[COMRAM] PTR unsigned char 
+		 -> cadastrarSenha@temp2(2), main@toc(2), 
+ Auto vars:     Size  Location     Type
+  i               2   27[COMRAM] int 
+ Return value:  Size  Location     Type
+                  2   23[COMRAM] int 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    4
+ This function calls:
+		_bip
+		_clearLCD
+		_cmpSignal
+		_set_line
+		_write_LCD
+ This function is called by:
+		_destravarPorta
+		_cadastrarSenha
+ This function uses a non-reentrant model
+
+
+ *************** function _write_LCD *****************
+ Defined at:
+		line 59 in file "LCD.c"
+ Parameters:    Size  Location     Type
+  c               2   17[COMRAM] PTR unsigned char 
+		 -> STR_18(11), STR_17(6), STR_16(6), STR_15(11), 
+		 -> STR_14(6), STR_13(13), STR_12(6), STR_11(13), 
+		 -> STR_10(14), STR_9(10), STR_8(10), STR_7(10), 
+		 -> STR_6(14), STR_5(10), STR_4(12), STR_3(6), 
+		 -> STR_2(14), STR_1(14), 
+ Auto vars:     Size  Location     Type
+  i               2   21[COMRAM] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_send_msg
+ This function is called by:
+		_lerToque
+		_destravarPorta
+		_cmpPass
+		_confirmarSenha
+		_cadastrarSenha
+ This function uses a non-reentrant model
+
+
+ *************** function _send_msg *****************
+ Defined at:
+		line 35 in file "LCD.c"
+ Parameters:    Size  Location     Type
+  msg             1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  msg             1   16[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         0       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          1       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    2
+ This function calls:
+		_ena_pulse
+ This function is called by:
+		_write_LCD
+		_lerToque
+		_destravarPorta
+ This function uses a non-reentrant model
+
+
+ *************** function _set_line *****************
+ Defined at:
+		line 66 in file "LCD.c"
+ Parameters:    Size  Location     Type
+  line            2   17[COMRAM] int 
+  pos             2   19[COMRAM] int 
+ Auto vars:     Size  Location     Type
+  cursor          1   21[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         1       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0
+      Totals:         5       0       0       0       0       0       0       0       0
+Total ram usage:        5 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    3
+ This function calls:
+		_send_cfg
+ This function is called by:
+		_lerToque
+		_destravarPorta
+		_cmpPass
+		_confirmarSenha
+		_cadastrarSenha
+ This function uses a non-reentrant model
+
+
+ *************** function _cmpSignal *****************
+ Defined at:
+		line 36 in file "ReadSignal.c"
+ Parameters:    Size  Location     Type
+  pass            2   14[COMRAM] PTR unsigned char 
+		 -> cadastrarSenha@temp1(2), main@pass(2), 
+  toc             2   16[COMRAM] PTR unsigned char 
+		 -> cadastrarSenha@temp2(2), main@toc(2), 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  2   14[COMRAM] int 
+ Registers used:
+		wreg, fsr1l, fsr1h, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0
+      Totals:         6       0       0       0       0       0       0       0       0
+Total ram usage:        6 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_cmpPass
  This function uses a non-reentrant model
 
 
@@ -1027,9 +1105,11 @@ Total ram usage:        0 bytes
  This function calls:
 		_send_cfg
  This function is called by:
-		_cadastrarSenha
 		_lerToque
+		_destravarPorta
 		_cmpPass
+		_confirmarSenha
+		_cadastrarSenha
  This function uses a non-reentrant model
 
 
@@ -1096,6 +1176,38 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _bip *****************
+ Defined at:
+		line 14 in file "Buzzer.c"
+ Parameters:    Size  Location     Type
+  rounds          2   14[COMRAM] int 
+  time            2   16[COMRAM] int 
+ Auto vars:     Size  Location     Type
+  j               2   20[COMRAM] int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         4       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0
+      Temps:          2       0       0       0       0       0       0       0       0
+      Totals:         8       0       0       0       0       0       0       0       0
+Total ram usage:        8 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_destravarPorta
+		_cmpPass
+ This function uses a non-reentrant model
+
+
  *************** function _ISR *****************
  Defined at:
 		line 32 in file "Interrupt.c"
@@ -1130,53 +1242,55 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 TOCTOC.c
-		_cadastrarSenha		CODE           	084E	0000	367
-		_cmpPass       		CODE           	0AB2	0000	217
-		_lerToque      		CODE           	09BC	0000	247
+		_cadastrarSenha		CODE           	0A56	0000	431
+		_cmpPass       		CODE           	0D0E	0000	225
+		_confirmarSenha		CODE           	0FD6	0000	107
+		_destravarPorta		CODE           	0876	0000	481
+		_lerToque      		CODE           	0C04	0000	267
 
-TOCTOC.c estimated size: 831
+TOCTOC.c estimated size: 1511
 
 Buzzer.c
-		_bip           		CODE           	0B8A	0000	195
+		_bip           		CODE           	0DEE	0000	195
 
 Buzzer.c estimated size: 195
 
 shared
-		__initialization		CODE           	0F52	0000	5
+		__initialization		CODE           	1214	0000	5
 
 shared estimated size: 5
 
 Interrupt.c
 		_ISR           		CODE           	0008	0000	139
-		_init_INTRB2   		CODE           	0F7A	0000	17
+		_init_INTRB2   		CODE           	123C	0000	17
 
 Interrupt.c estimated size: 156
 
 ReadSignal.c
-		_readSignal    		CODE           	0C4C	0000	163
-		_cmpSignal     		CODE           	0DD8	0000	77
+		_readSignal    		CODE           	0EB0	0000	163
+		_cmpSignal     		CODE           	109A	0000	77
 
 ReadSignal.c estimated size: 240
 
 ADC.c
-		_init_ADC      		CODE           	0F68	0000	19
-		_read_ADC      		CODE           	0F3A	0000	25
+		_init_ADC      		CODE           	122A	0000	19
+		_read_ADC      		CODE           	11FC	0000	25
 
 ADC.c estimated size: 44
 
 main.c
-		_main          		CODE           	0D72	0000	103
+		_main          		CODE           	1040	0000	91
 
-main.c estimated size: 103
+main.c estimated size: 91
 
 LCD.c
-		_set_line      		CODE           	0F1E	0000	29
-		_send_cfg      		CODE           	0F00	0000	31
-		_write_LCD     		CODE           	0E24	0000	75
-		_init_LCD      		CODE           	0ED6	0000	43
-		_ena_pulse     		CODE           	0E6E	0000	57
-		_send_msg      		CODE           	0EA6	0000	49
-		_clearLCD      		CODE           	0F8A	0000	9
+		_set_line      		CODE           	11E0	0000	29
+		_send_cfg      		CODE           	11C2	0000	31
+		_write_LCD     		CODE           	10E6	0000	75
+		_init_LCD      		CODE           	1198	0000	43
+		_ena_pulse     		CODE           	1130	0000	57
+		_send_msg      		CODE           	1168	0000	49
+		_clearLCD      		CODE           	124C	0000	9
 
 LCD.c estimated size: 293
 

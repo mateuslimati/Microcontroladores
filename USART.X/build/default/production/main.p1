@@ -8,10 +8,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _init_ADC `(v ~T0 @X0 0 ef ]
 "36 TOCTOC.h
 [v _cadastrarSenha `(v ~T0 @X0 0 ef1`*uc ]
-"37
-[v _lerToque `(v ~T0 @X0 0 ef1`*uc ]
-"38
-[v _cmpPass `(v ~T0 @X0 0 ef2`*uc`*uc ]
+"39
+[v _destravarPorta `(v ~T0 @X0 0 ef2`*uc`*uc ]
 "35 main.h
 [p x PLLDIV=1 ]
 "36
@@ -3633,7 +3631,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ADC.h: 38: unsigned int read_ADC();
 [; ;TOCTOC.h: 36: void cadastrarSenha(char* pass);
 [; ;TOCTOC.h: 37: void lerToque(char* toque);
-[; ;TOCTOC.h: 38: void cmpPass(char* pass, char* toque);
+[; ;TOCTOC.h: 38: int cmpPass(char* pass, char* toque);
+[; ;TOCTOC.h: 39: void destravarPorta(char* pass, char* toque);
 "18 main.c
 [v _button `i ~T0 @X0 1 e ]
 [i _button
@@ -3680,32 +3679,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 "35
 [e :U 366 ]
 {
-[; ;main.c: 37: lerToque(toc);
+[; ;main.c: 37: destravarPorta(pass, toc);
 "37
-[e ( _lerToque (1 &U _toc ]
-[; ;main.c: 38: cmpPass(pass, toc);
+[e ( _destravarPorta (2 , &U _pass &U _toc ]
+[; ;main.c: 38: if(button == 1){
 "38
-[e ( _cmpPass (2 , &U _pass &U _toc ]
-[; ;main.c: 40: if(button == 1){
-"40
 [e $ ! == _button -> 1 `i 367  ]
 {
-[; ;main.c: 41: cadastrarSenha(pass);
-"41
-[e ( _cadastrarSenha (1 &U _pass ]
-[; ;main.c: 42: button = 0;
-"42
+[; ;main.c: 39: button = 0;
+"39
 [e = _button -> 0 `i ]
-"43
+[; ;main.c: 40: cadastrarSenha(pass);
+"40
+[e ( _cadastrarSenha (1 &U _pass ]
+"41
 }
 [e :U 367 ]
-"45
+"43
 }
-[; ;main.c: 43: }
-[; ;main.c: 45: }while(1);
+[; ;main.c: 41: }
+[; ;main.c: 43: }while(1);
 [e $ != -> 1 `i -> 0 `i 366  ]
 [e :U 365 ]
-[; ;main.c: 47: }
-"47
+[; ;main.c: 45: }
+"45
 [e :UE 363 ]
 }

@@ -12,31 +12,33 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production/USART.X.production.obj
-cinit CODE 0 F52 F52 16 1
-intcode_body CODE 0 CEE CEE 84 1
-text0 CODE 0 D72 D72 66 1
-text1 CODE 0 9BC 9BC F6 1
-text2 CODE 0 ED6 ED6 2A 1
-text3 CODE 0 F7A F7A 10 1
-text4 CODE 0 F68 F68 12 1
-text5 CODE 0 AB2 AB2 D8 1
-text6 CODE 0 DD8 DD8 4C 1
-text7 CODE 0 B8A B8A C2 1
-text8 CODE 0 84E 84E 16E 1
-text9 CODE 0 E24 E24 4A 1
-text10 CODE 0 EA6 EA6 30 1
-text11 CODE 0 F1E F1E 1C 1
-text12 CODE 0 C4C C4C A2 1
-text13 CODE 0 F3A F3A 18 1
-text14 CODE 0 F8A F8A 8 1
-text15 CODE 0 F00 F00 1E 1
-text16 CODE 0 E6E E6E 38 1
-cstackCOMRAM COMRAM 1 1 1 28 1
-temp COMRAM 1 2B 2B 1 1
+cinit CODE 0 1214 1214 16 1
+intcode_body CODE 0 F52 F52 84 1
+text0 CODE 0 1040 1040 5A 1
+text1 CODE 0 1198 1198 2A 1
+text2 CODE 0 123C 123C 10 1
+text3 CODE 0 122A 122A 12 1
+text4 CODE 0 876 876 1E0 1
+text5 CODE 0 A56 A56 1AE 1
+text6 CODE 0 C04 C04 10A 1
+text7 CODE 0 EB0 EB0 A2 1
+text8 CODE 0 11FC 11FC 18 1
+text9 CODE 0 FD6 FD6 6A 1
+text10 CODE 0 D0E D0E E0 1
+text11 CODE 0 10E6 10E6 4A 1
+text12 CODE 0 1168 1168 30 1
+text13 CODE 0 11E0 11E0 1C 1
+text14 CODE 0 109A 109A 4C 1
+text15 CODE 0 124C 124C 8 1
+text16 CODE 0 11C2 11C2 1E 1
+text17 CODE 0 1130 1130 38 1
+text18 CODE 0 DEE DEE C2 1
+cstackCOMRAM COMRAM 1 1 1 32 1
+temp COMRAM 1 35 35 1 1
 intcode CODE 0 8 8 6 1
-smallconst SMALLCONST 0 800 800 4E 1
-bssCOMRAM COMRAM 1 29 29 2 1
-$/tmp/xcXmsZmQf.obj
+smallconst SMALLCONST 0 800 800 76 1
+bssCOMRAM COMRAM 1 33 33 2 1
+$/tmp/xcXQW2fBi.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -59,16 +61,16 @@ BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
 CONST 12-7FF 1
-CONST F92-7FFF 1
+CONST 1254-7FFF 1
 STACK 60-7FF 1
-SMALLCONST F92-7FFF 1
+SMALLCONST 1254-7FFF 1
 CODE 4-7 1
 CODE 12-7FF 1
-CODE F92-7FFF 1
-BIGRAM 2C-7FF 1
-COMRAM 2C-5F 1
+CODE 1254-7FFF 1
+BIGRAM 36-7FF 1
+COMRAM 36-5F 1
 EEDATA F00000-F000FF 1
-MEDIUMCONST F92-7FFF 1
+MEDIUMCONST 1254-7FFF 1
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -83,209 +85,262 @@ MEDIUMCONST F92-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/USART.X.production.obj
+8 intcode CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
 8 intcode CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-8 intcode CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-CEE intcode_body CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-D28 intcode_body CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-D2C intcode_body CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-D2E intcode_body CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-D36 intcode_body CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-E6E text16 CODE >11:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E6E text16 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E70 text16 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E80 text16 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E82 text16 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E92 text16 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E94 text16 CODE >18:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EA4 text16 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F00 text15 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F02 text15 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F06 text15 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F08 text15 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F0C text15 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F1C text15 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F8A text14 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F8A text14 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F90 text14 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F3A text13 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F3A text13 CODE >21:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F3C text13 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F40 text13 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F48 text13 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F50 text13 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-C4C text12 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C4C text12 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C54 text12 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C5C text12 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C64 text12 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C70 text12 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C72 text12 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C7A text12 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C7C text12 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-C8C text12 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CAC text12 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CBC text12 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CC0 text12 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CD0 text12 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CD8 text12 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-CD8 text12 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-F1E text11 CODE >66:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F1E text11 CODE >69:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F26 text11 CODE >70:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F2C text11 CODE >72:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F32 text11 CODE >73:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-F38 text11 CODE >75:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EA6 text10 CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EA8 text10 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EAC text10 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EAE text10 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EBE text10 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EC2 text10 CODE >41:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-ED2 text10 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-ED4 text10 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E24 text9 CODE >59:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E24 text9 CODE >61:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E2C text9 CODE >62:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E2E text9 CODE >63:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-E4A text9 CODE >62:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-84E text8 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-84E text8 CODE >21:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-856 text8 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-862 text8 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-872 text8 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-876 text8 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-88A text8 CODE >28:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-896 text8 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8AA text8 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8B6 text8 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8B8 text8 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8CC text8 CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8D4 text8 CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8DC text8 CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8F2 text8 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-8FA text8 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-910 text8 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-91A text8 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-934 text8 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-94C text8 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-950 text8 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-960 text8 CODE >46:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-964 text8 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-978 text8 CODE >48:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-984 text8 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-998 text8 CODE >50:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9A4 text8 CODE >51:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9BA text8 CODE >53:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B8A text7 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-B8A text7 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-B8C text7 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-B8E text7 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-B96 text7 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BA4 text7 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BBE text7 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BD4 text7 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BD8 text7 CODE >21:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BEE text7 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-BFE text7 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-C18 text7 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-C30 text7 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-C34 text7 CODE >28:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-C4A text7 CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
-DD8 text6 CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-DD8 text6 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-E10 text6 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-E1A text6 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
-AB2 text5 CODE >81:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-AB2 text5 CODE >83:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-ACE text5 CODE >85:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-AD6 text5 CODE >86:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-ADA text5 CODE >87:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-AEE text5 CODE >88:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-AFA text5 CODE >89:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B0E text5 CODE >90:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B1A text5 CODE >91:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B2E text5 CODE >92:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B30 text5 CODE >94:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B34 text5 CODE >95:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B48 text5 CODE >96:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B54 text5 CODE >97:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B68 text5 CODE >98:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-B74 text5 CODE >99:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-F68 text4 CODE >11:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F68 text4 CODE >12:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F6A text4 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F6E text4 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F72 text4 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F76 text4 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F78 text4 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
-F7A text3 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F7A text3 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F7C text3 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F7E text3 CODE >44:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F80 text3 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F82 text3 CODE >46:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F84 text3 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F86 text3 CODE >48:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-F88 text3 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
-ED6 text2 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-ED6 text2 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EDA text2 CODE >48:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EDE text2 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EE2 text2 CODE >50:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EE6 text2 CODE >52:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EEC text2 CODE >53:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EF2 text2 CODE >54:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EF8 text2 CODE >55:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-EFE text2 CODE >57:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
-9BC text1 CODE >55:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9BC text1 CODE >57:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9C4 text1 CODE >59:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9D0 text1 CODE >60:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9E0 text1 CODE >62:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9E4 text1 CODE >63:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-9F8 text1 CODE >64:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A04 text1 CODE >66:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A06 text1 CODE >67:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A1A text1 CODE >68:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A22 text1 CODE >69:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A2A text1 CODE >70:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A40 text1 CODE >71:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A48 text1 CODE >72:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A5E text1 CODE >73:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A68 text1 CODE >74:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A82 text1 CODE >76:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A9A text1 CODE >77:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-A9E text1 CODE >66:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-AB0 text1 CODE >79:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
-D72 text0 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D72 text0 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D76 text0 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D7A text0 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D7E text0 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D82 text0 CODE >28:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D86 text0 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D8A text0 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D8E text0 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-D9A text0 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-DA6 text0 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-DBA text0 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-DC2 text0 CODE >41:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-DCE text0 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-DD6 text0 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
-F52 cinit CODE >3041:/tmp/xcXwbsK7P
-F52 cinit CODE >3043:/tmp/xcXwbsK7P
-F52 cinit CODE >3046:/tmp/xcXwbsK7P
-F52 cinit CODE >3058:/tmp/xcXwbsK7P
-F54 cinit CODE >3059:/tmp/xcXwbsK7P
-F56 cinit CODE >3065:/tmp/xcXwbsK7P
-F56 cinit CODE >3067:/tmp/xcXwbsK7P
-F58 cinit CODE >3068:/tmp/xcXwbsK7P
-F5A cinit CODE >3070:/tmp/xcXwbsK7P
-F5C cinit CODE >3071:/tmp/xcXwbsK7P
-F5E cinit CODE >3072:/tmp/xcXwbsK7P
-F60 cinit CODE >3073:/tmp/xcXwbsK7P
-F62 cinit CODE >3074:/tmp/xcXwbsK7P
-F64 cinit CODE >3075:/tmp/xcXwbsK7P
+F52 intcode_body CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+F8C intcode_body CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+F90 intcode_body CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+F92 intcode_body CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+F9A intcode_body CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+DEE text18 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+DEE text18 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+DF0 text18 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+DF2 text18 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+DFA text18 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E08 text18 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E22 text18 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E38 text18 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E3C text18 CODE >21:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E52 text18 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E62 text18 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E7C text18 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E94 text18 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+E98 text18 CODE >28:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+EAE text18 CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+1130 text17 CODE >11:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1130 text17 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1132 text17 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1142 text17 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1144 text17 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1154 text17 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1156 text17 CODE >18:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1166 text17 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11C2 text16 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11C4 text16 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11C8 text16 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11CA text16 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11CE text16 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11DE text16 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+124C text15 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+124C text15 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1252 text15 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+109A text14 CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+109A text14 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+10D2 text14 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+10DC text14 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+11E0 text13 CODE >66:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11E0 text13 CODE >69:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11E8 text13 CODE >70:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11EE text13 CODE >72:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11F4 text13 CODE >73:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11FA text13 CODE >75:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1168 text12 CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+116A text12 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+116E text12 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1170 text12 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1180 text12 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1184 text12 CODE >41:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1194 text12 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1196 text12 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+10E6 text11 CODE >59:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+10E6 text11 CODE >61:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+10EE text11 CODE >62:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+10F0 text11 CODE >63:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+110C text11 CODE >62:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+D0E text10 CODE >97:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D0E text10 CODE >99:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D2A text10 CODE >101:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D32 text10 CODE >102:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D36 text10 CODE >103:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D4A text10 CODE >104:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D56 text10 CODE >105:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D6A text10 CODE >106:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D76 text10 CODE >107:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D8A text10 CODE >108:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D8C text10 CODE >110:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D90 text10 CODE >111:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+DA4 text10 CODE >112:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+DB0 text10 CODE >113:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+DC4 text10 CODE >114:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+DD0 text10 CODE >115:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+DE4 text10 CODE >117:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+FD6 text9 CODE >121:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+FD6 text9 CODE >122:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+FDA text9 CODE >123:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+FEE text9 CODE >124:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+FFA text9 CODE >125:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+100E text9 CODE >126:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+101A text9 CODE >128:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+1022 text9 CODE >129:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+102A text9 CODE >130:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+1034 text9 CODE >132:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+1038 text9 CODE >133:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+11FC text8 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+11FC text8 CODE >21:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+11FE text8 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+1202 text8 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+120A text8 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+1212 text8 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+EB0 text7 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EB0 text7 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EB8 text7 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EC0 text7 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EC8 text7 CODE >19:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+ED4 text7 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+ED6 text7 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EDE text7 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EE0 text7 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+EF0 text7 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F10 text7 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F20 text7 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F24 text7 CODE >25:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F34 text7 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F3C text7 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+F3C text7 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
+C04 text6 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C04 text6 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C0C text6 CODE >26:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C18 text6 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C28 text6 CODE >29:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C2C text6 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C40 text6 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C4C text6 CODE >32:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C62 text6 CODE >35:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C76 text6 CODE >36:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C7E text6 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C86 text6 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C9C text6 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CA4 text6 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CBA text6 CODE >41:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CC4 text6 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CDE text6 CODE >44:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CF6 text6 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+CFA text6 CODE >34:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+D0C text6 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A56 text5 CODE >137:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A56 text5 CODE >139:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A58 text5 CODE >141:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A60 text5 CODE >142:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A68 text5 CODE >145:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A6C text5 CODE >146:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A70 text5 CODE >149:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A74 text5 CODE >150:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A78 text5 CODE >152:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A84 text5 CODE >153:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A94 text5 CODE >156:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A98 text5 CODE >157:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+AAC text5 CODE >158:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+AB8 text5 CODE >159:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+ACC text5 CODE >160:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+AD8 text5 CODE >161:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+AF0 text5 CODE >163:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+AFC text5 CODE >164:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B00 text5 CODE >165:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B14 text5 CODE >166:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B20 text5 CODE >167:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B34 text5 CODE >168:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B40 text5 CODE >169:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B58 text5 CODE >171:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B64 text5 CODE >172:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B80 text5 CODE >173:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B8C text5 CODE >178:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+B98 text5 CODE >179:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BA8 text5 CODE >181:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BAC text5 CODE >182:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BC0 text5 CODE >183:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BCC text5 CODE >184:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BE0 text5 CODE >185:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+BEC text5 CODE >186:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+C02 text5 CODE >188:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+876 text4 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+876 text4 CODE >51:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+87E text4 CODE >53:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+88A text4 CODE >54:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+89A text4 CODE >56:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+89E text4 CODE >57:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8B2 text4 CODE >58:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8BE text4 CODE >60:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8C0 text4 CODE >61:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8C8 text4 CODE >60:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8DE text4 CODE >66:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8F2 text4 CODE >67:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+8FA text4 CODE >68:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+902 text4 CODE >69:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+918 text4 CODE >70:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+920 text4 CODE >71:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+936 text4 CODE >72:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+940 text4 CODE >73:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+95A text4 CODE >75:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+972 text4 CODE >76:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+976 text4 CODE >65:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+986 text4 CODE >78:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9A2 text4 CODE >79:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9A6 text4 CODE >80:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9BA text4 CODE >81:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9C6 text4 CODE >82:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9DA text4 CODE >83:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9E6 text4 CODE >84:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9FA text4 CODE >85:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+9FC text4 CODE >87:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A00 text4 CODE >88:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A14 text4 CODE >89:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A20 text4 CODE >90:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A34 text4 CODE >91:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+A40 text4 CODE >92:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+122A text3 CODE >11:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+122A text3 CODE >12:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+122C text3 CODE >13:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+1230 text3 CODE >14:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+1234 text3 CODE >15:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+1238 text3 CODE >16:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+123A text3 CODE >17:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+123C text2 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+123C text2 CODE >42:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+123E text2 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1240 text2 CODE >44:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1242 text2 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1244 text2 CODE >46:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1246 text2 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1248 text2 CODE >48:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+124A text2 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
+1198 text1 CODE >45:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1198 text1 CODE >47:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+119C text1 CODE >48:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11A0 text1 CODE >49:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11A4 text1 CODE >50:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11A8 text1 CODE >52:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11AE text1 CODE >53:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11B4 text1 CODE >54:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11BA text1 CODE >55:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+11C0 text1 CODE >57:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
+1040 text0 CODE >20:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1040 text0 CODE >22:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1044 text0 CODE >23:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1048 text0 CODE >24:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+104C text0 CODE >27:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1050 text0 CODE >28:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1054 text0 CODE >30:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1058 text0 CODE >31:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+105C text0 CODE >33:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1068 text0 CODE >37:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+107C text0 CODE >38:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1084 text0 CODE >39:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+108C text0 CODE >40:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1098 text0 CODE >43:/home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+1214 cinit CODE >3106:/tmp/xcXAK5K7d
+1214 cinit CODE >3108:/tmp/xcXAK5K7d
+1214 cinit CODE >3111:/tmp/xcXAK5K7d
+1214 cinit CODE >3123:/tmp/xcXAK5K7d
+1216 cinit CODE >3124:/tmp/xcXAK5K7d
+1218 cinit CODE >3130:/tmp/xcXAK5K7d
+1218 cinit CODE >3132:/tmp/xcXAK5K7d
+121A cinit CODE >3133:/tmp/xcXAK5K7d
+121C cinit CODE >3135:/tmp/xcXAK5K7d
+121E cinit CODE >3136:/tmp/xcXAK5K7d
+1220 cinit CODE >3137:/tmp/xcXAK5K7d
+1222 cinit CODE >3138:/tmp/xcXAK5K7d
+1224 cinit CODE >3139:/tmp/xcXAK5K7d
+1226 cinit CODE >3140:/tmp/xcXAK5K7d
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -300,20 +355,22 @@ F64 cinit CODE >3075:/tmp/xcXwbsK7P
 %SYMTAB
 __Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/USART.X.production.obj
 __Hspace_0 30000E 0 ABS 0 - dist/default/production/USART.X.production.obj
-__Hspace_1 2C 0 ABS 0 - dist/default/production/USART.X.production.obj
+__Hspace_1 36 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_init_ADC 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_init_LCD 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 cmpPass@i 1C 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-cadastrarSenha@i 23 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+cadastrarSenha@i 27 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+cadastrarSenha@j 29 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 readSignal@signal 13 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production/USART.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXmsZmQf.obj
-_init_INTRB2 F7A 0 CODE 0 text3 dist/default/production/USART.X.production.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst /tmp/xcXQW2fBi.obj
+_init_INTRB2 123C 0 CODE 0 text2 dist/default/production/USART.X.production.obj
 cmpPass@toque 1A 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/USART.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/USART.X.production.obj
+_confirmarSenha FD6 0 CODE 0 text9 dist/default/production/USART.X.production.obj
 lerToque@toque 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Lsmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/USART.X.production.obj
 _BRGH 7D62 0 ABS 0 - dist/default/production/USART.X.production.obj
@@ -323,58 +380,66 @@ _SPEN 7D5F 0 ABS 0 - dist/default/production/USART.X.production.obj
 _SYNC 7D64 0 ABS 0 - dist/default/production/USART.X.production.obj
 _TRMT 7D61 0 ABS 0 - dist/default/production/USART.X.production.obj
 _TXEN 7D65 0 ABS 0 - dist/default/production/USART.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcXmsZmQf.obj
-_main D72 0 CODE 0 text0 dist/default/production/USART.X.production.obj
+___sp 0 0 STACK 2 stack /tmp/xcXQW2fBi.obj
+_main 1040 0 CODE 0 text0 dist/default/production/USART.X.production.obj
 bip@j 15 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-btemp 2B 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
-start E 0 CODE 0 init /tmp/xcXmsZmQf.obj
+btemp 35 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
+start E 0 CODE 0 init /tmp/xcXQW2fBi.obj
 __size_of_main 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/USART.X.production.obj
+?_cmpPass 18 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hpowerup E 0 CODE 0 powerup dist/default/production/USART.X.production.obj
 _T0CONbits FD5 0 ABS 0 - dist/default/production/USART.X.production.obj
-__accesstop 60 0 ABS 0 - /tmp/xcXmsZmQf.obj
-intlevel0 0 0 CODE 0 text /tmp/xcXmsZmQf.obj
-intlevel1 0 0 CODE 0 text /tmp/xcXmsZmQf.obj
-intlevel2 0 0 CODE 0 text /tmp/xcXmsZmQf.obj
-intlevel3 0 0 CODE 0 text /tmp/xcXmsZmQf.obj
+__accesstop 60 0 ABS 0 - /tmp/xcXQW2fBi.obj
+intlevel0 0 0 CODE 0 text /tmp/xcXQW2fBi.obj
+intlevel1 0 0 CODE 0 text /tmp/xcXQW2fBi.obj
+intlevel2 0 0 CODE 0 text /tmp/xcXQW2fBi.obj
+intlevel3 0 0 CODE 0 text /tmp/xcXQW2fBi.obj
+_destravarPorta 876 0 CODE 0 text4 dist/default/production/USART.X.production.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production/USART.X.production.obj
 __CFG_USBDIV$1 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_init_ADC F68 0 CODE 0 text4 dist/default/production/USART.X.production.obj
-_init_LCD ED6 0 CODE 0 text2 dist/default/production/USART.X.production.obj
+_init_ADC 122A 0 CODE 0 text3 dist/default/production/USART.X.production.obj
+_init_LCD 1198 0 CODE 0 text1 dist/default/production/USART.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/USART.X.production.obj
 __CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
+destravarPorta@i 23 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_EBTR2$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_EBTR3$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_lerToque 0 0 ABS 0 - dist/default/production/USART.X.production.obj
+__end_of_confirmarSenha 1040 0 CODE 0 text9 dist/default/production/USART.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production/USART.X.production.obj
+destravarPorta@pass 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production/USART.X.production.obj
-__end_of_init_ADC F7A 0 CODE 0 text4 dist/default/production/USART.X.production.obj
-__end_of_init_LCD F00 0 CODE 0 text2 dist/default/production/USART.X.production.obj
-__end_of_ena_pulse EA6 0 CODE 0 text16 dist/default/production/USART.X.production.obj
+__end_of_init_ADC 123C 0 CODE 0 text3 dist/default/production/USART.X.production.obj
+__end_of_init_LCD 11C2 0 CODE 0 text1 dist/default/production/USART.X.production.obj
+?_confirmarSenha 18 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+__end_of_ena_pulse 1168 0 CODE 0 text17 dist/default/production/USART.X.production.obj
 _ADCON0 FC2 0 ABS 0 - dist/default/production/USART.X.production.obj
 _ADCON1 FC1 0 ABS 0 - dist/default/production/USART.X.production.obj
 _ADCON2 FC0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_ena_pulse 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-___inthi_sp 0 0 STACK 2 stack /tmp/xcXmsZmQf.obj
-___intlo_sp 0 0 STACK 2 stack /tmp/xcXmsZmQf.obj
+___inthi_sp 0 0 STACK 2 stack /tmp/xcXQW2fBi.obj
+___intlo_sp 0 0 STACK 2 stack /tmp/xcXQW2fBi.obj
 bip@rounds F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production/USART.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/USART.X.production.obj
-cadastrarSenha@pass 1F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-main@toc 25 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+cadastrarSenha@pass 23 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+main@toc 2F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production/USART.X.production.obj
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/production/USART.X.production.obj
-_ena_pulse E6E 0 CODE 0 text16 dist/default/production/USART.X.production.obj
-_lerToque 9BC 0 CODE 0 text1 dist/default/production/USART.X.production.obj
+_ena_pulse 1130 0 CODE 0 text17 dist/default/production/USART.X.production.obj
+__end_of_destravarPorta A56 0 CODE 0 text4 dist/default/production/USART.X.production.obj
+_lerToque C04 0 CODE 0 text6 dist/default/production/USART.X.production.obj
 set_line@pos 14 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-__end_of_lerToque AB2 0 CODE 0 text1 dist/default/production/USART.X.production.obj
+destravarPorta@toque 21 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+__end_of_lerToque D0E 0 CODE 0 text6 dist/default/production/USART.X.production.obj
 _INTCON2bits FF1 0 ABS 0 - dist/default/production/USART.X.production.obj
 _INTCON3bits FF0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lintcodelo E 0 CODE 0 intcodelo dist/default/production/USART.X.production.obj
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-start_initialization F52 0 CODE 0 cinit dist/default/production/USART.X.production.obj
+start_initialization 1214 0 CODE 0 cinit dist/default/production/USART.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production/USART.X.production.obj
 _TRISAbits F92 0 ABS 0 - dist/default/production/USART.X.production.obj
 _TRISBbits F93 0 ABS 0 - dist/default/production/USART.X.production.obj
@@ -417,10 +482,10 @@ __Htext9 0 0 ABS 0 text9 dist/default/production/USART.X.production.obj
 __size_of_cadastrarSenha 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production/USART.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production/USART.X.production.obj
-__smallconst 800 0 SMALLCONST 0 smallconst /tmp/xcXmsZmQf.obj
+__smallconst 800 0 SMALLCONST 0 smallconst /tmp/xcXQW2fBi.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production/USART.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production/USART.X.production.obj
-__end_of_init_INTRB2 F8A 0 CODE 0 text3 dist/default/production/USART.X.production.obj
+__end_of_init_INTRB2 124C 0 CODE 0 text2 dist/default/production/USART.X.production.obj
 __CFG_LPT1OSC$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production/USART.X.production.obj
 __Lbank1 0 0 ABS 0 bank1 dist/default/production/USART.X.production.obj
@@ -460,27 +525,27 @@ __Hdata 0 0 ABS 0 data dist/default/production/USART.X.production.obj
 __Hinit 12 0 CODE 0 init dist/default/production/USART.X.production.obj
 __Hrbit 0 0 COMRAM 1 rbit dist/default/production/USART.X.production.obj
 __Hrbss 0 0 COMRAM 1 rbss dist/default/production/USART.X.production.obj
-__Htemp 2C 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
+__Htemp 36 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
 __Htext 0 0 ABS 0 text dist/default/production/USART.X.production.obj
 __Labs1 0 0 ABS 0 abs1 dist/default/production/USART.X.production.obj
 __Ldata 0 0 ABS 0 data dist/default/production/USART.X.production.obj
 __Linit E 0 CODE 0 init dist/default/production/USART.X.production.obj
 __Lrbit 0 0 COMRAM 1 rbit dist/default/production/USART.X.production.obj
 __Lrbss 0 0 COMRAM 1 rbss dist/default/production/USART.X.production.obj
-__Ltemp 2B 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
+__Ltemp 35 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
 __Ltext 0 0 ABS 0 text dist/default/production/USART.X.production.obj
 __CFG_XINST$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-int$flags 2B 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
+int$flags 35 0 COMRAM 1 temp dist/default/production/USART.X.production.obj
 __HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Hintret 0 0 ABS 0 intret dist/default/production/USART.X.production.obj
 __Hirdata 0 0 CODE 0 irdata dist/default/production/USART.X.production.obj
 _ISR 8 0 CODE 0 intcode dist/default/production/USART.X.production.obj
 __S0 30000E 0 ABS 0 - dist/default/production/USART.X.production.obj
-__S1 2C 0 ABS 0 - dist/default/production/USART.X.production.obj
+__S1 36 0 ABS 0 - dist/default/production/USART.X.production.obj
 __S2 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_bip B8A 0 CODE 0 text7 dist/default/production/USART.X.production.obj
+_bip DEE 0 CODE 0 text18 dist/default/production/USART.X.production.obj
 __CFG_VREGEN$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_button 29 0 COMRAM 1 bssCOMRAM dist/default/production/USART.X.production.obj
+_button 33 0 COMRAM 1 bssCOMRAM dist/default/production/USART.X.production.obj
 __CFG_PLLDIV$1 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_PBADEN$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 readSignal@pos 15 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
@@ -488,10 +553,10 @@ __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production/USART.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production/USART.X.production.obj
 bip@time 11 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __size_of_read_ADC 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_readSignal C4C 0 CODE 0 text12 dist/default/production/USART.X.production.obj
-__end_of_ISR D72 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
-__end_of_bip C4C 0 CODE 0 text7 dist/default/production/USART.X.production.obj
-int_func CEE 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
+_readSignal EB0 0 CODE 0 text7 dist/default/production/USART.X.production.obj
+__end_of_ISR FD6 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
+__end_of_bip EB0 0 CODE 0 text18 dist/default/production/USART.X.production.obj
+int_func F52 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production/USART.X.production.obj
 __Hramtop 800 0 RAM 0 ramtop dist/default/production/USART.X.production.obj
 __Hrparam 0 0 COMRAM 1 rparam dist/default/production/USART.X.production.obj
@@ -506,75 +571,83 @@ __Htext13 0 0 ABS 0 text13 dist/default/production/USART.X.production.obj
 __Htext14 0 0 ABS 0 text14 dist/default/production/USART.X.production.obj
 __Htext15 0 0 ABS 0 text15 dist/default/production/USART.X.production.obj
 __Htext16 0 0 ABS 0 text16 dist/default/production/USART.X.production.obj
-__end_of_cmpPass B8A 0 CODE 0 text5 dist/default/production/USART.X.production.obj
+__Htext17 0 0 ABS 0 text17 dist/default/production/USART.X.production.obj
+__Htext18 0 0 ABS 0 text18 dist/default/production/USART.X.production.obj
+__end_of_cmpPass DEE 0 CODE 0 text10 dist/default/production/USART.X.production.obj
 send_cfg@cmd 11 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-__ptext10 EA6 0 CODE 0 text10 dist/default/production/USART.X.production.obj
-__ptext11 F1E 0 CODE 0 text11 dist/default/production/USART.X.production.obj
-__ptext12 C4C 0 CODE 0 text12 dist/default/production/USART.X.production.obj
-__ptext13 F3A 0 CODE 0 text13 dist/default/production/USART.X.production.obj
-__ptext14 F8A 0 CODE 0 text14 dist/default/production/USART.X.production.obj
-__ptext15 F00 0 CODE 0 text15 dist/default/production/USART.X.production.obj
-__ptext16 E6E 0 CODE 0 text16 dist/default/production/USART.X.production.obj
-__pintcode_body CEE 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
+__size_of_confirmarSenha 0 0 ABS 0 - dist/default/production/USART.X.production.obj
+__ptext10 D0E 0 CODE 0 text10 dist/default/production/USART.X.production.obj
+__ptext11 10E6 0 CODE 0 text11 dist/default/production/USART.X.production.obj
+__ptext12 1168 0 CODE 0 text12 dist/default/production/USART.X.production.obj
+__ptext13 11E0 0 CODE 0 text13 dist/default/production/USART.X.production.obj
+__ptext14 109A 0 CODE 0 text14 dist/default/production/USART.X.production.obj
+__ptext15 124C 0 CODE 0 text15 dist/default/production/USART.X.production.obj
+__ptext16 11C2 0 CODE 0 text16 dist/default/production/USART.X.production.obj
+__ptext17 1130 0 CODE 0 text17 dist/default/production/USART.X.production.obj
+__ptext18 DEE 0 CODE 0 text18 dist/default/production/USART.X.production.obj
+__pintcode_body F52 0 CODE 0 intcode_body dist/default/production/USART.X.production.obj
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production/USART.X.production.obj
 __Lbigram 0 0 ABS 0 bigram dist/default/production/USART.X.production.obj
 cmpSignal@pass F 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __CFG_BOR$ON 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_BORV$3 0 0 ABS 0 - dist/default/production/USART.X.production.obj
+cadastrarSenha@temp1 2D 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+cadastrarSenha@temp2 2B 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production/USART.X.production.obj
 __Lconfig 300000 0 CONFIG 0 config dist/default/production/USART.X.production.obj
 __size_of_set_line 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-main@pass 27 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
+main@pass 31 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production/USART.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production/USART.X.production.obj
-_read_ADC F3A 0 CODE 0 text13 dist/default/production/USART.X.production.obj
-__end_of_write_LCD E6E 0 CODE 0 text9 dist/default/production/USART.X.production.obj
-__end_of_readSignal CEE 0 CODE 0 text12 dist/default/production/USART.X.production.obj
+_read_ADC 11FC 0 CODE 0 text8 dist/default/production/USART.X.production.obj
+__end_of_write_LCD 1130 0 CODE 0 text11 dist/default/production/USART.X.production.obj
+__end_of_readSignal F52 0 CODE 0 text7 dist/default/production/USART.X.production.obj
 __CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_write_LCD 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-stackhi 7FF 0 ABS 0 - /tmp/xcXmsZmQf.obj
-stacklo 60 0 ABS 0 - /tmp/xcXmsZmQf.obj
+stackhi 7FF 0 ABS 0 - /tmp/xcXQW2fBi.obj
+stacklo 60 0 ABS 0 - /tmp/xcXQW2fBi.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production/USART.X.production.obj
+__size_of_destravarPorta 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production/USART.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production/USART.X.production.obj
 _ADCON0bits FC2 0 ABS 0 - dist/default/production/USART.X.production.obj
-__end_of_read_ADC F52 0 CODE 0 text13 dist/default/production/USART.X.production.obj
+__end_of_read_ADC 1214 0 CODE 0 text8 dist/default/production/USART.X.production.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_ICPRT$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_init_INTRB2 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lspace_0 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lspace_1 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lspace_2 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_send_cfg F00 0 CODE 0 text15 dist/default/production/USART.X.production.obj
-_send_msg EA6 0 CODE 0 text10 dist/default/production/USART.X.production.obj
-__pbssCOMRAM 29 0 COMRAM 1 bssCOMRAM dist/default/production/USART.X.production.obj
+_send_cfg 11C2 0 CODE 0 text16 dist/default/production/USART.X.production.obj
+_send_msg 1168 0 CODE 0 text12 dist/default/production/USART.X.production.obj
+__pbssCOMRAM 33 0 COMRAM 1 bssCOMRAM dist/default/production/USART.X.production.obj
 send_msg@msg 11 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production/USART.X.production.obj
-_write_LCD E24 0 CODE 0 text9 dist/default/production/USART.X.production.obj
+_write_LCD 10E6 0 CODE 0 text11 dist/default/production/USART.X.production.obj
 __CFG_CPUDIV$OSC1_PLL2 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-end_of_initialization F56 0 CODE 0 cinit dist/default/production/USART.X.production.obj
-__end_of_send_cfg F1E 0 CODE 0 text15 dist/default/production/USART.X.production.obj
-__end_of_send_msg ED6 0 CODE 0 text10 dist/default/production/USART.X.production.obj
+end_of_initialization 1218 0 CODE 0 cinit dist/default/production/USART.X.production.obj
+__end_of_send_cfg 11E0 0 CODE 0 text16 dist/default/production/USART.X.production.obj
+__end_of_send_msg 1198 0 CODE 0 text12 dist/default/production/USART.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production/USART.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production/USART.X.production.obj
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec dist/default/production/USART.X.production.obj
-__end_of_cmpSignal E24 0 CODE 0 text6 dist/default/production/USART.X.production.obj
-_set_line F1E 0 CODE 0 text11 dist/default/production/USART.X.production.obj
+__end_of_cmpSignal 10E6 0 CODE 0 text14 dist/default/production/USART.X.production.obj
+_set_line 11E0 0 CODE 0 text13 dist/default/production/USART.X.production.obj
 __Lramtop 800 0 RAM 0 ramtop dist/default/production/USART.X.production.obj
 __size_of_cmpSignal 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production/USART.X.production.obj
-__pcinit F52 0 CODE 0 cinit dist/default/production/USART.X.production.obj
-__ptext0 D72 0 CODE 0 text0 dist/default/production/USART.X.production.obj
-__ptext1 9BC 0 CODE 0 text1 dist/default/production/USART.X.production.obj
-__ptext2 ED6 0 CODE 0 text2 dist/default/production/USART.X.production.obj
-__ptext3 F7A 0 CODE 0 text3 dist/default/production/USART.X.production.obj
-__ptext4 F68 0 CODE 0 text4 dist/default/production/USART.X.production.obj
-__ptext5 AB2 0 CODE 0 text5 dist/default/production/USART.X.production.obj
-__ptext6 DD8 0 CODE 0 text6 dist/default/production/USART.X.production.obj
-__ptext7 B8A 0 CODE 0 text7 dist/default/production/USART.X.production.obj
-__ptext8 84E 0 CODE 0 text8 dist/default/production/USART.X.production.obj
-__ptext9 E24 0 CODE 0 text9 dist/default/production/USART.X.production.obj
+__pcinit 1214 0 CODE 0 cinit dist/default/production/USART.X.production.obj
+__ptext0 1040 0 CODE 0 text0 dist/default/production/USART.X.production.obj
+__ptext1 1198 0 CODE 0 text1 dist/default/production/USART.X.production.obj
+__ptext2 123C 0 CODE 0 text2 dist/default/production/USART.X.production.obj
+__ptext3 122A 0 CODE 0 text3 dist/default/production/USART.X.production.obj
+__ptext4 876 0 CODE 0 text4 dist/default/production/USART.X.production.obj
+__ptext5 A56 0 CODE 0 text5 dist/default/production/USART.X.production.obj
+__ptext6 C04 0 CODE 0 text6 dist/default/production/USART.X.production.obj
+__ptext7 EB0 0 CODE 0 text7 dist/default/production/USART.X.production.obj
+__ptext8 11FC 0 CODE 0 text8 dist/default/production/USART.X.production.obj
+__ptext9 FD6 0 CODE 0 text9 dist/default/production/USART.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production/USART.X.production.obj
 __Ltext10 0 0 ABS 0 text10 dist/default/production/USART.X.production.obj
 __Ltext11 0 0 ABS 0 text11 dist/default/production/USART.X.production.obj
@@ -583,14 +656,16 @@ __Ltext13 0 0 ABS 0 text13 dist/default/production/USART.X.production.obj
 __Ltext14 0 0 ABS 0 text14 dist/default/production/USART.X.production.obj
 __Ltext15 0 0 ABS 0 text15 dist/default/production/USART.X.production.obj
 __Ltext16 0 0 ABS 0 text16 dist/default/production/USART.X.production.obj
-__end_of_set_line F3A 0 CODE 0 text11 dist/default/production/USART.X.production.obj
-__ramtop 800 0 RAM 0 ramtop /tmp/xcXmsZmQf.obj
+__Ltext17 0 0 ABS 0 text17 dist/default/production/USART.X.production.obj
+__Ltext18 0 0 ABS 0 text18 dist/default/production/USART.X.production.obj
+__end_of_set_line 11FC 0 CODE 0 text13 dist/default/production/USART.X.production.obj
+__ramtop 800 0 RAM 0 ramtop /tmp/xcXQW2fBi.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production/USART.X.production.obj
 write_LCD@c 12 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 write_LCD@i 16 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production/USART.X.production.obj
 __psmallconst 800 0 SMALLCONST 0 smallconst dist/default/production/USART.X.production.obj
-_cmpSignal DD8 0 CODE 0 text6 dist/default/production/USART.X.production.obj
+_cmpSignal 109A 0 CODE 0 text14 dist/default/production/USART.X.production.obj
 set_line@cursor 16 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production/USART.X.production.obj
 __CFG_FOSC$HS 0 0 ABS 0 - dist/default/production/USART.X.production.obj
@@ -598,7 +673,7 @@ ___param_bank 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production/USART.X.production.obj
 __size_of_clearLCD 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-__end_of__initialization F56 0 CODE 0 cinit dist/default/production/USART.X.production.obj
+__end_of__initialization 1218 0 CODE 0 cinit dist/default/production/USART.X.production.obj
 __CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_WRT2$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
@@ -608,10 +683,10 @@ __Libigdata 0 0 CODE 0 ibigdata dist/default/production/USART.X.production.obj
 __CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production/USART.X.production.obj
-_cadastrarSenha 84E 0 CODE 0 text8 dist/default/production/USART.X.production.obj
+_cadastrarSenha A56 0 CODE 0 text5 dist/default/production/USART.X.production.obj
 __CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-__end_of_main DD8 0 CODE 0 text0 dist/default/production/USART.X.production.obj
+__end_of_main 109A 0 CODE 0 text0 dist/default/production/USART.X.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production/USART.X.production.obj
 _ADRES FC3 0 ABS 0 - dist/default/production/USART.X.production.obj
 _PORTD F83 0 ABS 0 - dist/default/production/USART.X.production.obj
@@ -642,17 +717,17 @@ readSignal@i 1B 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.producti
 readSignal@j 1D 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __size_of_ISR 0 0 ABS 0 - dist/default/production/USART.X.production.obj
 __size_of_bip 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-_cmpPass AB2 0 CODE 0 text5 dist/default/production/USART.X.production.obj
-__initialization F52 0 CODE 0 cinit dist/default/production/USART.X.production.obj
+_cmpPass D0E 0 CODE 0 text10 dist/default/production/USART.X.production.obj
+__initialization 1214 0 CODE 0 cinit dist/default/production/USART.X.production.obj
 readSignal@limite 19 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
-_clearLCD F8A 0 CODE 0 text14 dist/default/production/USART.X.production.obj
+_clearLCD 124C 0 CODE 0 text15 dist/default/production/USART.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production/USART.X.production.obj
-__Hsmallconst 84E 0 SMALLCONST 0 smallconst dist/default/production/USART.X.production.obj
+__Hsmallconst 876 0 SMALLCONST 0 smallconst dist/default/production/USART.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production/USART.X.production.obj
-__end_of_cadastrarSenha 9BC 0 CODE 0 text8 dist/default/production/USART.X.production.obj
+__end_of_cadastrarSenha C04 0 CODE 0 text5 dist/default/production/USART.X.production.obj
 read_ADC@value 11 0 COMRAM 1 cstackCOMRAM dist/default/production/USART.X.production.obj
 __size_of_readSignal 0 0 ABS 0 - dist/default/production/USART.X.production.obj
-__end_of_clearLCD F92 0 CODE 0 text14 dist/default/production/USART.X.production.obj
+__end_of_clearLCD 1254 0 CODE 0 text15 dist/default/production/USART.X.production.obj
 __Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production/USART.X.production.obj
 __Hintcode E 0 CODE 0 intcode dist/default/production/USART.X.production.obj
 # %SPLITSTAB Section
@@ -680,9 +755,9 @@ __Hintcode E 0 CODE 0 intcode dist/default/production/USART.X.production.obj
 # All other numeric quantities are in decimal.
 %SEGMENTS
 idloc 0 200000 200000 8 1
-text8 0 84E 84E 744 1
-cstackCOMRAM 1 1 1 2B 1
+text4 0 876 876 9DE 1
+cstackCOMRAM 1 1 1 35 1
 reset_vec 0 0 0 4 1
 intcode 0 8 8 A 1
-smallconst 0 800 800 4E 1
+smallconst 0 800 800 76 1
 config 0 300000 300000 E 1
