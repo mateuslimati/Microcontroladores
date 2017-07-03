@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=Interrupt.c LCD.c main.c USART.c ADC.c ReadSignal.c Buzzer.c TOCTOC.c
+SOURCEFILES_QUOTED_IF_SPACED=Interrupt.c LCD.c main.c USART.c ADC.c ReadSignal.c Buzzer.c TOCTOC.c PWM.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Interrupt.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/ADC.p1 ${OBJECTDIR}/ReadSignal.p1 ${OBJECTDIR}/Buzzer.p1 ${OBJECTDIR}/TOCTOC.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/Interrupt.p1.d ${OBJECTDIR}/LCD.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/USART.p1.d ${OBJECTDIR}/ADC.p1.d ${OBJECTDIR}/ReadSignal.p1.d ${OBJECTDIR}/Buzzer.p1.d ${OBJECTDIR}/TOCTOC.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/Interrupt.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/ADC.p1 ${OBJECTDIR}/ReadSignal.p1 ${OBJECTDIR}/Buzzer.p1 ${OBJECTDIR}/TOCTOC.p1 ${OBJECTDIR}/PWM.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/Interrupt.p1.d ${OBJECTDIR}/LCD.p1.d ${OBJECTDIR}/main.p1.d ${OBJECTDIR}/USART.p1.d ${OBJECTDIR}/ADC.p1.d ${OBJECTDIR}/ReadSignal.p1.d ${OBJECTDIR}/Buzzer.p1.d ${OBJECTDIR}/TOCTOC.p1.d ${OBJECTDIR}/PWM.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Interrupt.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/ADC.p1 ${OBJECTDIR}/ReadSignal.p1 ${OBJECTDIR}/Buzzer.p1 ${OBJECTDIR}/TOCTOC.p1
+OBJECTFILES=${OBJECTDIR}/Interrupt.p1 ${OBJECTDIR}/LCD.p1 ${OBJECTDIR}/main.p1 ${OBJECTDIR}/USART.p1 ${OBJECTDIR}/ADC.p1 ${OBJECTDIR}/ReadSignal.p1 ${OBJECTDIR}/Buzzer.p1 ${OBJECTDIR}/TOCTOC.p1 ${OBJECTDIR}/PWM.p1
 
 # Source Files
-SOURCEFILES=Interrupt.c LCD.c main.c USART.c ADC.c ReadSignal.c Buzzer.c TOCTOC.c
+SOURCEFILES=Interrupt.c LCD.c main.c USART.c ADC.c ReadSignal.c Buzzer.c TOCTOC.c PWM.c
 
 
 CFLAGS=
@@ -151,6 +151,14 @@ ${OBJECTDIR}/TOCTOC.p1: TOCTOC.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/TOCTOC.d ${OBJECTDIR}/TOCTOC.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TOCTOC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/PWM.p1: PWM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PWM.p1.d 
+	@${RM} ${OBJECTDIR}/PWM.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  -D__DEBUG=1 --debugger=pickit2  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/PWM.p1  PWM.c 
+	@-${MV} ${OBJECTDIR}/PWM.d ${OBJECTDIR}/PWM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PWM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/Interrupt.p1: Interrupt.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -215,6 +223,14 @@ ${OBJECTDIR}/TOCTOC.p1: TOCTOC.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/TOCTOC.p1  TOCTOC.c 
 	@-${MV} ${OBJECTDIR}/TOCTOC.d ${OBJECTDIR}/TOCTOC.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/TOCTOC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/PWM.p1: PWM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/PWM.p1.d 
+	@${RM} ${OBJECTDIR}/PWM.p1 
+	${MP_CC} --pass1 $(MP_EXTRA_CC_PRE) --chip=$(MP_PROCESSOR_OPTION) -Q -G  --double=24 --float=24 --emi=wordwrite --opt=+asm,+asmfile,-speed,+space,-debug,-local --addrqual=ignore --mode=free -P -N255 --warn=-3 --asmlist -DXPRJ_default=$(CND_CONF)  --summary=default,-psect,-class,+mem,-hex,-file --output=default,-inhx032 --runtime=default,+clear,+init,-keep,-no_startup,-download,+config,+clib,-plib $(COMPARISON_BUILD)  --output=-mcof,+elf:multilocs --stack=compiled:auto:auto:auto "--errformat=%f:%l: error: (%n) %s" "--warnformat=%f:%l: warning: (%n) %s" "--msgformat=%f:%l: advisory: (%n) %s"    -o${OBJECTDIR}/PWM.p1  PWM.c 
+	@-${MV} ${OBJECTDIR}/PWM.d ${OBJECTDIR}/PWM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/PWM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

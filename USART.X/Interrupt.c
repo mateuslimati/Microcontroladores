@@ -7,8 +7,13 @@
 #include <xc.h>
 #include <pic18f4550.h>
 #include "LCD.h"
+#include "PWM.h"
 
-extern int button;
+#define _XTAL_FREQ 16000000
+
+
+extern int buttonCancel_Lock;
+extern int doorState;
 
 //void interrupt low_priority INT(){ Interrupt for secound
 //    
@@ -33,7 +38,13 @@ void interrupt ISR(){
     
     if(INTCON3bits.INT2IF){
         INTCON3bits.INT2IF = 0;
-        button = 1;
+        buttonCancel_Lock = 1;
+        if(doorState = 1){
+            doorState = 0;
+            DutyCycle_PWM(600);
+            __delay_ms(400);
+            DutyCycle_PWM(0);
+        }
     }
 }
 

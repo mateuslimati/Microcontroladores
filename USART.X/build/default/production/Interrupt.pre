@@ -4778,15 +4778,27 @@ void init_LCD();
 void write_LCD(char *);
 void set_line(int , int );
 
-# 11 "Interrupt.c"
-extern int button;
+# 19 "PWM.h"
+void init_PWM(void);
+void Periodo_PWM(unsigned char Valor);
+void DutyCycle_PWM(unsigned int Valor);
 
-# 32
+# 15 "Interrupt.c"
+extern int buttonCancel_Lock;
+extern int doorState;
+
+# 37
 void interrupt ISR(){
 
 if(INTCON3bits.INT2IF){
 INTCON3bits.INT2IF = 0;
-button = 1;
+buttonCancel_Lock = 1;
+if(doorState = 1){
+doorState = 0;
+DutyCycle_PWM(600);
+_delay((unsigned long)((400)*(16000000/4000.0)));
+DutyCycle_PWM(0);
+}
 }
 }
 

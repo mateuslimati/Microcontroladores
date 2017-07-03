@@ -14,11 +14,15 @@
 #include "Interrupt.h"
 #include "ADC.h"
 #include "TOCTOC.h"
+#include "PWM.h"
 
-int button = 0;
+int doorState = 0; //0 representa fechada
+int buttonConfirm_Cad = 0;
+int buttonCancel_Lock = 0;
 
 void main(){
     
+    init_PWM();
     init_INTRB2();
     init_LCD();
     init_ADC();
@@ -35,8 +39,8 @@ void main(){
     do{
         
         destravarPorta(pass, toc);
-        if(button == 1){
-            button = 0;
+        if(buttonConfirm_Cad == 1){
+            buttonConfirm_Cad = 0;
             cadastrarSenha(pass);
         }
             

@@ -12,6 +12,7 @@
       <itemPath>Buzzer.h</itemPath>
       <itemPath>TOCTOC.h</itemPath>
       <itemPath>main.h</itemPath>
+      <itemPath>PWM.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -28,6 +29,7 @@
       <itemPath>ReadSignal.c</itemPath>
       <itemPath>Buzzer.c</itemPath>
       <itemPath>TOCTOC.c</itemPath>
+      <itemPath>PWM.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

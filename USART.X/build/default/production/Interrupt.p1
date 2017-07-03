@@ -10,8 +10,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [n S347 . . . ]
 "8304
 [v _INTCON3bits `VS347 ~T0 @X0 0 e@4080 ]
-"11 Interrupt.c
-[v _button `i ~T0 @X0 0 e ]
+"15 Interrupt.c
+[v _buttonCancel_Lock `i ~T0 @X0 0 e ]
+"16
+[v _doorState `i ~T0 @X0 0 e ]
+"21 PWM.h
+[v _DutyCycle_PWM `(v ~T0 @X0 0 ef1`ui ]
+[v F3779 `(v ~T0 @X0 1 tf1`ul ]
+"161 /opt/microchip/xc8/v1.41/include/pic18.h
+[v __delay `JF3779 ~T0 @X0 0 e ]
+[p i __delay ]
 "8450 /opt/microchip/xc8/v1.41/include/pic18f4550.h
 [s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
@@ -3605,115 +3613,139 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;LCD.h: 42: void init_LCD();
 [; ;LCD.h: 43: void write_LCD(char *);
 [; ;LCD.h: 44: void set_line(int , int );
-[; ;Interrupt.c: 11: extern int button;
-[v F3832 `(v ~T0 @X0 1 tf ]
-"32 Interrupt.c
-[v _ISR `IF3832 ~T0 @X0 1 e ]
+[; ;PWM.h: 19: void init_PWM(void);
+[; ;PWM.h: 20: void Periodo_PWM(unsigned char Valor);
+[; ;PWM.h: 21: void DutyCycle_PWM(unsigned int Valor);
+[; ;Interrupt.c: 15: extern int buttonCancel_Lock;
+[; ;Interrupt.c: 16: extern int doorState;
+[v F3839 `(v ~T0 @X0 1 tf ]
+"37 Interrupt.c
+[v _ISR `IF3839 ~T0 @X0 1 e ]
 {
-[; ;Interrupt.c: 32: void interrupt ISR(){
+[; ;Interrupt.c: 37: void interrupt ISR(){
 [e :U _ISR ]
 [f ]
-[; ;Interrupt.c: 34: if(INTCON3bits.INT2IF){
-"34
+[; ;Interrupt.c: 39: if(INTCON3bits.INT2IF){
+"39
 [e $ ! != -> . . _INTCON3bits 0 1 `i -> -> -> 0 `i `Vuc `i 364  ]
 {
-[; ;Interrupt.c: 35: INTCON3bits.INT2IF = 0;
-"35
+[; ;Interrupt.c: 40: INTCON3bits.INT2IF = 0;
+"40
 [e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 36: button = 1;
-"36
-[e = _button -> 1 `i ]
-"37
+[; ;Interrupt.c: 41: buttonCancel_Lock = 1;
+"41
+[e = _buttonCancel_Lock -> 1 `i ]
+[; ;Interrupt.c: 42: if(doorState = 1){
+"42
+[e $ ! != = _doorState -> 1 `i -> 0 `i 365  ]
+{
+[; ;Interrupt.c: 43: doorState = 0;
+"43
+[e = _doorState -> 0 `i ]
+[; ;Interrupt.c: 44: DutyCycle_PWM(600);
+"44
+[e ( _DutyCycle_PWM (1 -> -> 600 `i `ui ]
+[; ;Interrupt.c: 45: _delay((unsigned long)((400)*(16000000/4000.0)));
+"45
+[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[; ;Interrupt.c: 46: DutyCycle_PWM(0);
+"46
+[e ( _DutyCycle_PWM (1 -> -> 0 `i `ui ]
+"47
+}
+[e :U 365 ]
+"48
 }
 [e :U 364 ]
-[; ;Interrupt.c: 37: }
-[; ;Interrupt.c: 38: }
-"38
-[e :UE 363 ]
-}
-"40
-[v _init_INTRB2 `(v ~T0 @X0 1 ef ]
-{
-[; ;Interrupt.c: 40: void init_INTRB2(){
-[e :U _init_INTRB2 ]
-[f ]
-[; ;Interrupt.c: 42: INTCONbits.GIE = 0;
-"42
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 43: INTCONbits.PEIE = 0;
-"43
-[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 44: TRISBbits.RB2 = 1;
-"44
-[e = . . _TRISBbits 1 2 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 45: INTCON2bits.INTEDG0 = 1;
-"45
-[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 46: INTCON3bits.INT2IF = 0;
-"46
-[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 47: INTCON3bits.INT2IE = 1;
-"47
-[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 48: INTCONbits.GIE = 1;
-"48
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 47: }
+[; ;Interrupt.c: 48: }
 [; ;Interrupt.c: 49: }
 "49
-[e :UE 365 ]
+[e :UE 363 ]
 }
 "51
+[v _init_INTRB2 `(v ~T0 @X0 1 ef ]
+{
+[; ;Interrupt.c: 51: void init_INTRB2(){
+[e :U _init_INTRB2 ]
+[f ]
+[; ;Interrupt.c: 53: INTCONbits.GIE = 0;
+"53
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 54: INTCONbits.PEIE = 0;
+"54
+[e = . . _INTCONbits 1 6 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 55: TRISBbits.RB2 = 1;
+"55
+[e = . . _TRISBbits 1 2 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 56: INTCON2bits.INTEDG0 = 1;
+"56
+[e = . . _INTCON2bits 1 6 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 57: INTCON3bits.INT2IF = 0;
+"57
+[e = . . _INTCON3bits 0 1 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 58: INTCON3bits.INT2IE = 1;
+"58
+[e = . . _INTCON3bits 0 4 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 59: INTCONbits.GIE = 1;
+"59
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 60: }
+"60
+[e :UE 366 ]
+}
+"62
 [v _init_timer `(v ~T0 @X0 1 ef ]
 {
-[; ;Interrupt.c: 51: void init_timer(){
+[; ;Interrupt.c: 62: void init_timer(){
 [e :U _init_timer ]
 [f ]
-[; ;Interrupt.c: 53: TRISD = 0x00;
-"53
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;Interrupt.c: 55: INTCONbits.GIE = 0;
-"55
-[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 56: INTCONbits.PEIE = 1;
-"56
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 57: INTCONbits.TMR0IF = 0x00;
-"57
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 58: INTCONbits.TMR0IE = 1;
-"58
-[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 61: T0CONbits.T08BIT = 0;
-"61
-[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 62: T0CONbits.T0CS = 0;
-"62
-[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 63: T0CONbits.PSA = 0;
-"63
-[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 64: T0CONbits.T0PS2 = 1;
+[; ;Interrupt.c: 64: TRISD = 0x00;
 "64
-[e = . . _T0CONbits 1 2 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 65: T0CONbits.T0PS1 = 0;
-"65
-[e = . . _T0CONbits 1 1 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 66: T0CONbits.T0PS0 = 0;
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;Interrupt.c: 66: INTCONbits.GIE = 0;
 "66
-[e = . . _T0CONbits 1 0 -> -> 0 `i `uc ]
-[; ;Interrupt.c: 67: TMR0H = 0xB;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 67: INTCONbits.PEIE = 1;
 "67
-[e = _TMR0H -> -> 11 `i `uc ]
-[; ;Interrupt.c: 68: TMR0L = 0xDC;
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 68: INTCONbits.TMR0IF = 0x00;
 "68
-[e = _TMR0L -> -> 220 `i `uc ]
-[; ;Interrupt.c: 69: T0CONbits.TMR0ON = 1;
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 69: INTCONbits.TMR0IE = 1;
 "69
-[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 71: INTCONbits.GIE = 1;
-"71
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;Interrupt.c: 72: }
+[e = . . _INTCONbits 0 5 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 72: T0CONbits.T08BIT = 0;
 "72
-[e :UE 366 ]
+[e = . . _T0CONbits 0 4 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 73: T0CONbits.T0CS = 0;
+"73
+[e = . . _T0CONbits 0 3 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 74: T0CONbits.PSA = 0;
+"74
+[e = . . _T0CONbits 0 1 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 75: T0CONbits.T0PS2 = 1;
+"75
+[e = . . _T0CONbits 1 2 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 76: T0CONbits.T0PS1 = 0;
+"76
+[e = . . _T0CONbits 1 1 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 77: T0CONbits.T0PS0 = 0;
+"77
+[e = . . _T0CONbits 1 0 -> -> 0 `i `uc ]
+[; ;Interrupt.c: 78: TMR0H = 0xB;
+"78
+[e = _TMR0H -> -> 11 `i `uc ]
+[; ;Interrupt.c: 79: TMR0L = 0xDC;
+"79
+[e = _TMR0L -> -> 220 `i `uc ]
+[; ;Interrupt.c: 80: T0CONbits.TMR0ON = 1;
+"80
+[e = . . _T0CONbits 0 5 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 82: INTCONbits.GIE = 1;
+"82
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;Interrupt.c: 83: }
+"83
+[e :UE 367 ]
 }

@@ -1,5 +1,7 @@
 Version 3.2 HI-TECH Software Intermediate Code
 [p mainexit ]
+"19 PWM.h
+[v _init_PWM `(v ~T0 @X0 0 ef ]
 "41 Interrupt.h
 [v _init_INTRB2 `(v ~T0 @X0 0 ef ]
 "42 LCD.h
@@ -3633,75 +3635,93 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;TOCTOC.h: 37: void lerToque(char* toque);
 [; ;TOCTOC.h: 38: int cmpPass(char* pass, char* toque);
 [; ;TOCTOC.h: 39: void destravarPorta(char* pass, char* toque);
-"18 main.c
-[v _button `i ~T0 @X0 1 e ]
-[i _button
+[; ;PWM.h: 19: void init_PWM(void);
+[; ;PWM.h: 20: void Periodo_PWM(unsigned char Valor);
+[; ;PWM.h: 21: void DutyCycle_PWM(unsigned int Valor);
+"19 main.c
+[v _doorState `i ~T0 @X0 1 e ]
+[i _doorState
 -> 0 `i
 ]
-[; ;main.c: 18: int button = 0;
+[; ;main.c: 19: int doorState = 0;
 "20
+[v _buttonConfirm_Cad `i ~T0 @X0 1 e ]
+[i _buttonConfirm_Cad
+-> 0 `i
+]
+[; ;main.c: 20: int buttonConfirm_Cad = 0;
+"21
+[v _buttonCancel_Lock `i ~T0 @X0 1 e ]
+[i _buttonCancel_Lock
+-> 0 `i
+]
+[; ;main.c: 21: int buttonCancel_Lock = 0;
+"23
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 20: void main(){
+[; ;main.c: 23: void main(){
 [e :U _main ]
 [f ]
-[; ;main.c: 22: init_INTRB2();
-"22
-[e ( _init_INTRB2 ..  ]
-[; ;main.c: 23: init_LCD();
-"23
-[e ( _init_LCD ..  ]
-[; ;main.c: 24: init_ADC();
-"24
-[e ( _init_ADC ..  ]
+[; ;main.c: 25: init_PWM();
+"25
+[e ( _init_PWM ..  ]
+[; ;main.c: 26: init_INTRB2();
 "26
-[v _pass `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 26: char pass[2];
-[; ;main.c: 27: pass[0] = 0x00;
+[e ( _init_INTRB2 ..  ]
+[; ;main.c: 27: init_LCD();
 "27
-[e = *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 28: pass[1] = 0x00;
+[e ( _init_LCD ..  ]
+[; ;main.c: 28: init_ADC();
 "28
-[e = *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
-"29
-[v _toc `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 29: char toc[2];
-[; ;main.c: 30: toc[0] = 0x00;
+[e ( _init_ADC ..  ]
 "30
-[e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 31: toc[1] = 0x00;
+[v _pass `uc ~T0 @X0 -> 2 `i a ]
+[; ;main.c: 30: char pass[2];
+[; ;main.c: 31: pass[0] = 0x00;
 "31
-[e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 33: cadastrarSenha(pass);
+[e = *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 32: pass[1] = 0x00;
+"32
+[e = *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
 "33
-[e ( _cadastrarSenha (1 &U _pass ]
-[; ;main.c: 35: do{
+[v _toc `uc ~T0 @X0 -> 2 `i a ]
+[; ;main.c: 33: char toc[2];
+[; ;main.c: 34: toc[0] = 0x00;
+"34
+[e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 35: toc[1] = 0x00;
 "35
+[e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 37: cadastrarSenha(pass);
+"37
+[e ( _cadastrarSenha (1 &U _pass ]
+[; ;main.c: 39: do{
+"39
 [e :U 366 ]
 {
-[; ;main.c: 37: destravarPorta(pass, toc);
-"37
-[e ( _destravarPorta (2 , &U _pass &U _toc ]
-[; ;main.c: 38: if(button == 1){
-"38
-[e $ ! == _button -> 1 `i 367  ]
-{
-[; ;main.c: 39: button = 0;
-"39
-[e = _button -> 0 `i ]
-[; ;main.c: 40: cadastrarSenha(pass);
-"40
-[e ( _cadastrarSenha (1 &U _pass ]
+[; ;main.c: 41: destravarPorta(pass, toc);
 "41
+[e ( _destravarPorta (2 , &U _pass &U _toc ]
+[; ;main.c: 42: if(buttonConfirm_Cad == 1){
+"42
+[e $ ! == _buttonConfirm_Cad -> 1 `i 367  ]
+{
+[; ;main.c: 43: buttonConfirm_Cad = 0;
+"43
+[e = _buttonConfirm_Cad -> 0 `i ]
+[; ;main.c: 44: cadastrarSenha(pass);
+"44
+[e ( _cadastrarSenha (1 &U _pass ]
+"45
 }
 [e :U 367 ]
-"43
+"47
 }
-[; ;main.c: 41: }
-[; ;main.c: 43: }while(1);
+[; ;main.c: 45: }
+[; ;main.c: 47: }while(1);
 [e $ != -> 1 `i -> 0 `i 366  ]
 [e :U 365 ]
-[; ;main.c: 45: }
-"45
+[; ;main.c: 49: }
+"49
 [e :UE 363 ]
 }

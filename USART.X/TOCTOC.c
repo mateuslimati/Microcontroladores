@@ -12,12 +12,15 @@
 #include "ReadSignal.h"
 #include "Buzzer.h"
 #include "TOCTOC.h"
+#include "PWM.h"
 #include <time.h>
 
 #define high 1
 #define low  0
 
-extern int button;
+extern int buttonConfirm_Cad;
+extern int buttonCancel_Lock;
+extern int doorState;
 
 void lerToque(char* toque){
         
@@ -58,8 +61,10 @@ void destravarPorta(char* pass, char* toque){
     write_LCD("Bata na porta");
 
     while((int)read_ADC() < 15){
-        if(button == 1)
+        if(PORTBbits.RB4 == 1){
+            buttonConfirm_Cad = 1;
             return;
+        }
     }
         
     while(i < 4){
@@ -81,7 +86,14 @@ void destravarPorta(char* pass, char* toque){
         write_LCD("Porta");
         set_line(1,2);
         write_LCD("Destravada!");
-        bip(2, 1000);          
+      
+        if(doorState == 0){
+            doorState = 1;
+            DutyCycle_PWM(8);
+            __delay_ms(1000);
+            DutyCycle_PWM(0);
+        }
+
     }
     else{
         clearLCD();
@@ -89,7 +101,6 @@ void destravarPorta(char* pass, char* toque){
         write_LCD("As senhas");
         set_line(1,1);
         write_LCD("nao coincidem");
-        bip(4, 500);
     } 
 
 }
@@ -104,7 +115,7 @@ int cmpPass(char* pass, char* toque){
         write_LCD("As senhas");
         set_line(1,3);
         write_LCD("coincidem");
-        bip(2, 1000);  
+        //bip(2, 1000);  
     }
     else{
         clearLCD();
@@ -112,7 +123,7 @@ int cmpPass(char* pass, char* toque){
         write_LCD("As senhas");
         set_line(1,1);
         write_LCD("nao coincidem");
-        bip(4, 500);
+        //bip(4, 500);
     } 
     return i;
 
@@ -125,8 +136,8 @@ int confirmarSenha(){
         set_line(1,5);
         write_LCD("senha");
         while(1){
-            if(button == 1){
-                button = 0;
+            if(buttonCancel_Lock == 1){
+                buttonCancel_Lock = 0;
                 return 0;
             }
             else if(PORTBbits.RB4)
