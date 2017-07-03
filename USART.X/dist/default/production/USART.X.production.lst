@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC18 LITE Macro Assembler V1.41 build -162212810 
-                                                                                               Sat Jul  1 17:29:05 2017
+                                                                                               Mon Jul  3 13:51:54 2017
 
 Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250102
      1                           	processor	18F4550
@@ -1984,10 +1984,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1970  001026  0E00               	movlw	0
   1971  001028  6E33               	movwf	_button,c
   1972                           
-  1973                           ;TOCTOC.c: 130: return 1;
+  1973                           ;TOCTOC.c: 130: return 0;
   1974  00102A  0E00               	movlw	0
   1975  00102C  6E19               	movwf	?_confirmarSenha+1,c
-  1976  00102E  0E01               	movlw	1
+  1976  00102E  0E00               	movlw	0
   1977  001030  6E18               	movwf	?_confirmarSenha,c
   1978  001032  0012               	return	
   1979  001034                     l269:
@@ -1996,10 +1996,10 @@ Microchip Technology Omniscient Code Generator v1.41 (Free mode) build 201701250
   1982  001034  A881               	btfss	3969,4,c	;volatile
   1983  001036  D7F1               	goto	l1484
   1984                           
-  1985                           ;TOCTOC.c: 133: return 0;
+  1985                           ;TOCTOC.c: 133: return 1;
   1986  001038  0E00               	movlw	0
   1987  00103A  6E19               	movwf	?_confirmarSenha+1,c
-  1988  00103C  0E00               	movlw	0
+  1988  00103C  0E01               	movlw	1
   1989  00103E  D7F8               	goto	L1
   1990  001040                     __end_of_confirmarSenha:
   1991                           	opt stack 0
@@ -3586,7 +3586,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V1.41 build -162212810 
-Symbol Table                                                                                   Sat Jul  1 17:29:05 2017
+Symbol Table                                                                                   Mon Jul  3 13:51:54 2017
 
             __CFG_BOR$ON 000000              __CFG_BORV$3 000000             __CFG_CP0$OFF 000000  
            __CFG_CP1$OFF 000000             __CFG_CP2$OFF 000000             __CFG_CP3$OFF 000000  
