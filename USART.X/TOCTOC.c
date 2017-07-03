@@ -78,9 +78,9 @@ void destravarPorta(char* pass, char* toque){
     if(cmpPass(pass, toque)){
         clearLCD();
         set_line(0,4);
-        write_LCD("    Porta");
+        write_LCD("Porta");
         set_line(1,2);
-        write_LCD("  Destravada!");
+        write_LCD("Destravada!");
         bip(2, 1000);          
     }
     else{
