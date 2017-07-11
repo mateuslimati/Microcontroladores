@@ -23,6 +23,10 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _RCIF `Vb ~T0 @X0 0 e@31989 ]
 "5351
 [v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"10 USART.c
+[v _buttonCancel_Lock `i ~T0 @X0 0 e ]
+"11
+[v _buttonConfirm_Cad `i ~T0 @X0 0 e ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3531,169 +3535,294 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 161: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 163: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 165: extern __nonreentrant void _delay3(unsigned char);
-"10 USART.c
+[; ;USART.c: 10: extern int buttonCancel_Lock;
+[; ;USART.c: 11: extern int buttonConfirm_Cad;
+"13 USART.c
 [v _init_UART `(v ~T0 @X0 1 ef ]
 {
-[; ;USART.c: 10: void init_UART(){
+[; ;USART.c: 13: void init_UART(){
 [e :U _init_UART ]
 [f ]
-[; ;USART.c: 12: SPBRG = 12;
-"12
-[e = _SPBRG -> -> 12 `i `uc ]
-[; ;USART.c: 13: BRGH = 0;
-"13
-[e = _BRGH -> -> 0 `i `b ]
-[; ;USART.c: 14: SYNC = 0;
-"14
-[e = _SYNC -> -> 0 `i `b ]
-[; ;USART.c: 15: SPEN = 1;
+[; ;USART.c: 15: SPBRG = 25;
 "15
-[e = _SPEN -> -> 1 `i `b ]
-[; ;USART.c: 16: TRISC7 = 1;
+[e = _SPBRG -> -> 25 `i `uc ]
+[; ;USART.c: 16: BRGH = 0;
 "16
-[e = _TRISC7 -> -> 1 `i `b ]
-[; ;USART.c: 17: TRISC6 = 1;
+[e = _BRGH -> -> 0 `i `b ]
+[; ;USART.c: 17: SYNC = 0;
 "17
-[e = _TRISC6 -> -> 1 `i `b ]
-[; ;USART.c: 18: CREN = 1;
+[e = _SYNC -> -> 0 `i `b ]
+[; ;USART.c: 18: SPEN = 1;
 "18
-[e = _CREN -> -> 1 `i `b ]
-[; ;USART.c: 19: TXEN = 1;
+[e = _SPEN -> -> 1 `i `b ]
+[; ;USART.c: 19: TRISC7 = 1;
 "19
-[e = _TXEN -> -> 1 `i `b ]
-[; ;USART.c: 20: }
+[e = _TRISC7 -> -> 1 `i `b ]
+[; ;USART.c: 20: TRISC6 = 1;
 "20
+[e = _TRISC6 -> -> 1 `i `b ]
+[; ;USART.c: 21: CREN = 1;
+"21
+[e = _CREN -> -> 1 `i `b ]
+[; ;USART.c: 22: TXEN = 1;
+"22
+[e = _TXEN -> -> 1 `i `b ]
+[; ;USART.c: 23: }
+"23
 [e :UE 362 ]
 }
-"22
+"25
 [v _UART_Write `(v ~T0 @X0 1 ef1`uc ]
 {
-[; ;USART.c: 22: void UART_Write(char data){
+[; ;USART.c: 25: void UART_Write(char data){
 [e :U _UART_Write ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;USART.c: 23: while(!TRMT);
-"23
+[; ;USART.c: 26: while(!TRMT);
+"26
 [e $U 364  ]
 [e :U 365 ]
 [e :U 364 ]
 [e $ ! _TRMT 365  ]
 [e :U 366 ]
-[; ;USART.c: 24: TXREG = data;
-"24
+[; ;USART.c: 27: TXREG = data;
+"27
 [e = _TXREG _data ]
-[; ;USART.c: 25: }
-"25
+[; ;USART.c: 28: }
+"28
 [e :UE 363 ]
 }
-"27
+"30
 [v _UART_TX_Empty `(uc ~T0 @X0 1 ef ]
 {
-[; ;USART.c: 27: char UART_TX_Empty(){
+[; ;USART.c: 30: char UART_TX_Empty(){
 [e :U _UART_TX_Empty ]
 [f ]
-[; ;USART.c: 28: return TRMT;
-"28
+[; ;USART.c: 31: return TRMT;
+"31
 [e ) -> -> _TRMT `i `uc ]
 [e $UE 367  ]
-[; ;USART.c: 29: }
-"29
+[; ;USART.c: 32: }
+"32
 [e :UE 367 ]
 }
-"31
+"34
 [v _UART_Write_Text `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;USART.c: 31: void UART_Write_Text(char *text){
+[; ;USART.c: 34: void UART_Write_Text(char *text){
 [e :U _UART_Write_Text ]
 [v _text `*uc ~T0 @X0 1 r1 ]
 [f ]
-"32
+"35
 [v _i `i ~T0 @X0 1 a ]
-[; ;USART.c: 32: int i;
-[; ;USART.c: 33: for(i=0;text[i]!='\0';i++)
-"33
+[; ;USART.c: 35: int i;
+[; ;USART.c: 36: for(i=0;text[i]!='\0';i++)
+"36
 {
 [e = _i -> 0 `i ]
 [e $U 372  ]
-"34
+"37
 [e :U 369 ]
-[; ;USART.c: 34: UART_Write(text[i]);
+[; ;USART.c: 37: UART_Write(text[i]);
 [e ( _UART_Write (1 *U + _text * -> _i `x -> -> # *U _text `i `x ]
-"33
+"36
 [e ++ _i -> 1 `i ]
 [e :U 372 ]
 [e $ != -> *U + _text * -> _i `x -> -> # *U _text `i `x `ui -> 0 `ui 369  ]
 [e :U 370 ]
-"34
+"37
 }
-[; ;USART.c: 35: }
-"35
+[; ;USART.c: 38: }
+"38
 [e :UE 368 ]
 }
-"37
+"40
 [v _UART_Data_Ready `(uc ~T0 @X0 1 ef ]
 {
-[; ;USART.c: 37: char UART_Data_Ready(){
+[; ;USART.c: 40: char UART_Data_Ready(){
 [e :U _UART_Data_Ready ]
 [f ]
-[; ;USART.c: 38: return RCIF;
-"38
+[; ;USART.c: 41: return RCIF;
+"41
 [e ) -> -> _RCIF `i `uc ]
 [e $UE 373  ]
-[; ;USART.c: 39: }
-"39
+[; ;USART.c: 42: }
+"42
 [e :UE 373 ]
 }
-"41
+"44
 [v _UART_Read `(uc ~T0 @X0 1 ef ]
 {
-[; ;USART.c: 41: char UART_Read(){
+[; ;USART.c: 44: char UART_Read(){
 [e :U _UART_Read ]
 [f ]
-[; ;USART.c: 42: while(!RCIF);
-"42
+[; ;USART.c: 45: while(!RCIF);
+"45
 [e $U 375  ]
 [e :U 376 ]
 [e :U 375 ]
 [e $ ! _RCIF 376  ]
 [e :U 377 ]
-[; ;USART.c: 43: return RCREG;
-"43
+[; ;USART.c: 46: return RCREG;
+"46
 [e ) _RCREG ]
 [e $UE 374  ]
-[; ;USART.c: 44: }
-"44
+[; ;USART.c: 47: }
+"47
 [e :UE 374 ]
 }
-"46
+"49
 [v _UART_Read_Text `(v ~T0 @X0 1 ef2`*uc`ui ]
 {
-[; ;USART.c: 46: void UART_Read_Text(char *Output, unsigned int length){
+[; ;USART.c: 49: void UART_Read_Text(char *Output, unsigned int length){
 [e :U _UART_Read_Text ]
 [v _Output `*uc ~T0 @X0 1 r1 ]
 [v _length `ui ~T0 @X0 1 r2 ]
 [f ]
-"47
+"50
 [v _i `ui ~T0 @X0 1 a ]
-[; ;USART.c: 47: unsigned int i;
-[; ;USART.c: 48: for(int i=0;i<length;i++)
-"48
+[; ;USART.c: 50: unsigned int i;
+[; ;USART.c: 51: for(int i=0;i<length;i++)
+"51
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
 [e $U 382  ]
-"49
+"52
 [e :U 379 ]
-[; ;USART.c: 49: Output[i] = UART_Read();
+[; ;USART.c: 52: Output[i] = UART_Read();
 [e = *U + _Output * -> _i `x -> -> # *U _Output `i `x ( _UART_Read ..  ]
-"48
+"51
 [e ++ _i -> 1 `i ]
 [e :U 382 ]
 [e $ < -> _i `ui _length 379  ]
 [e :U 380 ]
-"49
+"52
 }
-[; ;USART.c: 50: }
-"50
+[; ;USART.c: 53: }
+"53
 [e :UE 378 ]
+}
+"55
+[v _cmp_MSG1 `(i ~T0 @X0 1 ef1`uc ]
+{
+[; ;USART.c: 55: int cmp_MSG1(char msg){
+[e :U _cmp_MSG1 ]
+[v _msg `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;USART.c: 56: if(msg == 0x40)
+"56
+[e $ ! == -> _msg `i -> 64 `i 384  ]
+[; ;USART.c: 57: return 1;
+"57
+[e ) -> 1 `i ]
+[e $UE 383  ]
+[e :U 384 ]
+[; ;USART.c: 58: return 0;
+"58
+[e ) -> 0 `i ]
+[e $UE 383  ]
+[; ;USART.c: 59: }
+"59
+[e :UE 383 ]
+}
+"61
+[v _cmp_MSG2 `(i ~T0 @X0 1 ef1`uc ]
+{
+[; ;USART.c: 61: int cmp_MSG2(char msg){
+[e :U _cmp_MSG2 ]
+[v _msg `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;USART.c: 62: if((msg & 0x1C) == 0x04){
+"62
+[e $ ! == & -> _msg `i -> 28 `i -> 4 `i 386  ]
+{
+[; ;USART.c: 63: if((msg & 0x03) == 0x0)
+"63
+[e $ ! == & -> _msg `i -> 3 `i -> 0 `i 387  ]
+[; ;USART.c: 64: return 0;
+"64
+[e ) -> 0 `i ]
+[e $UE 385  ]
+[e :U 387 ]
+[; ;USART.c: 65: if((msg & 0x03) == 0x1)
+"65
+[e $ ! == & -> _msg `i -> 3 `i -> 1 `i 388  ]
+[; ;USART.c: 66: return 1;
+"66
+[e ) -> 1 `i ]
+[e $UE 385  ]
+[e :U 388 ]
+"67
+}
+[e :U 386 ]
+[; ;USART.c: 67: }
+[; ;USART.c: 68: return -1;
+"68
+[e ) -U -> 1 `i ]
+[e $UE 385  ]
+[; ;USART.c: 70: }
+"70
+[e :UE 385 ]
+}
+"72
+[v _checkUSART `(v ~T0 @X0 1 ef ]
+{
+[; ;USART.c: 72: void checkUSART(){
+[e :U _checkUSART ]
+[f ]
+[; ;USART.c: 74: if(UART_Data_Ready()){
+"74
+[e $ ! != -> ( _UART_Data_Ready ..  `i -> -> -> 0 `i `uc `i 390  ]
+{
+"75
+[v _msg `uc ~T0 @X0 1 a ]
+[; ;USART.c: 75: char msg = UART_Read();
+[e = _msg ( _UART_Read ..  ]
+[; ;USART.c: 76: if(cmp_MSG1(msg)){
+"76
+[e $ ! != ( _cmp_MSG1 (1 _msg -> 0 `i 391  ]
+{
+[; ;USART.c: 77: if(UART_Data_Ready()){
+"77
+[e $ ! != -> ( _UART_Data_Ready ..  `i -> -> -> 0 `i `uc `i 392  ]
+{
+[; ;USART.c: 78: msg = UART_Read();
+"78
+[e = _msg ( _UART_Read ..  ]
+"79
+[v _op `i ~T0 @X0 1 a ]
+[; ;USART.c: 79: int op = cmp_MSG2(msg);
+[e = _op ( _cmp_MSG2 (1 _msg ]
+[; ;USART.c: 80: if(op == 0)
+"80
+[e $ ! == _op -> 0 `i 393  ]
+[; ;USART.c: 81: buttonCancel_Lock = 1;
+"81
+[e = _buttonCancel_Lock -> 1 `i ]
+[e $U 394  ]
+"82
+[e :U 393 ]
+[; ;USART.c: 82: else if(op == 1)
+[e $ ! == _op -> 1 `i 395  ]
+[; ;USART.c: 83: buttonConfirm_Cad = 1;
+"83
+[e = _buttonConfirm_Cad -> 1 `i ]
+[e :U 395 ]
+"84
+[e :U 394 ]
+}
+[e :U 392 ]
+"85
+}
+[e :U 391 ]
+"86
+}
+[e :U 390 ]
+[; ;USART.c: 84: }
+[; ;USART.c: 85: }
+[; ;USART.c: 86: }
+[; ;USART.c: 87: }
+"87
+[e :UE 389 ]
 }

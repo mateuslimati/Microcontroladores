@@ -13,20 +13,20 @@
 
 void bip(int rounds, int time){
         
-    TRISCbits.RC2 = 0;
-    PORTCbits.RC2 = 0;
+    TRISCbits.RC1 = 0;
+    PORTCbits.RC1 = 0;
     
     int j = 0;
     if(time == 500){
         while(j < rounds){
-                PORTCbits.RC2 = !PORTCbits.RC2;
+                PORTCbits.RC1 = !PORTCbits.RC1;
                 __delay_ms(500);
                 j++;
         }
     }
     else if(time == 1000){
         while(j < rounds){
-                PORTCbits.RC2 = !PORTCbits.RC2;
+                PORTCbits.RC1 = !PORTCbits.RC1;
                 __delay_ms(1000);
                 j++;
         }

@@ -4862,8 +4862,19 @@ void init_PWM(void);
 void Periodo_PWM(unsigned char Valor);
 void DutyCycle_PWM(unsigned int Valor);
 
-# 19 "main.c"
-int doorState = 0;
+# 37 "USART.h"
+void init_UART();
+void UART_Write(char data);
+char UART_TX_Empty();
+void UART_Write_Text(char *text);
+char UART_Data_Ready();
+char UART_Read();
+void UART_Read_Text(char *Output, unsigned int length);
+int cmp_MSG1(char msg);
+int cmp_MSG2(char msg);
+
+# 20 "main.c"
+int doorState = 1;
 int buttonConfirm_Cad = 0;
 int buttonCancel_Lock = 0;
 
@@ -4873,6 +4884,7 @@ init_PWM();
 init_INTRB2();
 init_LCD();
 init_ADC();
+init_UART();
 
 char pass[2];
 pass[0] = 0x00;

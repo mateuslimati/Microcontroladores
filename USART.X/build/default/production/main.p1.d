@@ -3,6 +3,7 @@
  main.c  \
 PWM.h  \
 main.h  \
+USART.h  \
 LCD.h  \
 TOCTOC.h  \
 ADC.h  \

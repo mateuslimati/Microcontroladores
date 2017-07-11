@@ -3576,37 +3576,37 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;ADC.c: 16: ADCON0bits.ADON = 1;
 "16
 [e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-[; ;ADC.c: 17: }
-"17
+[; ;ADC.c: 18: }
+"18
 [e :UE 362 ]
 }
-"19
+"20
 [v _read_ADC `(ui ~T0 @X0 1 ef ]
 {
-[; ;ADC.c: 19: unsigned int read_ADC(){
+[; ;ADC.c: 20: unsigned int read_ADC(){
 [e :U _read_ADC ]
 [f ]
-"20
-[v _value `ui ~T0 @X0 1 a ]
-[; ;ADC.c: 20: unsigned int value;
-[; ;ADC.c: 21: ADCON0bits.GO = 1;
 "21
+[v _value `ui ~T0 @X0 1 a ]
+[; ;ADC.c: 21: unsigned int value;
+[; ;ADC.c: 22: ADCON0bits.GO = 1;
+"22
 [e = . . _ADCON0bits 4 1 -> -> 1 `i `uc ]
-[; ;ADC.c: 23: while(ADCON0bits.DONE);
-"23
+[; ;ADC.c: 24: while(ADCON0bits.DONE);
+"24
 [e $U 364  ]
 [e :U 365 ]
 [e :U 364 ]
 [e $ != -> . . _ADCON0bits 3 1 `i -> -> -> 0 `i `Vuc `i 365  ]
 [e :U 366 ]
-[; ;ADC.c: 24: value = ADRES;
-"24
+[; ;ADC.c: 25: value = ADRES;
+"25
 [e = _value -> _ADRES `ui ]
-[; ;ADC.c: 26: return value;
-"26
+[; ;ADC.c: 27: return value;
+"27
 [e ) _value ]
 [e $UE 363  ]
-[; ;ADC.c: 27: }
-"27
+[; ;ADC.c: 28: }
+"28
 [e :UE 363 ]
 }

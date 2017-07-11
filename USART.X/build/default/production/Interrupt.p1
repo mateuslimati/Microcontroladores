@@ -3635,9 +3635,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Interrupt.c: 41: buttonCancel_Lock = 1;
 "41
 [e = _buttonCancel_Lock -> 1 `i ]
-[; ;Interrupt.c: 42: if(doorState = 1){
+[; ;Interrupt.c: 42: if(doorState == 1){
 "42
-[e $ ! != = _doorState -> 1 `i -> 0 `i 365  ]
+[e $ ! == _doorState -> 1 `i 365  ]
 {
 [; ;Interrupt.c: 43: doorState = 0;
 "43
@@ -3645,9 +3645,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;Interrupt.c: 44: DutyCycle_PWM(600);
 "44
 [e ( _DutyCycle_PWM (1 -> -> 600 `i `ui ]
-[; ;Interrupt.c: 45: _delay((unsigned long)((400)*(16000000/4000.0)));
+[; ;Interrupt.c: 45: _delay((unsigned long)((175)*(16000000/4000.0)));
 "45
-[e ( __delay (1 -> * -> -> 400 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
+[e ( __delay (1 -> * -> -> 175 `i `d / -> -> 16000000 `l `d .4000.0 `ul ]
 [; ;Interrupt.c: 46: DutyCycle_PWM(0);
 "46
 [e ( _DutyCycle_PWM (1 -> -> 0 `i `ui ]

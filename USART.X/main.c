@@ -15,8 +15,9 @@
 #include "ADC.h"
 #include "TOCTOC.h"
 #include "PWM.h"
+#include "USART.h"
 
-int doorState = 0; //0 representa fechada
+int doorState = 1; //1 representa aberta
 int buttonConfirm_Cad = 0;
 int buttonCancel_Lock = 0;
 
@@ -26,7 +27,8 @@ void main(){
     init_INTRB2();
     init_LCD();
     init_ADC();
-       
+    init_UART();
+     
     char pass[2];
     pass[0] = 0x00;
     pass[1] = 0x00;

@@ -4744,6 +4744,7 @@ ADCON0 = 0;
 ADCON1 = 0x0e;
 ADCON2 = 0xd9;
 ADCON0bits.ADON = 1;
+
 }
 
 unsigned int read_ADC(){

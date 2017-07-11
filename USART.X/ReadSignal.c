@@ -23,7 +23,7 @@ void readSignal(char *signal, int pos){
         
         i = 0;
         while(i < 500){
-            if((int)read_ADC() > 15){
+            if((int)read_ADC() > 25){
                 *signal |= (0x03<<j);
             }
             __delay_ms(1);    

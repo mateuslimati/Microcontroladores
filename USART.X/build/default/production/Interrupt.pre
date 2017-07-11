@@ -4793,10 +4793,10 @@ void interrupt ISR(){
 if(INTCON3bits.INT2IF){
 INTCON3bits.INT2IF = 0;
 buttonCancel_Lock = 1;
-if(doorState = 1){
+if(doorState == 1){
 doorState = 0;
 DutyCycle_PWM(600);
-_delay((unsigned long)((400)*(16000000/4000.0)));
+_delay((unsigned long)((175)*(16000000/4000.0)));
 DutyCycle_PWM(0);
 }
 }

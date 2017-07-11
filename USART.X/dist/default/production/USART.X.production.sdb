@@ -25,8 +25,10 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "11 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
 [v _init_ADC init_ADC `(v  1 e 1 0 ]
-"19
+"20
 [v _read_ADC read_ADC `(ui  1 e 2 0 ]
+"14 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+[v _bip bip `(v  1 e 1 0 ]
 "37 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 "51
@@ -45,7 +47,7 @@
 [v _write_LCD write_LCD `(v  1 e 1 0 ]
 "66
 [v _set_line set_line `(v  1 e 1 0 ]
-"23 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+"24 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
 [v _main main `(v  1 e 1 0 ]
 "14 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/PWM.c
 [v _init_PWM init_PWM `(v  1 e 1 0 ]
@@ -56,20 +58,30 @@
 [v _readSignal readSignal `(v  1 e 1 0 ]
 "36
 [v _cmpSignal cmpSignal `(i  1 e 2 0 ]
-"25 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+"26 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _lerToque lerToque `(v  1 e 1 0 ]
-"52
+"53
 [v _destravarPorta destravarPorta `(v  1 e 1 0 ]
-"108
+"109
 [v _cmpPass cmpPass `(i  1 e 2 0 ]
-"132
+"133
 [v _confirmarSenha confirmarSenha `(i  1 e 2 0 ]
-"148
+"150
 [v _cadastrarSenha cadastrarSenha `(v  1 e 1 0 ]
-"22 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/USART.c
+"13 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/USART.c
+[v _init_UART init_UART `(v  1 e 1 0 ]
+"25
 [v _UART_Write UART_Write `(v  1 e 1 0 ]
-"41
+"40
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+"44
 [v _UART_Read UART_Read `(uc  1 e 1 0 ]
+"55
+[v _cmp_MSG1 cmp_MSG1 `(i  1 e 2 0 ]
+"61
+[v _cmp_MSG2 cmp_MSG2 `(i  1 e 2 0 ]
+"72
+[v _checkUSART checkUSART `(v  1 e 1 0 ]
 [s S132 . 1 `uc 1 RB0 1 0 :1:0 
 `uc 1 RB1 1 0 :1:1 
 `uc 1 RB2 1 0 :1:2 
@@ -93,7 +105,7 @@
 ]
 [u S374 . 1 `S132 1 . 1 0 `S363 1 . 1 0 `S371 1 . 1 0 ]
 [v _PORTBbits PORTBbits `VES374  1 e 1 @3969 ]
-[s S660 . 1 `uc 1 RC0 1 0 :1:0 
+[s S676 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -103,29 +115,29 @@
 `uc 1 RC7 1 0 :1:7 
 ]
 "2569
-[s S669 . 1 `uc 1 T1OSO 1 0 :1:0 
+[s S685 . 1 `uc 1 T1OSO 1 0 :1:0 
 `uc 1 T1OSI 1 0 :1:1 
 `uc 1 CCP1 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 TX 1 0 :1:6 
 `uc 1 RX 1 0 :1:7 
 ]
-[s S676 . 1 `uc 1 T13CKI 1 0 :1:0 
+[s S692 . 1 `uc 1 T13CKI 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 P1A 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 CK 1 0 :1:6 
 `uc 1 DT 1 0 :1:7 
 ]
-[s S683 . 1 `uc 1 . 1 0 :1:0 
+[s S699 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S687 . 1 `uc 1 . 1 0 :1:0 
+[s S703 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S690 . 1 `S660 1 . 1 0 `S669 1 . 1 0 `S676 1 . 1 0 `S683 1 . 1 0 `S687 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES690  1 e 1 @3970 ]
+[u S706 . 1 `S676 1 . 1 0 `S685 1 . 1 0 `S692 1 . 1 0 `S699 1 . 1 0 `S703 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES706  1 e 1 @3970 ]
 "2668
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S284 . 1 `uc 1 RE0 1 0 :1:0 
@@ -161,7 +173,7 @@
 ]
 [u S314 . 1 `S284 1 . 1 0 `S291 1 . 1 0 `S295 1 . 1 0 `S302 1 . 1 0 `S309 1 . 1 0 ]
 [v _PORTEbits PORTEbits `VES314  1 e 1 @3972 ]
-[s S490 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S506 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -170,7 +182,7 @@
 `uc 1 TRISA6 1 0 :1:6 
 ]
 "3413
-[s S498 . 1 `uc 1 RA0 1 0 :1:0 
+[s S514 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
 `uc 1 RA3 1 0 :1:3 
@@ -178,8 +190,8 @@
 `uc 1 RA5 1 0 :1:5 
 `uc 1 RA6 1 0 :1:6 
 ]
-[u S506 . 1 `S490 1 . 1 0 `S498 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES506  1 e 1 @3986 ]
+[u S522 . 1 `S506 1 . 1 0 `S514 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES522  1 e 1 @3986 ]
 "3580
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 [s S123 . 1 `uc 1 TRISB0 1 0 :1:0 
@@ -194,7 +206,7 @@
 "3612
 [u S141 . 1 `S123 1 . 1 0 `S132 1 . 1 0 ]
 [v _TRISBbits TRISBbits `VES141  1 e 1 @3987 ]
-[s S628 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S644 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
@@ -202,15 +214,15 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "3829
-[s S635 . 1 `uc 1 RC0 1 0 :1:0 
+[s S651 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 . 1 0 :3:3 
 `uc 1 RC6 1 0 :1:6 
 `uc 1 RC7 1 0 :1:7 
 ]
-[u S642 . 1 `S628 1 . 1 0 `S635 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES642  1 e 1 @3988 ]
+[u S658 . 1 `S644 1 . 1 0 `S651 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES658  1 e 1 @3988 ]
 "3954
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4175
@@ -223,12 +235,12 @@
 [v _SPBRG SPBRG `VEuc  1 e 1 @4015 ]
 "6248
 [v _CCP1CON CCP1CON `VEuc  1 e 1 @4029 ]
-[s S878 . 1 `uc 1 CCP1M 1 0 :4:0 
+[s S898 . 1 `uc 1 CCP1M 1 0 :4:0 
 `uc 1 DC1B 1 0 :2:4 
 `uc 1 P1M 1 0 :2:6 
 ]
 "6275
-[s S882 . 1 `uc 1 CCP1M0 1 0 :1:0 
+[s S902 . 1 `uc 1 CCP1M0 1 0 :1:0 
 `uc 1 CCP1M1 1 0 :1:1 
 `uc 1 CCP1M2 1 0 :1:2 
 `uc 1 CCP1M3 1 0 :1:3 
@@ -237,8 +249,8 @@
 `uc 1 P1M0 1 0 :1:6 
 `uc 1 P1M1 1 0 :1:7 
 ]
-[u S891 . 1 `S878 1 . 1 0 `S882 1 . 1 0 ]
-[v _CCP1CONbits CCP1CONbits `VES891  1 e 1 @4029 ]
+[u S911 . 1 `S898 1 . 1 0 `S902 1 . 1 0 ]
+[v _CCP1CONbits CCP1CONbits `VES911  1 e 1 @4029 ]
 "6415
 [v _CCPR1L CCPR1L `VEuc  1 e 1 @4030 ]
 "6427
@@ -247,38 +259,38 @@
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "6581
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @4034 ]
-[s S529 . 1 `uc 1 . 1 0 :1:0 
+[s S545 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_NOT_DONE 1 0 :1:1 
 ]
 "6625
-[s S532 . 1 `uc 1 ADON 1 0 :1:0 
+[s S548 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 ]
-[s S536 . 1 `uc 1 . 1 0 :1:0 
+[s S552 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
 `uc 1 CHS2 1 0 :1:4 
 `uc 1 CHS3 1 0 :1:5 
 ]
-[s S543 . 1 `uc 1 . 1 0 :1:0 
+[s S559 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 DONE 1 0 :1:1 
 ]
-[s S546 . 1 `uc 1 . 1 0 :1:0 
+[s S562 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 ]
-[s S549 . 1 `uc 1 . 1 0 :1:0 
+[s S565 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 NOT_DONE 1 0 :1:1 
 ]
-[s S552 . 1 `uc 1 . 1 0 :1:0 
+[s S568 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S555 . 1 `uc 1 . 1 0 :1:0 
+[s S571 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GODONE 1 0 :1:1 
 ]
-[u S558 . 1 `S529 1 . 1 0 `S532 1 . 1 0 `S536 1 . 1 0 `S543 1 . 1 0 `S546 1 . 1 0 `S549 1 . 1 0 `S552 1 . 1 0 `S555 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES558  1 e 1 @4034 ]
+[u S574 . 1 `S545 1 . 1 0 `S548 1 . 1 0 `S552 1 . 1 0 `S559 1 . 1 0 `S562 1 . 1 0 `S565 1 . 1 0 `S568 1 . 1 0 `S571 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES574  1 e 1 @4034 ]
 "6699
 [v _ADRES ADRES `VEus  1 e 2 @4035 ]
 "7106
@@ -387,20 +399,25 @@
 [v _TRMT TRMT `VEb  1 e 0 @32097 ]
 "10168
 [v _TXEN TXEN `VEb  1 e 0 @32101 ]
-"19 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
+"20 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/main.c
 [v _doorState doorState `i  1 e 2 0 ]
-"20
-[v _buttonConfirm_Cad buttonConfirm_Cad `i  1 e 2 0 ]
 "21
+[v _buttonConfirm_Cad buttonConfirm_Cad `i  1 e 2 0 ]
+"22
 [v _buttonCancel_Lock buttonCancel_Lock `i  1 e 2 0 ]
-"23
+"24
 [v _main main `(v  1 e 1 0 ]
 {
-"30
+"32
 [v main@pass pass `[2]uc  1 a 2 54 ]
-"33
+"35
 [v main@toc toc `[2]uc  1 a 2 52 ]
-"49
+"51
+} 0
+"13 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/USART.c
+[v _init_UART init_UART `(v  1 e 1 0 ]
+{
+"23
 } 0
 "14 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/PWM.c
 [v _init_PWM init_PWM `(v  1 e 1 0 ]
@@ -420,17 +437,17 @@
 "11 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
 [v _init_ADC init_ADC `(v  1 e 1 0 ]
 {
-"17
+"18
 } 0
-"52 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+"53 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _destravarPorta destravarPorta `(v  1 e 1 0 ]
 {
-"54
+"55
 [v destravarPorta@i i `i  1 a 2 42 ]
-"52
+"53
 [v destravarPorta@pass pass `*.39uc  1 p 2 36 ]
 [v destravarPorta@toque toque `*.39uc  1 p 2 38 ]
-"106
+"107
 } 0
 "43 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/PWM.c
 [v _DutyCycle_PWM DutyCycle_PWM `(v  1 e 1 0 ]
@@ -438,29 +455,29 @@
 [v DutyCycle_PWM@Valor Valor `ui  1 p 2 20 ]
 "47
 } 0
-"148 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+"150 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _cadastrarSenha cadastrarSenha `(v  1 e 1 0 ]
 {
-"155
+"157
 [v cadastrarSenha@temp1 temp1 `[2]uc  1 a 2 50 ]
-"159
+"161
 [v cadastrarSenha@temp2 temp2 `[2]uc  1 a 2 48 ]
-"153
+"155
 [v cadastrarSenha@j j `i  1 a 2 46 ]
-"152
+"154
 [v cadastrarSenha@i i `i  1 a 2 44 ]
-"148
+"150
 [v cadastrarSenha@pass pass `*.39uc  1 p 2 40 ]
-"199
+"201
 } 0
-"25
+"26
 [v _lerToque lerToque `(v  1 e 1 0 ]
 {
-"27
+"28
 [v lerToque@i i `i  1 a 2 38 ]
-"25
+"26
 [v lerToque@toque toque `*.39uc  1 p 2 36 ]
-"50
+"51
 } 0
 "13 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ReadSignal.c
 [v _readSignal readSignal `(v  1 e 1 0 ]
@@ -476,27 +493,62 @@
 [v readSignal@pos pos `i  1 p 2 26 ]
 "34
 } 0
-"19 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
+"20 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/ADC.c
 [v _read_ADC read_ADC `(ui  1 e 2 0 ]
 {
-"20
+"21
 [v read_ADC@value value `ui  1 a 2 22 ]
-"27
+"28
 } 0
-"132 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
+"133 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _confirmarSenha confirmarSenha `(i  1 e 2 0 ]
 {
-"146
+"148
 } 0
-"108
+"72 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/USART.c
+[v _checkUSART checkUSART `(v  1 e 1 0 ]
+{
+"79
+[v checkUSART@op op `i  1 a 2 24 ]
+"75
+[v checkUSART@msg msg `uc  1 a 1 26 ]
+"87
+} 0
+"61
+[v _cmp_MSG2 cmp_MSG2 `(i  1 e 2 0 ]
+{
+[v cmp_MSG2@msg msg `uc  1 a 1 wreg ]
+[v cmp_MSG2@msg msg `uc  1 a 1 wreg ]
+[v cmp_MSG2@msg msg `uc  1 a 1 23 ]
+"70
+} 0
+"55
+[v _cmp_MSG1 cmp_MSG1 `(i  1 e 2 0 ]
+{
+[v cmp_MSG1@msg msg `uc  1 a 1 wreg ]
+[v cmp_MSG1@msg msg `uc  1 a 1 wreg ]
+[v cmp_MSG1@msg msg `uc  1 a 1 22 ]
+"59
+} 0
+"44
+[v _UART_Read UART_Read `(uc  1 e 1 0 ]
+{
+"47
+} 0
+"40
+[v _UART_Data_Ready UART_Data_Ready `(uc  1 e 1 0 ]
+{
+"42
+} 0
+"109 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/TOCTOC.c
 [v _cmpPass cmpPass `(i  1 e 2 0 ]
 {
-"110
+"111
 [v cmpPass@i i `i  1 a 2 33 ]
-"108
+"109
 [v cmpPass@pass pass `*.39uc  1 p 2 29 ]
 [v cmpPass@toque toque `*.39uc  1 p 2 31 ]
-"130
+"131
 } 0
 "59 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/LCD.c
 [v _write_LCD write_LCD `(v  1 e 1 0 ]
@@ -551,6 +603,16 @@
 [v _ena_pulse ena_pulse `(v  1 e 1 0 ]
 {
 "20
+} 0
+"14 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Buzzer.c
+[v _bip bip `(v  1 e 1 0 ]
+{
+"19
+[v bip@j j `i  1 a 2 26 ]
+"14
+[v bip@rounds rounds `i  1 p 2 20 ]
+[v bip@time time `i  1 p 2 22 ]
+"34
 } 0
 "37 /home/mateus/Dropbox/UFC/semestre-5/Microcontroladores/Microcontroladores/USART.X/Interrupt.c
 [v _ISR ISR `II(v  1 e 1 0 ]

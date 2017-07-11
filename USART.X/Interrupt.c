@@ -39,10 +39,10 @@ void interrupt ISR(){
     if(INTCON3bits.INT2IF){
         INTCON3bits.INT2IF = 0;
         buttonCancel_Lock = 1;
-        if(doorState = 1){
+        if(doorState == 1){
             doorState = 0;
             DutyCycle_PWM(600);
-            __delay_ms(400);
+            __delay_ms(175);
             DutyCycle_PWM(0);
         }
     }
