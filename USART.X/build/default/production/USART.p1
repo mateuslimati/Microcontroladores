@@ -3737,7 +3737,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 "62
 [e $ ! == & -> _msg `i -> 28 `i -> 4 `i 386  ]
 {
-[; ;USART.c: 63: if((msg & 0x03) == 0x0)
+[; ;USART.c: 63: if((msg & 0x03) == 0x00)
 "63
 [e $ ! == & -> _msg `i -> 3 `i -> 0 `i 387  ]
 [; ;USART.c: 64: return 0;
@@ -3745,7 +3745,7 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e ) -> 0 `i ]
 [e $UE 385  ]
 [e :U 387 ]
-[; ;USART.c: 65: if((msg & 0x03) == 0x1)
+[; ;USART.c: 65: if((msg & 0x03) == 0x01)
 "65
 [e $ ! == & -> _msg `i -> 3 `i -> 1 `i 388  ]
 [; ;USART.c: 66: return 1;

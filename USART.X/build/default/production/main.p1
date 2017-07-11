@@ -10,6 +10,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _init_ADC `(v ~T0 @X0 0 ef ]
 "37 USART.h
 [v _init_UART `(v ~T0 @X0 0 ef ]
+"36 I2C.h
+[v _init_I2C `(v ~T0 @X0 0 ef1`Cul ]
 "36 TOCTOC.h
 [v _cadastrarSenha `(v ~T0 @X0 0 ef1`*uc ]
 "39
@@ -3649,93 +3651,103 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;USART.h: 43: void UART_Read_Text(char *Output, unsigned int length);
 [; ;USART.h: 44: int cmp_MSG1(char msg);
 [; ;USART.h: 45: int cmp_MSG2(char msg);
-"20 main.c
+[; ;I2C.h: 36: void init_I2C(const unsigned long clock);
+[; ;I2C.h: 37: void I2C_Master_Wait();
+[; ;I2C.h: 38: void I2C_Master_Start();
+[; ;I2C.h: 39: void I2C_Master_RepeatedStart();
+[; ;I2C.h: 40: void I2C_Master_Stop();
+[; ;I2C.h: 41: void I2C_Master_Write(char data);
+[; ;I2C.h: 42: char I2C_Master_Read(unsigned short a);
+"21 main.c
 [v _doorState `i ~T0 @X0 1 e ]
 [i _doorState
 -> 1 `i
 ]
-[; ;main.c: 20: int doorState = 1;
-"21
+[; ;main.c: 21: int doorState = 1;
+"22
 [v _buttonConfirm_Cad `i ~T0 @X0 1 e ]
 [i _buttonConfirm_Cad
 -> 0 `i
 ]
-[; ;main.c: 21: int buttonConfirm_Cad = 0;
-"22
+[; ;main.c: 22: int buttonConfirm_Cad = 0;
+"23
 [v _buttonCancel_Lock `i ~T0 @X0 1 e ]
 [i _buttonCancel_Lock
 -> 0 `i
 ]
-[; ;main.c: 22: int buttonCancel_Lock = 0;
-"24
+[; ;main.c: 23: int buttonCancel_Lock = 0;
+"25
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 24: void main(){
+[; ;main.c: 25: void main(){
 [e :U _main ]
 [f ]
-[; ;main.c: 26: init_PWM();
-"26
-[e ( _init_PWM ..  ]
-[; ;main.c: 27: init_INTRB2();
+[; ;main.c: 27: init_PWM();
 "27
-[e ( _init_INTRB2 ..  ]
-[; ;main.c: 28: init_LCD();
+[e ( _init_PWM ..  ]
+[; ;main.c: 28: init_INTRB2();
 "28
-[e ( _init_LCD ..  ]
-[; ;main.c: 29: init_ADC();
+[e ( _init_INTRB2 ..  ]
+[; ;main.c: 29: init_LCD();
 "29
-[e ( _init_ADC ..  ]
-[; ;main.c: 30: init_UART();
+[e ( _init_LCD ..  ]
+[; ;main.c: 30: init_ADC();
 "30
+[e ( _init_ADC ..  ]
+[; ;main.c: 31: init_UART();
+"31
 [e ( _init_UART ..  ]
+[; ;main.c: 32: init_I2C(400000);
 "32
-[v _pass `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 32: char pass[2];
-[; ;main.c: 33: pass[0] = 0x00;
-"33
-[e = *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 34: pass[1] = 0x00;
+[e ( _init_I2C (1 -> -> 400000 `l `ul ]
 "34
-[e = *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
+[v _pass `uc ~T0 @X0 -> 2 `i a ]
+[; ;main.c: 34: char pass[2];
+[; ;main.c: 35: pass[0] = 0x00;
 "35
-[v _toc `uc ~T0 @X0 -> 2 `i a ]
-[; ;main.c: 35: char toc[2];
-[; ;main.c: 36: toc[0] = 0x00;
+[e = *U + &U _pass * -> -> -> 0 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 36: pass[1] = 0x00;
 "36
-[e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 37: toc[1] = 0x00;
+[e = *U + &U _pass * -> -> -> 1 `i `ui `ux -> -> # *U &U _pass `ui `ux -> -> 0 `i `uc ]
 "37
-[e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
-[; ;main.c: 39: cadastrarSenha(pass);
+[v _toc `uc ~T0 @X0 -> 2 `i a ]
+[; ;main.c: 37: char toc[2];
+[; ;main.c: 38: toc[0] = 0x00;
+"38
+[e = *U + &U _toc * -> -> -> 0 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 39: toc[1] = 0x00;
 "39
-[e ( _cadastrarSenha (1 &U _pass ]
-[; ;main.c: 41: do{
+[e = *U + &U _toc * -> -> -> 1 `i `ui `ux -> -> # *U &U _toc `ui `ux -> -> 0 `i `uc ]
+[; ;main.c: 41: cadastrarSenha(pass);
 "41
+[e ( _cadastrarSenha (1 &U _pass ]
+[; ;main.c: 43: do{
+"43
 [e :U 366 ]
 {
-[; ;main.c: 43: destravarPorta(pass, toc);
-"43
+[; ;main.c: 45: destravarPorta(pass, toc);
+"45
 [e ( _destravarPorta (2 , &U _pass &U _toc ]
-[; ;main.c: 44: if(buttonConfirm_Cad == 1){
-"44
+[; ;main.c: 46: if(buttonConfirm_Cad == 1){
+"46
 [e $ ! == _buttonConfirm_Cad -> 1 `i 367  ]
 {
-[; ;main.c: 45: buttonConfirm_Cad = 0;
-"45
-[e = _buttonConfirm_Cad -> 0 `i ]
-[; ;main.c: 46: cadastrarSenha(pass);
-"46
-[e ( _cadastrarSenha (1 &U _pass ]
+[; ;main.c: 47: buttonConfirm_Cad = 0;
 "47
-}
-[e :U 367 ]
+[e = _buttonConfirm_Cad -> 0 `i ]
+[; ;main.c: 48: cadastrarSenha(pass);
+"48
+[e ( _cadastrarSenha (1 &U _pass ]
 "49
 }
-[; ;main.c: 47: }
-[; ;main.c: 49: }while(1);
+[e :U 367 ]
+"51
+}
+[; ;main.c: 49: }
+[; ;main.c: 51: }while(1);
 [e $ != -> 1 `i -> 0 `i 366  ]
 [e :U 365 ]
-[; ;main.c: 51: }
-"51
+[; ;main.c: 53: }
+"53
 [e :UE 363 ]
 }

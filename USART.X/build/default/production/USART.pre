@@ -4791,9 +4791,9 @@ return 0;
 
 int cmp_MSG2(char msg){
 if((msg & 0x1C) == 0x04){
-if((msg & 0x03) == 0x0)
+if((msg & 0x03) == 0x00)
 return 0;
-if((msg & 0x03) == 0x1)
+if((msg & 0x03) == 0x01)
 return 1;
 }
 return -1;

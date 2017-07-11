@@ -13,6 +13,7 @@
       <itemPath>TOCTOC.h</itemPath>
       <itemPath>main.h</itemPath>
       <itemPath>PWM.h</itemPath>
+      <itemPath>I2C.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -30,6 +31,7 @@
       <itemPath>Buzzer.c</itemPath>
       <itemPath>TOCTOC.c</itemPath>
       <itemPath>PWM.c</itemPath>
+      <itemPath>I2C.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -45,7 +47,7 @@
         <targetDevice>PIC18F4550</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PICkit2PlatformTool</platformTool>
+        <platformTool>picsimlab</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>1.41</languageToolchainVersion>
         <platform>2</platform>

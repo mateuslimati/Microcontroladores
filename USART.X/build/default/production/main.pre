@@ -4873,7 +4873,16 @@ void UART_Read_Text(char *Output, unsigned int length);
 int cmp_MSG1(char msg);
 int cmp_MSG2(char msg);
 
-# 20 "main.c"
+# 36 "I2C.h"
+void init_I2C(const unsigned long clock);
+void I2C_Master_Wait();
+void I2C_Master_Start();
+void I2C_Master_RepeatedStart();
+void I2C_Master_Stop();
+void I2C_Master_Write(char data);
+char I2C_Master_Read(unsigned short a);
+
+# 21 "main.c"
 int doorState = 1;
 int buttonConfirm_Cad = 0;
 int buttonCancel_Lock = 0;
@@ -4885,6 +4894,7 @@ init_INTRB2();
 init_LCD();
 init_ADC();
 init_UART();
+init_I2C(400000);
 
 char pass[2];
 pass[0] = 0x00;
